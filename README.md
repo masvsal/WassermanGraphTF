@@ -12,3 +12,5 @@ where where the appropriate names replace capitalized names.
 
 TODO: 
 1. allow user to choose to run 1way or 2way import. 
+2. specify schema, add visualization
+3. script for GO annotation import?
