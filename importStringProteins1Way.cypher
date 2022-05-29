@@ -19,11 +19,12 @@ CREATE INDEX ON :Protein(name);
 //load proteins
 LOAD CSV WITH HEADERS
 	FROM "file:///" + $ANNOT as line
-MERGE (p:Protein {identifier: line.identifier})
+MERGE (p:Protein {String_identifier: line.identifier})
 SET p.name = line.node
 SET p.summary = line.domain_summary_url
 SET p.annotation = line.annotation
 SET p.alternate_names = split(coalesce(line.other_names_and_aliases), ",")
+SET p.database_ID = []
 WITH collect(p) as proteins
 RETURN "proteins added"
 ;
@@ -31,8 +32,8 @@ RETURN "proteins added"
 //load interactions
 LOAD CSV WITH HEADERS
 	FROM "file:///" + $INTERACTIONS AS line
-MERGE (p1:Protein {identifier: line.node1_string_id})
-MERGE (p2:Protein {identifier: line.node2_string_id})
+MERGE (p1:Protein {String_identifier: line.node1_string_id})
+MERGE (p2:Protein {String_identifier: line.node2_string_id})
 
 MERGE (p1)-[:IS_A_NEIGHBOR_OF {confidence: line.neighborhood_on_chromosome}]->(p2)
 MERGE (p1)-[:FUSES_WITH {confidence: line.gene_fusion}]->(p2)
