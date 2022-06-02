@@ -11,7 +11,7 @@ LOAD CSV WITH HEADERS FROM "file:///" + $GAF_FILE_NAME as line
 
 MATCH (prot) where line.DB_Object_ID IN prot.alternate_names
 
-MERGE (GO:GO_Concept {id:line.GO_ID, aspect:line.Aspect})
+MERGE (GO:GO_Concept {class:line.GO_ID, aspect:line.Aspect})
 MERGE (prot)-[r:IS_ANNOTATED_TO {
 db:line.DB, evidence_code:line.Evidence_Code, assigned_by:line.Assigned_By, date:line.Date,
  references:split(coalesce(line.Reference), "|"), qualifiers:split(coalesce(line.Qualifier), "|"),
