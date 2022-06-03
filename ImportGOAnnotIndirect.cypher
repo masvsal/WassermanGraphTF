@@ -4,7 +4,7 @@
 //TODO: fix my horrendous way of checking if a relationship exists
 
 //file must be GAF-formatted
-:param GAF_FILE_NAME=>'first_5_lines_SOX17_GAF.csv'
+:param GAF_FILE_NAME=>'10_lines_SOX17_GAF.csv'
 
 :begin
 //load CSV
@@ -18,8 +18,10 @@ MATCH (prot) WHERE line.DB_Object_ID IN prot.alternate_names
 //GO class:
 MERGE (GO:load {id:line.GO_ID, namespace:line.Aspect})
 
-//Annotation:
-MERGE (ann:Annot {qualifiers:split(coalesce(line.Qualifier), "|"), evidence_code:line.Evidence_Code, assigned_by:line.Assigned_By, date:line.Date, with_or_from:line.With_Or_From, taxon:line.Taxon, not_flag:FALSE})
+//Annotation: (use create because each new line needs separate annotation node)
+CREATE (ann:Annot {qualifiers:split(coalesce(line.Qualifier), "|"), evidence_code:line.Evidence_Code, assigned_by:line.Assigned_By, date:line.Date, taxon:line.Taxon, not_flag:FALSE})
+//possible null values:
+SET ann.with_or_from=line.With_Or_From
 //optional parameters
 SET ann.annotation_extensions=line.Annotation_Extension
 SET ann.gene_product_form_id=line.Gene_Product_Form_ID
@@ -48,12 +50,15 @@ SET prot.database_ID=DB_IDs
 
 //begin refactoring
 //-------------------
-//make sure optional fields are not null
+//make sure fields are not null
 MATCH (ann:Annot) WHERE ann.annotation_extensions IS NULL
 SET ann.annotation_extensions=[]
 ;
 MATCH (ann:Annot) WHERE ann.gene_product_form_id IS NULL
 SET ann.gene_product_form_id=[]
+;
+MATCH (ann:Annot) WHERE ann.with_or_from IS NULL
+SET ann.with_or_from=[]
 ;
 
 //setup namespace labels
