@@ -1,0 +1,5 @@
+biogrid:
+    access_key: "931d2c261ab610818b96bbd8c2175fa7"
+    base_url: "https://webservice.thebiogrid.org"
+jaspar:
+    base_url: "https://jaspar.genereg.net"
