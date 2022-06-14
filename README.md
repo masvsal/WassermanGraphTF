@@ -12,20 +12,20 @@ Scripts and general code for GraphTF project.
    |_graph_data            #where all data is gathered prior to graph import. Also contains large data files used by data_import (csv)
    |_graph_construction    #scripts for constructing and populating new neo4j database instance (cypher/shell)
    |_obsolete              #old data files and scripts, not used in current graph model
-├── data_import
-│   ├── __pycache__
-│   ├── biogrid_example_scripts
-│   ├── config
-│   └── core
-│       └── __pycache__
-├── graph_construction
-├── graph_data
-│   ├── entities
-│   ├── gene_annotations
-│   │   └── cis-bp
-│   └── protein_interactions
-└── obsolete
-    └── exampleDataset
+├── data_import <br/>
+│   ├── __pycache__ <br/>
+│   ├── biogrid_example_scripts <br/>
+│   ├── config <br/>
+│   └── core <br/>
+│       └── __pycache__ <br/>
+├── graph_construction <br/>
+├── graph_data <br/>
+│   ├── entities <br/>
+│   ├── gene_annotations <br/>
+│   │   └── cis-bp <br/>
+│   └── protein_interactions <br/>
+└── obsolete <br/>
+    └── exampleDataset <br/>
 
 14 directories
 *graph schema*
