@@ -1,33 +1,23 @@
 # WassermanGraphTF - Graphically Representing Transcription Factor Annotation
 
 Scripts and general code for GraphTF project.
-*Summer 2022*
 
-##Directories
-|_WassermanGraphTF \n
-   |_###data_import                 #scripts for consolidating data from various databases into local csv files (python)
-      |_biogrid_example_scripts  #scripts from biogrid repository for interacting w REST API
-      |_config                   #URL and passkeys needed to interact w various biological databases
-      |_core                     #code to parse config YML file
-   |_graph_data            #where all data is gathered prior to graph import. Also contains large data files used by data_import (csv)
-   |_graph_construction    #scripts for constructing and populating new neo4j database instance (cypher/shell)
-   |_obsolete              #old data files and scripts, not used in current graph model
-├── data_import <br/>
-│   ├── __pycache__ <br/>
-│   ├── biogrid_example_scripts <br/>
-│   ├── config <br/>
-│   └── core <br/>
+Directories: <br/>
+├── data_import:       *scripts for ingesting remote data into local csv files* <br/>
+│   ├── __pycache__  <br/>
+│   ├── biogrid_example_scripts:*scripts from biogrid repository for interacting w REST API* <br/>
+│   ├── config:*URL and passkeys needed to interact w various biological databases* <br/>
+│   └── core:*code to parse config YML file* <br/>
 │       └── __pycache__ <br/>
-├── graph_construction <br/>
-├── graph_data <br/>
-│   ├── entities <br/>
-│   ├── gene_annotations <br/>
+├── graph_construction:*scripts for constructing and populating new neo4j database instance* <br/>
+├── graph_data:*where all data is gathered prior to graph import. Also contains large data files used by graph import* <br/>
+│   ├── entities:*gene, transcript, protein data* <br/>
+│   ├── gene_annotations:*transcription factor annotation data* <br/>
 │   │   └── cis-bp <br/>
-│   └── protein_interactions <br/>
-└── obsolete <br/>
+│   └── protein_interactions:*protein interaction data* <br/>
+└── obsolete <br/>:*old data files and scripts, not used in current graph model*
     └── exampleDataset <br/>
 
-14 directories
 *graph schema*
 
 *plan for future*
