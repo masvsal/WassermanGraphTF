@@ -1,5 +1,12 @@
 # WassermanGraphTF
-Scripts and general code for creating graph database of TF. Summer 2022
+Scripts and general code for GraphTF project. Used to integrate TF Annotation data and construct Neo4j graph database.
+*Summer 2022*
+
+*folder directories*
+
+*graph schema*
+
+*plan for future*
 
 script for importing 1 way is ran from neo4j terminal. Arguments are passed into ImportProteins.sh. 
 
