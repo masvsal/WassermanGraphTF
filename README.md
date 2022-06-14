@@ -1,8 +1,17 @@
-# WassermanGraphTF
-Scripts and general code for GraphTF project. Used to integrate TF Annotation data and construct Neo4j graph database.
+# WassermanGraphTF - Graphically Representing Transcription Factor Annotation
+
+Scripts and general code for GraphTF project.
 *Summer 2022*
 
-*folder directories*
+##Directories
+|_WassermanGraphTF
+   |_###data_import                 #scripts for consolidating data from various databases into local csv files (python)
+      |_biogrid_example_scripts  #scripts from biogrid repository for interacting w REST API
+      |_config                   #URL and passkeys needed to interact w various biological databases
+      |_core                     #code to parse config YML file
+   |_graph_data            #where all data is gathered prior to graph import. Also contains large data files used by data_import (csv)
+   |_graph_construction    #scripts for constructing and populating new neo4j database instance (cypher/shell)
+   |_obsolete              #old data files and scripts, not used in current graph model
 
 *graph schema*
 
