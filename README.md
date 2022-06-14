@@ -4,7 +4,7 @@ Scripts and general code for GraphTF project.
 *Summer 2022*
 
 ##Directories
-|_WassermanGraphTF
+|_WassermanGraphTF \n
    |_###data_import                 #scripts for consolidating data from various databases into local csv files (python)
       |_biogrid_example_scripts  #scripts from biogrid repository for interacting w REST API
       |_config                   #URL and passkeys needed to interact w various biological databases
