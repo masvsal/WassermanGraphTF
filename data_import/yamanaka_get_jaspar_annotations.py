@@ -78,9 +78,9 @@ for i in range(len(jaspar_annotation)):
 #saves family info in TF map to output csv
 with open("graph_data/gene_annotations/jaspar_TF_Class_Family.csv", "w",  encoding='UTF8') as file:
     f = csv.writer(file)
-    f.writerow(['protein_name', "uniprot_ids", "jaspar_id", 'url', "collection", 'family', 'class'])
+    f.writerow(['protein_name', "uniprot_ids", "jaspar_id", 'url', "collection", 'family', 'class', "pubmed_ids", "medline"])
     for i in jaspar_annotation:
-        f.writerow([i['protein_name'], i["uniprot_ids"], i["latest_matrix_id"], i['url'], i["collection"], i['family'], i['class']])
+        f.writerow([i['protein_name'], i["uniprot_ids"], i["latest_matrix_id"], i['url'], i["collection"], i['family'], i['class'], i['pubmed_ids'], i['medline']])
 
 #saves PFM info in TF map to output csv
 with open("graph_data/gene_annotations/jaspar_TF_PFM.csv", "w",  encoding='UTF8') as file:
