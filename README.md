@@ -11,7 +11,7 @@ Directories: <br/>
 │   └── core: #code to parse config YML file
 │       └── __pycache__ 
 ├── graph_construction #scripts for constructing and populating new neo4j database instance
-├── graph_data #files written to and parsed by graph import scripts
+├── graph_data #store of all data flowing in from outside databases and out to the graph database
 │   ├── entities #gene, transcript, protein data
 │   ├── gene_annotations #transcription factor annotation data
 │   │   └── cis-bp 
