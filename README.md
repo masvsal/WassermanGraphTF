@@ -23,7 +23,7 @@ Directories: <br/>
 Schema:
 <img width="1247" alt="image" src="https://user-images.githubusercontent.com/95512439/173684845-3edaaa17-94b5-42c9-af90-bdc8f888b6e1.png">
 
-Mapping Graph Entities:
+Mapping genes to proteins:
 ![image](https://user-images.githubusercontent.com/95512439/173697408-51a8931b-a399-4c4d-a9af-e05f41411552.png)
 
 Annotations:
