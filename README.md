@@ -11,7 +11,7 @@ Directories: <br/>
 │   └── core: #code to parse config YML file
 │       └── __pycache__ 
 ├── graph_construction #scripts for constructing and populating new neo4j database instance
-├── graph_data #files written to and parsed by graph import scripts
+├── graph_data #store of all data flowing in from outside databases and out to the graph database
 │   ├── entities #gene, transcript, protein data
 │   ├── gene_annotations #transcription factor annotation data
 │   │   └── cis-bp 
@@ -21,7 +21,8 @@ Directories: <br/>
  ```
 
 Schema:
-<img width="1247" alt="image" src="https://user-images.githubusercontent.com/95512439/173684845-3edaaa17-94b5-42c9-af90-bdc8f888b6e1.png">
+<img width="1039" alt="image" src="https://user-images.githubusercontent.com/95512439/174120916-b8a9058b-2527-471f-a29e-08377e24dae6.png">
+
 
 Mapping genes to proteins:
 ![image](https://user-images.githubusercontent.com/95512439/173697408-51a8931b-a399-4c4d-a9af-e05f41411552.png)
