@@ -29,4 +29,4 @@ As you can see, it can get pretty messy. We chose to limit annotations to a sing
 ## Going forward
 We plan to only use these canonical pathways in the graph for all TFs. This was chosen to streamline the knowledge base. However, it will still be possible in the future to extend the graph to include all isoforms of proteins if we desired to. 
 
-Please use the above workflow to help with the integration.
+Please use the above workflow to help with any future isoform integration.
