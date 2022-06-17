@@ -3,3 +3,5 @@ biogrid:
     base_url: "https://webservice.thebiogrid.org"
 jaspar:
     base_url: "https://jaspar.genereg.net"
+pfam:
+    base_url: "https://pfam.xfam.org/"
