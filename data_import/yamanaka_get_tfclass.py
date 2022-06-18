@@ -8,14 +8,16 @@ import pandas as pd
 import sys
 
 gene_names = ["KLF4", "MYC", "SOX17", "SOX2", "POU5F1"]
-#from_file = sys.argv[1]
-#to_file = sys.argv[2]
 
+#csv in
 df = pd.read_csv('graph_data/gene_annotations/tf2TFClass.csv')
+
+#extract relevant rows
 loc_col = df.loc[df['Transcription factor'].isin(gene_names)]
+
+#refactor rows
 s = loc_col['TF family'].astype(str)
 loc_col['TF family'] = s.str.replace("\{.*\}",'')
+
+#out csv
 loc_col.to_csv('graph_data/gene_annotations/TFClass.csv')
-
-
-print(df.head(1),"\n",loc_col)

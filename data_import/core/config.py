@@ -19,3 +19,8 @@ BIOGRID_ACCESS_KEY = data["biogrid"]["access_key"]
 BIOGRID_BASE_URL = data["biogrid"]["base_url"]
 #JASPAR
 JASPAR_BASE_URL = data["jaspar"]["base_url"]
+#PFAM
+#USCS Genome Browser
+USCS_BASE_URL = data["uscs"]["base_url"]
+#Ensembl
+ENSEMBL_BASE_URL = data["ensembl_biomart"]["base_url"]

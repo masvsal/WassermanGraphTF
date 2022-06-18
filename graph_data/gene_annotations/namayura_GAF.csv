@@ -1,5 +1,5 @@
 DB,DB_Object_ID,DB_Object_Symbol,Qualifier,GO_ID,Reference,Evidence_Code,With_Or_From,Aspect,DB_Object_Name,DB_Object_Synonym,DB_Object_Type,Taxon,Date,Assigned_By,Annotation_Extension,Gene_Product_Form_ID
-UniProtKB,P01106,MYC,acts_upstream_of_or_within,GO:0008284,PMID:15994933,IDA,,P,Myc proto-oncogene protein,MYC|BHLHE39,protein,taxon:9606,20051223,MGI,,
+UniProtKB,P01106,MYC,acts_upstream_of_or_within,:0008284,PMID:15994933,IDA,,P,Myc proto-oncogene protein,MYC|BHLHE39,protein,taxon:9606,20051223,MGI,,
 UniProtKB,P01106,MYC,acts_upstream_of_or_within,GO:0010468,PMID:21447833,IDA,,P,Myc proto-oncogene protein,MYC|BHLHE39,protein,taxon:9606,20140129,MGI,,
 UniProtKB,P01106,MYC,enables,GO:0000978,PMID:10723141,IDA,,F,Myc proto-oncogene protein,MYC|BHLHE39,protein,taxon:9606,20140327,NTNU_SB,,
 UniProtKB,P01106,MYC,enables,GO:0000978,PMID:19786833,IMP,,F,Myc proto-oncogene protein,MYC|BHLHE39,protein,taxon:9606,20180803,BHF-UCL,occurs_at(SO:0000167),

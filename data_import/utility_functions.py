@@ -1,8 +1,6 @@
-from xml.etree.ElementTree import tostring
-
+from array import array
+import requests
+from core import config
 
 def list_to_pipe_del(list):
-    out_str = ''
-    for i in list:
-        out_str+=str(i) + "|"
-    return out_str
+    return "|".join(map(str,list))
