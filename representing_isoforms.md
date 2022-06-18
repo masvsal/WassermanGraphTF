@@ -12,7 +12,7 @@ Any biological model, no matter how sophisticated, cannot completely map to its 
 Point number 2, ensuring that our model is scientifically valid, is especially important when it comes to representing the central dogma of biology. Different versions of a gene present at a locus may each encode multiple transcripts which may in turn encode multiple proteins. Each of these proteins may have different functional and structural characteristics. Mapping out the production of each protein will therefore add a large amount of information to GraphTF. We must decide how much of it is actually useful for our purposes.
 
 ## Attempting to model all isoforms
-It could be argued that our graph is incomplete without representing all protein isoforms due to their different functional roles. So, this is my attempt to perform this modelling for the following set of yamanaka TF: ["KLF4", "MYC", "SOX17", "SOX2", "POU5F1"]
+It could be argued that our graph is incomplete without representing all protein isoforms due to their different functional roles. So, this is my attempt to perform this complete modelling for the following set of yamanaka TF: ["KLF4", "MYC", "SOX17", "SOX2", "POU5F1"]
 
 1. 1:1 mapping between TF name->uniprot/Swiss-prot IDs using uniprotKB search function
 2. 1:1..* mapping between uniprot/Swiss-prot ID->Ensembl Gene ID using ensembl:biomart tool. All proteins but POU5F1 mapped to a single gene. POU5F1 mapped to 7 genes at the same locus.
@@ -29,4 +29,4 @@ As you can see, it can get pretty messy. We chose to limit annotations to a sing
 ## Going forward
 We plan to only use these canonical pathways in the graph for all TFs. This was chosen to streamline the knowledge base. However, it will still be possible in the future to extend the graph to include all isoforms of proteins if we desired to. 
 
-Please use the above workflow to help with the integration.
+Please use the above workflow to help with any future isoform integration.
