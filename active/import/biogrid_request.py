@@ -30,6 +30,7 @@ params = {
 #execute GET request and parse as JSON
 r = requests.get(request_url, params=params)
 data = r.json()
+print(data)
 
 #write response to output csv
 with open("graph_data/protein_interactions/biogrid_interactions.csv", "w", encoding='UTF8') as file:
