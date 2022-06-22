@@ -17,3 +17,7 @@ data = yaml.load(data, Loader=yaml.FullLoader)
 AURADB_URI = data["auradb"]["uri"]
 AURADB_USER = data["auradb"]["user"]
 AURADB_PASSWORD = data["auradb"]["password"]
+
+GENE2UNIPARC_URI = data['data_uri']['gene2uniparc']
+GENE2UNIPROT_URI = data['data_uri']['gene2uniprot']
+ALTSEQ_URI = data['data_uri']['alt_seq']

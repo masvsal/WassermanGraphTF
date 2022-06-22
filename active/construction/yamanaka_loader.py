@@ -5,7 +5,6 @@ from neo4j.exceptions import Neo4jError
 from sqlalchemy import null
 
 from core import config as cfg
-import cypher_scripts
 
 class Yamanaka_Loader:
     def __init__(self):
@@ -54,8 +53,9 @@ class Yamanaka_Loader:
     @staticmethod
     def _create_gene_to_uniparc_mapping(tx):
         query = open("active/construction/cypher_scripts/import_genes_transcripts_proteins.cypher", "r")
-        result = tx.run(query.read())
+        result = tx.run(query.read().replace("$GENE2UNIPARC",cfg.GENE2UNIPARC_URI))
         try:
+            query.close()
             return [{"genes":record["genes"],"transcripts":record["transcripts"],"uniparc":record["uniparc"]} for record in result]
         except Neo4jError as exception:
             logging.error("{query} raised an error: \n {exception}".format(
@@ -65,18 +65,21 @@ class Yamanaka_Loader:
     @staticmethod
     def _set_uniprot_accession_labels(tx):
         query = open("active/construction/cypher_scripts/import_uniprot_accession_ids.cypher", "r")
-        result = tx.run(query.read())
+        result = tx.run(query.read().replace("$GENE2UNIPROT",cfg.GENE2UNIPROT_URI))
         try:
+            query.close()
             return [{"isoforms":record["isoforms"],"manual_entry":record["manual_entry"],"automatic_entry":record["automatic_entry"]} for record in result]
         except Neo4jError as exception:
             logging.error("{query} raised an error: \n {exception}".format(
                 query=query, exception=exception))
             raise
-
+    
+    @staticmethod
     def _set_ensembl_primary_sequence_flags(tx):
         query = open("active/construction/cypher_scripts/import_alt_seq_mapping.cypher", "r")
-        result = tx.run(query.read())
+        result = tx.run(query.read().replace("$ALT_SEQ",cfg.ALTSEQ_URI))
         try:
+            query.close()
             return [{"primary":record["primary"],"alternate":record["alternate"]} for record in result]
         except Neo4jError as exception:
             logging.error("{query} raised an error: \n {exception}".format(
