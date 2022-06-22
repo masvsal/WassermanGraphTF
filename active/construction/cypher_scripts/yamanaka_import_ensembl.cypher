@@ -1,10 +1,7 @@
 //set variables
-:param GENETOPROTEIN=>'ensembl_gene_to_uniparc.csv'
-:param ENRICHUNIPARC=>'ensembl_gene_to_uniprot_accessions.csv'
 :param ALTSEQMAPPING=>'yamanaka_alt_seq_mapping.csv'
 
 //set database
-:use isoformschemajune10
 //'DATABASE_NAME' replaced by passed parameter
 
 //GENE~~~~~~~
@@ -52,12 +49,12 @@ SET g.aliases = aliases_G
 SET t.aliases = aliases_T
 SET p.ensembl_ids = ensembl_ids
 
-WITH collect(g) as genes
-RETURN "Ensembl to UniParc added"
+WITH count(g) as genes, count(t) as transcripts, count(p) as uniparc
+RETURN genes, transcripts, uniparc
 ;
 
 LOAD CSV WITH HEADERS
-	FROM "file:///" + $ENRICHUNIPARC as line
+	FROM "file:///" + $PROTEINTOUNIPARC as line
 MATCH (p:Protein)
 WHERE line.Protein_Stable_ID IN p.ensembl_ids
 SET p.isoform_id = coalesce(p.isoform_id,[]) + [coalesce(line.UniProtKB_Isoform_ID,"")] 

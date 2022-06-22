@@ -24,7 +24,7 @@ header = ['DB','DB_Object_ID','DB_Object_Symbol','Qualifier','GO_ID','Reference'
 
 with open('/Users/samuelsalitra/WassermanGraphTF-1/graph_data/gene_annotations/namayura_GAF.csv') as from_csv:
     r = csv.reader(from_csv)
-    with open('graph_data/gene_annotations/namayura_GAF_Pruned.csv', mode='w') as to_csv:
+    with open('data/gene_annotations/namayura_GAF_Pruned.csv', mode='w') as to_csv:
         w = csv.writer(to_csv)
         w.writerow(header)
         next(r)
