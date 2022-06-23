@@ -22,7 +22,7 @@ proteins = [
 
 header = ['DB','DB_Object_ID','DB_Object_Symbol','Qualifier','GO_ID','Reference','Evidence_Code','With_Or_From','Aspect','DB_Object_Name','DB_Object_Synonym','DB_Object_Type','Taxon','Date','Assigned_By','Annotation_Extension','Gene_Product_Form_ID']
 
-with open('/Users/samuelsalitra/WassermanGraphTF-1/graph_data/gene_annotations/namayura_GAF.csv') as from_csv:
+with open('/Users/samuelsalitra/WassermanGraphTF-1/data/gene_annotations/namayura_GAF.csv') as from_csv:
     r = csv.reader(from_csv)
     with open('data/gene_annotations/namayura_GAF_Pruned.csv', mode='w') as to_csv:
         w = csv.writer(to_csv)

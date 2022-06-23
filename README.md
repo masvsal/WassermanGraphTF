@@ -29,3 +29,18 @@ Mapping genes to proteins:
 
 Annotations:
 - Canonical Gene->Protein Relationships are chosen by canonical transcript status and primary sequence status in ensembl. These criteria yield a single gene->transcript->protein pathway for every protein in yamanaka graph.
+
+
+Sample Queries:
+- comparing DNA binding domains
+  - How many proteins possess X DBD in the Pfam Database?
+  - Do the DBDs of proteins X and Y share any Families or Clans in the Pfam database?
+- comparing PFM
+  - 
+- comparing function
+  - How many TF Genes are annotated to X GO annotation?
+  - How many nodes removed are the GO positional annotations for TFs X and Y in the GO ontology?
+  - How many nodes removed are the GO functional annotations for TFs X and Y in the GO ontology?
+  - How many nodes removed are the Cell Process annotations for TFs X and Y in the GO Ontology?
+- comparing TFClass
+  - How many nodes removed are the class annotations for TFs X and Y in the TFClass ontology?

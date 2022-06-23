@@ -28,7 +28,7 @@ SET ann.annotation_extensions=line.Annotation_Extension
 SET ann.gene_product_form_id=line.Gene_Product_Form_ID
 
 //Resource:
-MERGE (r:Resource {PMID:'', alt_ids:split(coalesce(line.Reference), "|")})
+MERGE (r:Publication {PMID:'', alt_ids:split(coalesce(line.Reference), "|")})
 
 
 //add relationships:

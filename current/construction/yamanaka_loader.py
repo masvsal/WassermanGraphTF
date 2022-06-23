@@ -41,13 +41,6 @@ class Yamanaka_Loader:
             )
             for record in result:
                 print("{primary} primary sequences set. {alternate} alternate sequences set".format(primary=record["primary"], alternate=record["alternate"]))
-    def testing(self):
-        with self.driver.session() as session:
-            result = session.write_transaction(
-                self.test
-            )
-        for record in result:
-            print(record["t"])
 
     @staticmethod
     def _create_gene_to_uniparc_mapping(tx):
@@ -86,7 +79,14 @@ class Yamanaka_Loader:
                 query=query, exception=exception))
             raise
 
-    @staticmethod
+#main method
+if __name__ == "__main__":
+    loader = Yamanaka_Loader()
+    loader.create_genes_and_proteins()
+    loader.close()
+    
+    
+""" @staticmethod
     def test(tx):
         cypher_script = open("active/construction/cypher_scripts/test.cypher", "r")
         query = cypher_script.read()
@@ -98,11 +98,12 @@ class Yamanaka_Loader:
         except Neo4jError as exception:
             logging.error("{query} raised an error: \n {exception}".format(
                 query=query, exception=exception))
-            raise
+            raise """
 
-if __name__ == "__main__":
-    loader = Yamanaka_Loader()
-    loader.create_genes_and_proteins()
-    loader.close()
-    
-    
+""" def testing(self):
+        with self.driver.session() as session:
+            result = session.write_transaction(
+                self.test
+            )
+        for record in result:
+            print(record["t"]) """
