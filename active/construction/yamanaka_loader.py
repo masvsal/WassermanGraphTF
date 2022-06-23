@@ -2,7 +2,6 @@ import logging
 
 from neo4j import GraphDatabase
 from neo4j.exceptions import Neo4jError
-from sqlalchemy import null
 
 from core import config as cfg
 
@@ -25,23 +24,23 @@ class Yamanaka_Loader:
                 self._create_gene_to_uniparc_mapping
             )
             for record in result:
-                print("{gene} genes with unique Ensembl IDs added. {transcript} transcripts with Unique Ensembl IDs added. {protein} proteins with unique Uniparc IDs added").format(
-                    gene=record["genes"],transcript=record["trancripts"],protein=record["uniparc"])
+                print("{gene} genes with unique Ensembl IDs added. {transcript} transcripts with Unique Ensembl IDs added. {protein} proteins with unique Uniparc IDs added".format(gene=record["genes"],transcript=record["transcripts"],protein=record["uniparc"]))
+                #print("{id} {canonical}".format(id=record["id"],canonical=record['canonical']))
 
             print("setting uniprot accession ids...")
             result = session.write_transaction(
                 self._set_uniprot_accession_labels
             )
             for record in result:
-                print("{isoform} uniparc IDs associated with a unique Isoform. {manual} uniparc IDs associated with at least one manually curated uniprotKB entry (swissprot ID). {automatic} proteins associated with at least one automatically curated uniprotKB entry (trembl ID)").format(
-                    isoform=record["isoforms"],manual=record["manual_entry"],automatic=record["automatic_entry"])
+                print("{isoform} uniparc IDs associated with a unique Isoform. {manual} uniparc IDs associated with at least one manually curated uniprotKB entry (swissprot ID). {automatic} proteins associated with at least one automatically curated uniprotKB entry (trembl ID)".format(
+                    isoform=record["isoforms"],manual=record["manual_entry"],automatic=record["automatic_entry"]))
             
             print("setting primary/alternate sequence flags")
             result = session.write_transaction(
                 self._set_ensembl_primary_sequence_flags
             )
             for record in result:
-                print("{primary} primary sequences set. {alternate} alternate sequences set").format(primary=record["primary"], alternate=record["alternate"]) 
+                print("{primary} primary sequences set. {alternate} alternate sequences set".format(primary=record["primary"], alternate=record["alternate"]))
     def testing(self):
         with self.driver.session() as session:
             result = session.write_transaction(
@@ -53,6 +52,7 @@ class Yamanaka_Loader:
     @staticmethod
     def _create_gene_to_uniparc_mapping(tx):
         query = open("active/construction/cypher_scripts/import_genes_transcripts_proteins.cypher", "r")
+        #query = print(query.read().replace("$GENE2UNIPARC",cfg.GENE2UNIPARC_URI))
         result = tx.run(query.read().replace("$GENE2UNIPARC",cfg.GENE2UNIPARC_URI))
         try:
             query.close()

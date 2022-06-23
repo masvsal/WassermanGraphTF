@@ -5,7 +5,7 @@
 LOAD CSV WITH HEADERS
 	FROM '$GENE2UNIPARC' as line
 MERGE (g:Gene {ensembl_id:line.Gene_Stable_ID, ensembl_description:line.Gene_Description})
-MERGE (t:Transcript {ensembl_id:line.Transcript_Stable_ID, ensembl_canonical_flag:toBoolean(coalesce(line.Ensembl_Canonical,0))})
+MERGE (t:Transcript {ensembl_id:line.Transcript_Stable_ID, ensembl_canonical_flag:toBoolean(toInteger(line.Ensembl_Canonical))})
 MERGE (p:Protein {UniParc_id: line.UniParc_ID})
 CREATE (m:Metadata {from:'Ensembl', gene_source:line.Gene_Source, transcript_source:line.Transcript_Source, gene_version:line.Gene_Version, transcript_version:line.Transcript_Version})
 

@@ -1,1 +1,0 @@
-MATCH (t:Test) RETURN count(t) as counts
