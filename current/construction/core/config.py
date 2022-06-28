@@ -21,3 +21,13 @@ AURADB_PASSWORD = data["auradb"]["password"]
 GENE2UNIPARC_URI = data['data_uri']['gene2uniparc']
 GENE2UNIPROT_URI = data['data_uri']['gene2uniprot']
 ALTSEQ_URI = data['data_uri']['alt_seq']
+
+GAF_PRUNED = data['data_uri']['gaf_pruned']
+PROT_SEQ = data['data_uri']['cis_bp_prot_seq']
+TFCLASS = data['data_uri']['tfclass']
+JASPAR_PFM = data['data_uri']['jaspar_pfm']
+
+""" print(GAF_PRUNED)
+print(PROT_SEQ)
+print(TFCLASS)
+print(JASPAR_PFM) """

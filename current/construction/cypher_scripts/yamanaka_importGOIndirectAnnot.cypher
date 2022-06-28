@@ -4,15 +4,14 @@
 //TODO: fix my horrendous way of checking if a relationship exists
 
 //file must be GAF-formatted
-:param GAF_FILE_NAME=>'GO_Pruned.csv'
+//:param GAF_FILE_NAME=>'GO_Pruned.csv'
 
-:begin
 //load CSV
 //------------------
-LOAD CSV WITH HEADERS FROM "file:///" + $GAF_FILE_NAME as line
+LOAD CSV WITH HEADERS FROM '$GAF_PRUNED_URI' as line
 //find protein
 match (prot:Protein)<-[:ENCODES]-(t:Transcript)<-[:ENCODES]-(g:Gene)
-where t.ensembl_canonical_flag = '1' AND g.primary_seq = TRUE AND line.DB_Object_ID IN prot.uniprot_swissprot_id
+where t.ensembl_canonical_flag = TRUE AND g.primary_seq_flag = TRUE AND line.DB_Object_ID IN prot.uniprot_swissprot_id
 
 //add nodes:
 //-----------------
@@ -20,12 +19,19 @@ where t.ensembl_canonical_flag = '1' AND g.primary_seq = TRUE AND line.DB_Object
 MERGE (GO:load {id:line.GO_ID, namespace:line.Aspect})
 
 //Annotation: (use create because each new line needs separate annotation node)
-CREATE (ann:Annot {qualifiers:split(coalesce(line.Qualifier), "|"), evidence_code:line.Evidence_Code, assigned_by:line.Assigned_By, date:line.Date, taxon:line.Taxon, not_flag:FALSE})
+CREATE (ann:Annot {
+	qualifiers:split(coalesce(line.Qualifier), "|"),
+	evidence_code:line.Evidence_Code,
+	assigned_by:line.Assigned_By, date:line.Date,
+	taxon:line.Taxon, not_flag:FALSE,
+	with_or_from:coalesce(line.With_Or_From, []),
+	annotation_extensions:coalesce(line.Annotation_Extension,[]),
+	gene_product_form_id:coalesce(line.Gene_Product_Form_ID,[])})
 //possible null values:
-SET ann.with_or_from=line.With_Or_From
+//SET ann.with_or_from=line.With_Or_From
 //optional parameters
-SET ann.annotation_extensions=line.Annotation_Extension
-SET ann.gene_product_form_id=line.Gene_Product_Form_ID
+//SET ann.annotation_extensions=line.Annotation_Extension
+//SET ann.gene_product_form_id=line.Gene_Product_Form_ID
 
 //Resource:
 MERGE (r:Publication {PMID:'', alt_ids:split(coalesce(line.Reference), "|")})
@@ -46,68 +52,80 @@ CALL {
 
 WITH g, alt_names
 SET g.aliases = alt_names
-;
+
+WITH "task_finished" as statement
 
 //begin refactoring
 //-------------------
-//make sure fields are not null
-MATCH (ann:Annot) WHERE ann.annotation_extensions IS NULL
-SET ann.annotation_extensions=[]
-;
-MATCH (ann:Annot) WHERE ann.gene_product_form_id IS NULL
-SET ann.gene_product_form_id=[]
-;
-MATCH (ann:Annot) WHERE ann.with_or_from IS NULL
-SET ann.with_or_from=[]
-;
+//make sure optional fields are not null
+// MATCH (nullExtension:Annot) WHERE nullExtension.annotation_extensions IS NULL
+// MATCH (nullProductForm:Annot) WHERE nullProductForm.gene_product_form_id IS NULL
+// MATCH (nullWithOrFrom:Annot) WHERE nu.with_or_from IS NULL
+
+// SET nullExtension.annotation_extensions=[]
+// SET nullProductForm.gene_product_form_id=[]
+// SET nullWithOrFrom.with_or_from=[]
+
+//WITH "task_finished" as statement
 
 //setup namespace labels
 MATCH (f:load {namespace:'F'})
+MATCH (p:load {namespace:'P'})
+MATCH (c:load {namespace:'C'})
+
 SET f:Mol_Function
 REMOVE f:load
 REMOVE f.namespace
-;
-MATCH (p:load {namespace:'P'})
+
 SET p:Biol_Process
 REMOVE p:load
 REMOVE p.namespace
-;
-MATCH (c:load {namespace:'C'})
+
 SET c:Cell_Component
 REMOVE c:load
 REMOVE c.namespace
-;
+
+WITH "task_finished" as statement
+
 MATCH (a)
 WHERE 'Mol_Function' IN labels(a) OR 'Cell_Component' IN labels(a) OR 'Biol_Process' IN labels(a)
 WITH a
 MERGE (o:Ontology {name:'Gene Ontology (GO)'})
 MERGE (a)-[:IN_ONTOLOGY]->(o)
-;
+
+WITH "task_finished" as statement
 
 //make PMID primary reference ID in references
 MATCH (r:Resource)
 WHERE ANY (id IN r.alt_ids WHERE id STARTS WITH 'PMID:')
 With apoc.coll.indexOf(r.alt_ids, 'PMID*') as n, r
 SET r.PMID = r.alt_ids[n]
-;
+
+WITH "task_finished" as statement
 
 //identifying negated annotations
-MATCH (r:Annot)
-WHERE size(r.qualifiers) = 2
-SET r.not_flag = TRUE
-SET r.qualifier = r.qualifiers[1]
-;
-
+MATCH (n:Annot)
+WHERE size(n.qualifiers) = 2
 //identifying positive annotations
-MATCH (r:Annot)
-WHERE size(r.qualifiers) = 1
-SET r.not_flag = FALSE
-SET r.qualifier = r.qualifiers[0]
+MATCH (p:Annot)
+WHERE size(p.qualifiers) = 1
+
+SET n.not_flag = TRUE
+SET n.qualifier = n.qualifiers[1]
+
+SET p.not_flag = FALSE
+SET p.qualifier = p.qualifiers[0]
+
+WITH "task_finished" as statement
+
+MATCH (f)
+WHERE 'Mol_Function' IN labels(f)
+MATCH (c)
+WHERE 'Cell_Component' IN labels(c)
+MATCH (p)
+WHERE 'Biol_Process' IN labels(p)
+RETURN count(f) as function, count(c) as component, count(p) as process
 ;
-
-
-:commit
-
 
 //SET r.db=line.DB, r.reference=line.Reference, r.evidence_code=line.Evidence_Code, r.assigned_by=line.Assigned_By,r.gene_product_form_id=line.Gene_Product_Form_ID, r.date=line.Date
 //SET r.references=split(coalesce(line.Reference), "|")
