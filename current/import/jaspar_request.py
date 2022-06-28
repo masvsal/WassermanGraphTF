@@ -9,7 +9,7 @@ import utility_functions as utilfcns
 #Saves response to separate csv files.
 
 #REST API URL
-request_url = cfg.JASPAR_BASE_URL + "/api/v1/matrix"
+request_url = cfg.JASPAR_BASE_URL + "api/v1/matrix"
 
 #yamanaka TFs
 gene_names = ["KLF4", "MYC", "SOX17", "SOX2", "POU5F1"]
