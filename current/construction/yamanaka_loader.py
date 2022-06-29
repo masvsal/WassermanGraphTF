@@ -190,10 +190,10 @@ if __name__ == "__main__":
     loader = Yamanaka_Loader()
     #loader.testing()
     #loader.create_genes_and_proteins()
-    #loader.create_go_annotations()
-    loader.create_tfclass_annotations()
-    #loader.create_cis_bp_annotations()
-    #loader.create_jaspar_pfm_annotations()
+    #loader.create_go_annotations() #gives memory error
+    #loader.create_tfclass_annotations() #collections containing null values cannot be stored in properties
+    loader.create_cis_bp_annotations() #works
+    #loader.create_jaspar_pfm_annotations() #works! :)
     loader.close()
     
     

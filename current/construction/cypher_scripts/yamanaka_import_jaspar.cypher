@@ -1,6 +1,6 @@
 LOAD CSV WITH HEADERS FROM "$JASPAR_PFM_URI" as line
 match (prot:Protein)<-[:ENCODES]-(t:Transcript)<-[:ENCODES]-(g:Gene)
-where t.ensembl_canonical_flag = TRUE AND g.primary_seq_flag = TRUE AND split(line.uniprot_ids, "|") IN prot.uniprot_swissprot_id
+where t.ensembl_canonical_flag = TRUE AND g.primary_seq_flag = TRUE AND split(line.uniprot_ids, "|")[0] IN prot.uniprot_swissprot_id
 WITH g, line
 CREATE (a:Annot {from:'Jaspar:' + line.collection, entry_url:line.url, id:line.jaspar_id, data_type:line.data_type, data_source:line.data_source, species:line.tax_group})
 WITH g,a, line
