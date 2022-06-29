@@ -48,8 +48,10 @@ class Yamanaka_Loader:
             result = session.write_transaction(
                 self._create_go_annotations
             )
-            for record in result:
-                print("({process},{function},{component}) (process,function,component) GO nodes added".format(process=record['process'],function=record['function'],component=record['component']))
+            print ("formatting go annotations...")
+            result = session.write_transaction(
+                self._format_go_annotations
+            )
 
     def create_tfclass_annotations(self):
         with self.driver.session() as session:
@@ -117,11 +119,23 @@ class Yamanaka_Loader:
     
     @staticmethod
     def _create_go_annotations(tx):
-        query = open("current/construction/cypher_scripts/yamanaka_importGOIndirectAnnot.cypher", "r")
+        query = open("current/construction/cypher_scripts/GO/yamanaka_import_GO.cypher", "r")
         result = tx.run(query.read().replace("$GAF_PRUNED_URI",cfg.GAF_PRUNED))
         query.close()
         try:
-            return [{"component":record["component"], "process":record["process"], "function":record['function']} for record in result]
+            return "done" #[{"component":record["component"], "process":record["process"], "function":record['function']} for record in result]
+        except Neo4jError as exception:
+            logging.error("{query} raised an error: \n {exception}".format(
+                query=query, exception=exception))
+            raise
+    
+    @staticmethod
+    def _format_go_annotations(tx):
+        query = open("current/construction/cypher_scripts/GO/yamanaka_format_GO.cypher", "r")
+        result = tx.run(query.read())
+        query.close()
+        try:
+            return "done"
         except Neo4jError as exception:
             logging.error("{query} raised an error: \n {exception}".format(
                 query=query, exception=exception))
@@ -190,9 +204,9 @@ if __name__ == "__main__":
     loader = Yamanaka_Loader()
     #loader.testing()
     #loader.create_genes_and_proteins()
-    #loader.create_go_annotations() #gives memory error
+    loader.create_go_annotations() #works!
     #loader.create_tfclass_annotations() #collections containing null values cannot be stored in properties
-    loader.create_cis_bp_annotations() #works
+    #loader.create_cis_bp_annotations() #works
     #loader.create_jaspar_pfm_annotations() #works! :)
     loader.close()
     

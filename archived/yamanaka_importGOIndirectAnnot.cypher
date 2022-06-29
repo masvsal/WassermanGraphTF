@@ -16,6 +16,7 @@ where t.ensembl_canonical_flag = TRUE AND g.primary_seq_flag = TRUE AND line.DB_
 //add nodes:
 //-----------------
 //GO class:
+WITH g, line
 MERGE (GO:load {id:line.GO_ID, namespace:line.Aspect})
 
 //Annotation: (use create because each new line needs separate annotation node)
@@ -115,16 +116,6 @@ SET n.qualifier = n.qualifiers[1]
 
 SET p.not_flag = FALSE
 SET p.qualifier = p.qualifiers[0]
-
-WITH "task_finished" as statement
-
-MATCH (f)
-WHERE 'Mol_Function' IN labels(f)
-MATCH (c)
-WHERE 'Cell_Component' IN labels(c)
-MATCH (p)
-WHERE 'Biol_Process' IN labels(p)
-RETURN count(f) as function, count(c) as component, count(p) as process
 ;
 
 //SET r.db=line.DB, r.reference=line.Reference, r.evidence_code=line.Evidence_Code, r.assigned_by=line.Assigned_By,r.gene_product_form_id=line.Gene_Product_Form_ID, r.date=line.Date
