@@ -27,6 +27,10 @@ PROT_SEQ = data['data_uri']['cis_bp_prot_seq']
 TFCLASS = data['data_uri']['tfclass']
 JASPAR_PFM = data['data_uri']['jaspar_pfm']
 
+BIOGRID = data['data_uri']['biogrid']
+STRING_ANNOTATION = data['data_uri']['string_annotation']
+STRING_INTERACTIONS = data['data_uri']['string_interactions']
+
 """ print(GAF_PRUNED)
 print(PROT_SEQ)
 print(TFCLASS)

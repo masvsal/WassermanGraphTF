@@ -52,10 +52,12 @@ class Yamanaka_Loader:
             result = session.write_transaction(
                 self._format_go_annotations
             )
+            for record in result:
+                print("({count}) GO nodes added".format(count=record['count']))
 
     def create_tfclass_annotations(self):
         with self.driver.session() as session:
-            print("creating tfclass annotations...")
+            print("creating tfclass...")
             result = session.write_transaction(
                 self._create_tfclass_annotations
             )
@@ -64,7 +66,7 @@ class Yamanaka_Loader:
     
     def create_cis_bp_annotations(self):
         with self.driver.session() as session:
-            print("creating dna binding domain (cis bp) annotations...")
+            print("creating dna binding domain (cis bp)...")
             result = session.write_transaction(
                 self._create_cis_bp_annotations
             )
@@ -73,12 +75,34 @@ class Yamanaka_Loader:
     
     def create_jaspar_pfm_annotations(self):
         with self.driver.session() as session:
-            print("creating jaspar PFM annotations...")
+            print("creating jaspar PFM...")
             result = session.write_transaction(
                 self._create_jaspar_pfm_annotations
             )
             for record in result:
                 print("({pfms}) PFM nodes added".format(pfms=record['pfms']))
+    
+    def create_biogrid_interaction_annotations(self):
+        with self.driver.session() as session:
+            print("creating biogrid interactions...")
+            result = session.write_transaction(
+                self._create_biogrid_interaction_annotations
+            )
+            for record in result:
+                print("({count}) biogrid interactions added".format(count=record['count']))
+    
+    def create_string_interaction_annotations(self):
+        with self.driver.session() as session:
+            print("setting string annotations...")
+            result = session.write_transaction(
+                self._create_string_annotations
+            )
+            print("creating string interactions...")
+            result = session.write_transaction(
+                self._create_string_interactions
+            )
+            for record in result:
+                print("({count}) bidirectional string interactions added".format(count=record['count']))
 
     @staticmethod
     def _create_gene_to_uniparc_mapping(tx):
@@ -135,7 +159,7 @@ class Yamanaka_Loader:
         result = tx.run(query.read())
         query.close()
         try:
-            return "done"
+            return [{"count":record['count']} for record in result]
         except Neo4jError as exception:
             logging.error("{query} raised an error: \n {exception}".format(
                 query=query, exception=exception))
@@ -147,7 +171,7 @@ class Yamanaka_Loader:
         result = tx.run(query.read().replace("$CIS_BP_URI",cfg.PROT_SEQ))
         try:
             query.close()
-            return [{"dbds":record['dbds']} for record in result]
+            return [{"dbds":record['count']} for record in result]
         except Neo4jError as exception:
             logging.error("{query} raised an error: \n {exception}".format(
                 query=query, exception=exception))
@@ -176,6 +200,42 @@ class Yamanaka_Loader:
             logging.error("{query} raised an error: \n {exception}".format(
                 query=query, exception=exception))
             raise
+    
+    @staticmethod
+    def _create_biogrid_interaction_annotations(tx):
+        query = open("current/construction/cypher_scripts/import_biogrid_interactions.cypher", "r")
+        result = tx.run(query.read().replace("$BIOGRID_URI",cfg.BIOGRID))
+        try:
+            query.close()
+            return [{"count":record["count"]} for record in result]
+        except Neo4jError as exception:
+            logging.error("{query} raised an error: \n {exception}".format(
+                query=query, exception=exception))
+            raise
+    
+    @staticmethod
+    def _create_string_annotations(tx):
+        query = open("current/construction/cypher_scripts/import_string_annotation.cypher", "r")
+        result = tx.run(query.read().replace("$STRING_ANNOTATION_URI",cfg.STRING_ANNOTATION))
+        try:
+            query.close()
+            return 'done' #[{"count":record["count"]} for record in result]
+        except Neo4jError as exception:
+            logging.error("{query} raised an error: \n {exception}".format(
+                query=query, exception=exception))
+            raise
+    
+    @staticmethod
+    def _create_string_interactions(tx):
+        query = open("current/construction/cypher_scripts/import_string_interactions.cypher", "r")
+        result = tx.run(query.read().replace("$STRING_INTERACTIONS_URI",cfg.STRING_INTERACTIONS))
+        try:
+            query.close()
+            return [{"count":record["count"]} for record in result]
+        except Neo4jError as exception:
+            logging.error("{query} raised an error: \n {exception}".format(
+                query=query, exception=exception))
+            raise
 
     def testing(self):
         with self.driver.session() as session:
@@ -183,7 +243,7 @@ class Yamanaka_Loader:
                 self.test
             )
         for record in result:
-            print(record["t"])
+            print(record["quality"],record["model"])
 
     @staticmethod
     def test(tx):
@@ -193,7 +253,7 @@ class Yamanaka_Loader:
         result = tx.run(query)
         cypher_script.close()
         try:
-            return [{"t":record["t"] for record in result}]
+            return [{"quality":record["quality"], "model":record["model"]} for record in result]
         except Neo4jError as exception:
             logging.error("{query} raised an error: \n {exception}".format(
                 query=query, exception=exception))
@@ -202,12 +262,14 @@ class Yamanaka_Loader:
 #main method
 if __name__ == "__main__":
     loader = Yamanaka_Loader()
-    #loader.testing()
-    #loader.create_genes_and_proteins()
+    loader.testing()
+    loader.create_genes_and_proteins()
     loader.create_go_annotations() #works!
-    #loader.create_tfclass_annotations() #collections containing null values cannot be stored in properties
-    #loader.create_cis_bp_annotations() #works
-    #loader.create_jaspar_pfm_annotations() #works! :)
+    loader.create_tfclass_annotations()
+    loader.create_cis_bp_annotations() #works
+    loader.create_jaspar_pfm_annotations() #works! :)
+    loader.create_biogrid_interaction_annotations()
+    loader.create_string_interaction_annotations()
     loader.close()
     
     

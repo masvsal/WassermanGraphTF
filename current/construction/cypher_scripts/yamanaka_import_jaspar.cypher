@@ -5,7 +5,7 @@ WITH g, line
 CREATE (a:Annot {from:'Jaspar:' + line.collection, entry_url:line.url, id:line.jaspar_id, data_type:line.data_type, data_source:line.data_source, species:line.tax_group})
 WITH g,a, line
 UNWIND split(line.pubmed_ids,",") as pmid
-MERGE (r:Resource {PMID:pmid})
+MERGE (r:Publication {PMID:pmid})
 MERGE (pfm:PFM {id:line.jaspar_id,a:line.A, c:line.C, g:line.G, T:line.T})
 MERGE (g)-[:HAS_ANNOTATION]->(a)-[:ANNOTATED_TO]->(pfm)
 MERGE (a)-[:BECAUSE]->(r)

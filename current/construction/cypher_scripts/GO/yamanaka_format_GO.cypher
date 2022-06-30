@@ -25,7 +25,7 @@ MERGE (a)-[:IN_ONTOLOGY]->(o)
 WITH "task_finished" as statement
 
 //make PMID primary reference ID in references
-MATCH (r:Resource)
+MATCH (r:Publication)
 WHERE ANY (id IN r.alt_ids WHERE id STARTS WITH 'PMID:')
 With apoc.coll.indexOf(r.alt_ids, 'PMID*') as n, r
 SET r.PMID = r.alt_ids[n]
@@ -44,4 +44,10 @@ SET n.qualifier = n.qualifiers[1]
 
 SET p.not_flag = FALSE
 SET p.qualifier = p.qualifiers[0]
+
+WITH "task finished" as statement
+
+MATCH (:Ontology {name:'Gene Ontology (GO)'})<-[:IN_ONTOLOGY]-(go)
+RETURN count(go) as count
+
 ;

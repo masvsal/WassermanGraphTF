@@ -33,7 +33,7 @@ data = r.json()
 print(data)
 
 #write response to output csv
-with open("data/protein_interactions/biogrid_interactions.csv", "w", encoding='UTF8') as file:
+with open("current/data/protein_interactions/biogrid_interactions.csv", "w", encoding='UTF8') as file:
     f=csv.writer(file)
     f.writerow(["BIOGRID_INTERACTION_ID", 'ENTREZ_GENE_A', 'ENTREZ_GENE_B', 'BIOGRID_ID_A', 'BIOGRID_ID_B', 'SYSTEMATIC_NAME_A', 'SYSTEMATIC_NAME_B', 'OFFICIAL_SYMBOL_A', 'OFFICIAL_SYMBOL_B','SYNONYMS_A', 'SYNONYMS_B', 'EXPERIMENTAL_SYSTEM', 'EXPERIMENTAL_SYSTEM_TYPE', 'PUBMED_AUTHOR','PUBMED_ID','ORGANISM_A', 'ORGANISM_B','THROUGHPUT','QUANTITATION','MODIFICATION','ONTOLOGY_TERMS', 'QUALIFICATIONS', 'TAGS', 'SOURCEDB'])
     for key,value in data.items():

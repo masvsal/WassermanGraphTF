@@ -20,4 +20,5 @@ UNWIND coll_size as idx
 MERGE (d:DBD {name:dbd[idx]})
 MERGE (a:Annot {from:'CIS_BP', tax_group:line.Species, gene:line.Gene_ID, sequence: line.Protein_seq, dbd_seq:line.DBD_seqs, bp:from_[idx] + ":" + to_[idx]})
 merge (g)-[:HAS_ANNOTATION]->(a)-[:ANNOTATED_TO]->(d)
+RETURN count(d) as count
 ;
