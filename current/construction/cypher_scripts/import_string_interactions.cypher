@@ -10,7 +10,7 @@ MATCH (p2:Protein)
 WHERE p2.string_id = line.node2_string_id
 
 MERGE (a:Annot {
-    from: 'STRING'
+    from: 'STRING',
     confidence: toFloat(line.combined_score),
     neighborhood_on_chromosome:toFloat(line.neighborhood_on_chromosome),
     gene_fusion:toFloat(line.gene_fusion),

@@ -1,18 +1,36 @@
 import logging
-
-from neo4j import GraphDatabase
 from neo4j.exceptions import Neo4jError
-
 from core import config as cfg
 
-class Yamanaka_Loader:
-    def __init__(self):
-        self.driver = GraphDatabase.driver(cfg.AURADB_URI, 
-        auth=(cfg.AURADB_USER, cfg.AURADB_PASSWORD))
+#generic Importer class for executing cypher scripts. Constructor accepts driver reference. 
+class Importer:
+    def __init__(self, driver):
+        self.driver = driver
 
-    def close(self):
-        self.driver.close()
-    
+#executes cypher scripting which loads genes, gene products, their relationships, and associated metadata
+class Entity_Importer(Importer): 
+    def testing(self):
+        with self.driver.session() as session:
+            result = session.write_transaction(
+                self._test
+            )
+        for record in result:
+            print(record["quality"],record["model"])
+
+    @staticmethod
+    def _test(tx):
+        cypher_script = open("current/construction/cypher_scripts/test.cypher", "r")
+        query = cypher_script.read()
+        print(query)
+        result = tx.run(query)
+        cypher_script.close()
+        try:
+            return [{"quality":record["quality"], "model":record["model"]} for record in result]
+        except Neo4jError as exception:
+            logging.error("{query} raised an error: \n {exception}".format(
+                query=query, exception=exception))
+            raise
+ 
     #Imports all information about gene, transcript, and protein relationships. 
     #Groups ensembl proteins by uniparc ID. 
     #Flags genes by primary sequence status in ensembl.
@@ -41,7 +59,46 @@ class Yamanaka_Loader:
             )
             for record in result:
                 print("{primary} primary sequences set. {alternate} alternate sequences set".format(primary=record["primary"], alternate=record["alternate"]))
+
+    @staticmethod
+    def _create_gene_to_uniparc_mapping(tx):
+        query = open("current/construction/cypher_scripts/import_genes_transcripts_proteins.cypher", "r")
+        #query = print(query.read().replace("$GENE2UNIPARC",cfg.GENE2UNIPARC_URI))
+        result = tx.run(query.read().replace("$GENE2UNIPARC",cfg.GENE2UNIPARC_URI))
+        query.close()
+        try:    
+            return [{"genes":record["genes"],"transcripts":record["transcripts"],"uniparc":record["uniparc"]} for record in result]
+        except Neo4jError as exception:
+            logging.error("{query} raised an error: \n {exception}".format(
+                query=query, exception=exception))
+            raise
     
+    @staticmethod
+    def _set_uniprot_accession_labels(tx):
+        query = open("current/construction/cypher_scripts/import_uniprot_accession_ids.cypher", "r")
+        result = tx.run(query.read().replace("$GENE2UNIPROT",cfg.GENE2UNIPROT_URI))
+        try:
+            query.close()
+            return [{"isoforms":record["isoforms"],"manual_entry":record["manual_entry"],"automatic_entry":record["automatic_entry"]} for record in result]
+        except Neo4jError as exception:
+            logging.error("{query} raised an error: \n {exception}".format(
+                query=query, exception=exception))
+            raise
+    
+    @staticmethod
+    def _set_ensembl_primary_sequence_flags(tx):
+        query = open("current/construction/cypher_scripts/import_alt_seq_mapping.cypher", "r")
+        result = tx.run(query.read().replace("$ALT_SEQ",cfg.ALTSEQ_URI))
+        try:
+            query.close()
+            return [{"primary":record["primary"],"alternate":record["alternate"]} for record in result]
+        except Neo4jError as exception:
+            logging.error("{query} raised an error: \n {exception}".format(
+                query=query, exception=exception))
+            raise
+
+#executes cypher scriptiing which loads gene/protein annotations. Annotations include: structure, function, & interactions
+class Annotation_Importer(Importer):
     def create_go_annotations(self):
         with self.driver.session() as session:
             print("creating go annotations...")
@@ -103,43 +160,6 @@ class Yamanaka_Loader:
             )
             for record in result:
                 print("({count}) bidirectional string interactions added".format(count=record['count']))
-
-    @staticmethod
-    def _create_gene_to_uniparc_mapping(tx):
-        query = open("current/construction/cypher_scripts/import_genes_transcripts_proteins.cypher", "r")
-        #query = print(query.read().replace("$GENE2UNIPARC",cfg.GENE2UNIPARC_URI))
-        result = tx.run(query.read().replace("$GENE2UNIPARC",cfg.GENE2UNIPARC_URI))
-        query.close()
-        try:    
-            return [{"genes":record["genes"],"transcripts":record["transcripts"],"uniparc":record["uniparc"]} for record in result]
-        except Neo4jError as exception:
-            logging.error("{query} raised an error: \n {exception}".format(
-                query=query, exception=exception))
-            raise
-    
-    @staticmethod
-    def _set_uniprot_accession_labels(tx):
-        query = open("current/construction/cypher_scripts/import_uniprot_accession_ids.cypher", "r")
-        result = tx.run(query.read().replace("$GENE2UNIPROT",cfg.GENE2UNIPROT_URI))
-        try:
-            query.close()
-            return [{"isoforms":record["isoforms"],"manual_entry":record["manual_entry"],"automatic_entry":record["automatic_entry"]} for record in result]
-        except Neo4jError as exception:
-            logging.error("{query} raised an error: \n {exception}".format(
-                query=query, exception=exception))
-            raise
-    
-    @staticmethod
-    def _set_ensembl_primary_sequence_flags(tx):
-        query = open("current/construction/cypher_scripts/import_alt_seq_mapping.cypher", "r")
-        result = tx.run(query.read().replace("$ALT_SEQ",cfg.ALTSEQ_URI))
-        try:
-            query.close()
-            return [{"primary":record["primary"],"alternate":record["alternate"]} for record in result]
-        except Neo4jError as exception:
-            logging.error("{query} raised an error: \n {exception}".format(
-                query=query, exception=exception))
-            raise
     
     @staticmethod
     def _create_go_annotations(tx):
@@ -236,40 +256,3 @@ class Yamanaka_Loader:
             logging.error("{query} raised an error: \n {exception}".format(
                 query=query, exception=exception))
             raise
-
-    def testing(self):
-        with self.driver.session() as session:
-            result = session.write_transaction(
-                self.test
-            )
-        for record in result:
-            print(record["quality"],record["model"])
-
-    @staticmethod
-    def test(tx):
-        cypher_script = open("current/construction/cypher_scripts/test.cypher", "r")
-        query = cypher_script.read()
-        print(query)
-        result = tx.run(query)
-        cypher_script.close()
-        try:
-            return [{"quality":record["quality"], "model":record["model"]} for record in result]
-        except Neo4jError as exception:
-            logging.error("{query} raised an error: \n {exception}".format(
-                query=query, exception=exception))
-            raise
-
-#main method
-if __name__ == "__main__":
-    loader = Yamanaka_Loader()
-    loader.testing()
-    loader.create_genes_and_proteins()
-    loader.create_go_annotations() #works!
-    loader.create_tfclass_annotations()
-    loader.create_cis_bp_annotations() #works
-    loader.create_jaspar_pfm_annotations() #works! :)
-    loader.create_biogrid_interaction_annotations()
-    loader.create_string_interaction_annotations()
-    loader.close()
-    
-    
