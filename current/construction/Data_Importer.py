@@ -2,13 +2,13 @@ import logging
 from neo4j.exceptions import Neo4jError
 from core import config as cfg
 
-#generic Importer class for executing cypher scripts. Constructor accepts driver reference. 
-class Importer:
+#Generic Importer class for executing cypher scripts. Constructor accepts driver reference. 
+class Data_Importer:
     def __init__(self, driver):
         self.driver = driver
 
 #executes cypher scripting which loads genes, gene products, their relationships, and associated metadata
-class Entity_Importer(Importer): 
+class Entity_Importer(Data_Importer): 
     def testing(self):
         with self.driver.session() as session:
             result = session.write_transaction(
@@ -98,7 +98,7 @@ class Entity_Importer(Importer):
             raise
 
 #executes cypher scriptiing which loads gene/protein annotations. Annotations include: structure, function, & interactions
-class Annotation_Importer(Importer):
+class Annotation_Importer(Data_Importer):
     def create_go_annotations(self):
         with self.driver.session() as session:
             print("creating go annotations...")
