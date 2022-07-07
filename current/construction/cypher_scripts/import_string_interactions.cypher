@@ -21,6 +21,6 @@ MERGE (a:Annot {
     automated_textmining:toFloat(line.automated_textmining),
     database_annotated:toFloat(line.database_annotated)})
 
-MERGE (p1)-[:HAS_ANNOTATION]->(a)-[:ANNOTATED_TO]->(p2)
+MERGE (p1)-[:HAS_ANNOTATION]->(a)<-[:HAS_ANNOTATION]-(p2)
 RETURN count(a) as count
 ;

@@ -19,9 +19,11 @@ MERGE (a:Annot {
 	quantitation:coalesce(line.QUANTITATION, ""), 
 	modification:coalesce(line.MODIFICATION, ""),
 	qualification:coalesce(line.QUALIFICATIONS, ""), 
-	tags:coalesce(line.tags, "")})
+	tags:coalesce(line.tags, ""),
+	source:pA.uniprot_swissprot_id
+	target:pB.uniprot_swissprot_id})
 MERGE (p:Publication {PMID:line.PUBMED_ID, author:line.PUBMED_AUTHOR})
-MERGE (pA)-[:HAS_ANNOTATION]->(a)-[:ANNOTATED_TO]->(pB)
+MERGE (pA)-[:HAS_ANNOTATION]->(a)<-[:HAS_ANNOTATION]-(pB)
 MERGE (a)-[:BECAUSE]->(p)
 RETURN count(a) as count
 ;
