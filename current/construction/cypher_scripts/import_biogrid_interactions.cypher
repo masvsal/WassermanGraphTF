@@ -20,7 +20,7 @@ MERGE (a:Annot {
 	modification:coalesce(line.MODIFICATION, ""),
 	qualification:coalesce(line.QUALIFICATIONS, ""), 
 	tags:coalesce(line.tags, ""),
-	source:pA.uniprot_swissprot_id
+	source:pA.uniprot_swissprot_id,
 	target:pB.uniprot_swissprot_id})
 MERGE (p:Publication {PMID:line.PUBMED_ID, author:line.PUBMED_AUTHOR})
 MERGE (pA)-[:HAS_ANNOTATION]->(a)<-[:HAS_ANNOTATION]-(pB)
