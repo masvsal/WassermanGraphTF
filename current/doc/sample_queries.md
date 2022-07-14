@@ -1,5 +1,7 @@
 
 # Sample Queries:
+last updated: july 14th 2022
+by: Samuel Salitra
 
 ## Computing Similarity Scores Using Neo4j...
 
