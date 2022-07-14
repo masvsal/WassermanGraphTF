@@ -1,53 +1,88 @@
-MATCH (f:load {namespace:'F'})
-MATCH (p:load {namespace:'P'})
-MATCH (c:load {namespace:'C'})
+MATCH (l:load)
 
-SET f:Mol_Function
-REMOVE f:load
-REMOVE f.namespace
+CALL {
+    WITH l
+    WITH l
+    WHERE l.namespace = 'F'
+    SET l:Mol_Function
+    REMOVE l:load
+    REMOVE l.namespace
+    WITH count(l) as count
+    RETURN count = 1 as isF
+}
 
-SET p:Biol_Process
-REMOVE p:load
-REMOVE p.namespace
+CALL {
+    WITH l
+    WITH l
+    WHERE l.namespace = 'P'
+    SET l:Biol_Process
+    REMOVE l:load
+    REMOVE l.namespace
+    WITH count(l) as count
+    RETURN count = 1 as isP
+}
 
-SET c:Cell_Component
-REMOVE c:load
-REMOVE c.namespace
+CALL {
+    WITH l
+    WITH l
+    WHERE l.namespace = 'C'
+    SET l:Cell_Component
+    REMOVE l:load
+    REMOVE l.namespace
+    WITH count(l) as count
+    RETURN count = 1 as isC
+}
 
-WITH "task_finished" as statement
-
-MATCH (a)
-WHERE 'Mol_Function' IN labels(a) OR 'Cell_Component' IN labels(a) OR 'Biol_Process' IN labels(a)
-WITH a
 MERGE (o:Ontology {name:'Gene Ontology (GO)'})
-MERGE (a)-[:IN_ONTOLOGY]->(o)
+MERGE (l)-[:IN_ONTOLOGY]->(o)
 
-WITH "task_finished" as statement
+WITH l
+
+MATCH (l)<-[:ANNOTATED_TO]-(a:Annot)
+
+CALL {
+    WITH a
+    WITH a
+    WHERE size(a.qualifiers) = 2
+    SET a.not_flag = TRUE
+    SET a.qualifier = a.qualifiers[1]
+    WITH count(a) as count
+    RETURN count = 1 as isTrue
+}
+
+CALL {
+    WITH a
+    WITH a
+    WHERE size(a.qualifiers) = 1
+    SET a.not_flag = FALSE
+    SET a.qualifier = a.qualifiers[0]
+    WITH count(a) as count
+    RETURN count = 1 as isFalse
+}
+
+
+// WHERE size(n.qualifiers) = 2
+// //identifying positive annotations
+// MATCH (p:Annot)
+// WHERE size(p.qualifiers) = 1
+
+// SET n.not_flag = TRUE
+// SET n.qualifier = n.qualifiers[1]
+
+// SET p.not_flag = FALSE
+// SET p.qualifier = p.qualifiers[0]
+
+WITH a
 
 //make PMID primary reference ID in references
-MATCH (r:Publication)
-WHERE ANY (id IN r.alt_ids WHERE id STARTS WITH 'PMID:')
-With apoc.coll.indexOf(r.alt_ids, 'PMID*') as n, r
-SET r.PMID = r.alt_ids[n]
+// MATCH (r:Publication)
+MATCH (a)-[:BECAUSE]->(p:Publication)
+WHERE ANY (id IN p.alt_ids WHERE id STARTS WITH 'PMID:')
 
-WITH "task_finished" as statement
+WITH apoc.coll.indexOf(p.alt_ids, 'PMID*') as n, p, a
+SET p.PMID = p.alt_ids[n]
 
-//identifying negated annotations
-MATCH (n:Annot)
-WHERE size(n.qualifiers) = 2
-//identifying positive annotations
-MATCH (p:Annot)
-WHERE size(p.qualifiers) = 1
+WITH collect(a) as annots
 
-SET n.not_flag = TRUE
-SET n.qualifier = n.qualifiers[1]
-
-SET p.not_flag = FALSE
-SET p.qualifier = p.qualifiers[0]
-
-WITH "task finished" as statement
-
-MATCH (:Ontology {name:'Gene Ontology (GO)'})<-[:IN_ONTOLOGY]-(go)
-RETURN count(go) as count
-
+RETURN count(annots) as count
 ;
