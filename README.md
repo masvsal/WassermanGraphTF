@@ -1,6 +1,11 @@
 # WassermanGraphTF - Graphically Representing Transcription Factor Annotation
 
-Scripts and general code for GraphTF database
+The graphTF project facilitates quick and comprehensive TF comparisons that consider multiple types/sources of data.
+
+It does this by:
+- Unifying Transcription Factor (TF) Annotations from high-value sources into a human and machine-readable Neo4j Graph Database
+- Using the structure of the graph database to develop pairwise TF similarity scores. This provides an automated and quantitative measure of similarity between any 2 TFs.
+
 
 Directories: <br/>
 ```bash
