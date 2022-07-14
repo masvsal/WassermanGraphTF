@@ -4,13 +4,21 @@
 //load interactions separate relationships
 LOAD CSV WITH HEADERS FROM '$STRING_INTERACTIONS_URI' AS line FIELDTERMINATOR '\t'
 
-MATCH (p1:Protein)
-WHERE p1.string_id = line.node1_string_id
-MATCH (p2:Protein)
-WHERE p2.string_id = line.node2_string_id
+//MATCH (p1:Protein) #change it back to just proteins
+//WHERE p1.string_id = line.node1_string_id
+//MATCH (p2:Protein)
+//WHERE p2.string_id = line.node2_string_id
 
-MERGE (a:Annot {
+MATCH (g1:Gene)-[:ENCODES]->(t1:Transcript)-[:ENCODES]->(p1:Protein)
+WHERE g1.primary_seq_flag = TRUE AND t1.ensembl_canonical_flag = TRUE AND p1.string_id = line.node1_string_id
+MATCH (g2:Gene)-[:ENCODES]->(t2:Transcript)-[:ENCODES]->(p2:Protein)
+WHERE g2.primary_seq_flag = TRUE AND t2.ensembl_canonical_flag = TRUE AND p2.string_id = line.node2_string_id
+
+WITH g1,g2,line, p1, p2
+
+CREATE (assoc:Association {
     from: 'STRING',
+    bidirectional_flag:True,
     confidence: toFloat(line.combined_score),
     neighborhood_on_chromosome:toFloat(line.neighborhood_on_chromosome),
     gene_fusion:toFloat(line.gene_fusion),
@@ -21,19 +29,23 @@ MERGE (a:Annot {
     automated_textmining:toFloat(line.automated_textmining),
     database_annotated:toFloat(line.database_annotated)})
 
-MERGE (p1)-[:HAS_ANNOTATION {confidence: toFloat(line.combined_score)}]->(a)<-[:HAS_ANNOTATION {confidence: toFloat(line.combined_score)}]-(p2)
+CREATE (a1:Annot)
 
-WITH "done" as done
+MERGE (p1)-[:HAS_ANNOTATION]->(a1)
+MERGE (p2)-[:HAS_ANNOTATION]->(a1)
+MERGE (a1)-[:ANNOTATED_TO]->(assoc)
 
-LOAD CSV WITH HEADERS FROM '$STRING_PHYSICAL_INTERACTIONS_URI' AS line FIELDTERMINATOR '\t'
+//WITH "done" as done
 
-MATCH (p1:Protein)-[r1:HAS_ANNOTATION]->(a:Annot)<-[r2:HAS_ANNOTATION]-(p2:Protein)
-WHERE a.from = 'STRING' AND p1.string_id = line.node1_string_id AND p2.string_id = line.node2_string_id
+//LOAD CSV WITH HEADERS FROM '$STRING_PHYSICAL_INTERACTIONS_URI' AS line FIELDTERMINATOR '\t'
 
-SET a.physical_confidence = toFloat(line.combined_score),
-SET a.physical_experimentally_determined = toFloat(line.experimentally_determined_interaction)
-SET r1.physical_confidence = toFloat(line.combined_score)
-SET r2.physical_confidence = toFloat(line.combined_score)
+//MATCH (p1:Protein)-[r1:HAS_ANNOTATION]->(a:Annot)<-[r2:HAS_ANNOTATION]-(p2:Protein)
+// WHERE a.from = 'STRING' AND p1.string_id = line.node1_string_id AND p2.string_id = line.node2_string_id
 
-RETURN count(a) as count
+// SET a.physical_confidence = toFloat(line.combined_score)
+// SET a.physical_experimentally_determined = toFloat(line.experimentally_determined_interaction)
+// SET r1.physical_confidence = toFloat(line.combined_score)
+// SET r2.physical_confidence = toFloat(line.combined_score)
+
+RETURN count(a1) as count
 ;

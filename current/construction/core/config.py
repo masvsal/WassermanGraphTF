@@ -29,7 +29,8 @@ JASPAR_PFM = data['data_uri']['jaspar_pfm']
 
 BIOGRID = data['data_uri']['biogrid']
 STRING_ANNOTATION = data['data_uri']['string_annotation']
-STRING_INTERACTIONS = data['data_uri']['string_interactions']
+STRING_INTERACTIONS = data['data_uri']['string_functional_and_physical_interactions']
+STRING_PHYSICAL_INTERACTIONS = data['data_uri']['string_physical_interactions']
 
 """ print(GAF_PRUNED)
 print(PROT_SEQ)

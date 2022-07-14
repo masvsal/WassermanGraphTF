@@ -1,5 +1,4 @@
 //:param PROTEINTOUNIPARC=>'ensembl_gene_to_uniprot_accessions.csv'
-
 LOAD CSV WITH HEADERS
 	FROM '$GENE2UNIPROT' as line
 MATCH (p:Protein)
