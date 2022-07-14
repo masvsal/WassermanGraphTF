@@ -12,7 +12,7 @@ import utility_functions as utilfcns
 request_url = cfg.JASPAR_BASE_URL + "api/v1/matrix"
 
 #yamanaka TFs
-gene_names = ["KLF4", "MYC", "SOX17", "SOX2", "POU5F1"]
+gene_names = cfg.GENE_NAMES
 jaspar_annotation = []
 
 #parameters for GET request
@@ -89,14 +89,14 @@ for i in range(len(jaspar_annotation)):
     #TODO: make ACGT in pfm lists
 
 #saves family info in TF map to output csv
-with open("data/gene_annotations/jaspar_TF_Class_Family.csv", "w",  encoding='UTF8') as file:
+with open("current/data/gene_annotations/jaspar_TF_Class_Family.csv", "w",  encoding='UTF8') as file:
     f = csv.writer(file)
     f.writerow(['protein_name', "uniprot_ids", "jaspar_id", 'url', "collection", 'family', 'class', "pubmed_ids", "medline", 'tax_group'])
     for i in jaspar_annotation:
         f.writerow([i['protein_name'], i["uniprot_ids"], i["latest_matrix_id"], i['url'], i["collection"], i['family'], i['class'], i['pubmed_ids'], i['medline'], i['group']])
 
 #saves PFM info in TF map to output csv
-with open("data/gene_annotations/jaspar_TF_PFM.csv", "w",  encoding='UTF8') as file:
+with open("current/data/gene_annotations/jaspar_TF_PFM.csv", "w",  encoding='UTF8') as file:
     f = csv.writer(file)
     f.writerow(['protein_name', 'uniprot_ids', 'jaspar_id', 'url', "collection",'A', 'C', 'G', 'T', "pubmed_ids", "medline", 'tax_group', 'data_type', 'data_source'])
     for i in jaspar_annotation:

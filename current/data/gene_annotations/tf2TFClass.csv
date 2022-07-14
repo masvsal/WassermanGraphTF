@@ -1,4 +1,4 @@
-,Model,HGNC,Transcription factor,Model length,Quality,TF family,EntrezGene,UniProt ID,TFclass
+ID,Model,HGNC,Transcription factor,Model length,Quality,TF family,EntrezGene,UniProt ID,TFclass
 AHR_HUMAN.H11MO.0.B,AHR_HUMAN.H11MO.0.B,AHR,AHR,9,B,PAS domain factors{1.2.5},196,AHR_HUMAN,1.2.5
 AIRE_HUMAN.H11MO.0.C,AIRE_HUMAN.H11MO.0.C,AIRE,AIRE,18,C,AIRE{5.3.1},326,AIRE_HUMAN,5.3.1
 ALX1_HUMAN.H11MO.0.B,ALX1_HUMAN.H11MO.0.B,ALX1,ALX1,12,B,Paired-related HD factors{3.1.3},8092,ALX1_HUMAN,3.1.3

@@ -6,11 +6,12 @@
 
 import pandas as pd
 import sys
+from core import config as cfg
 
-gene_names = ["KLF4", "MYC", "SOX17", "SOX2", "POU5F1"]
+gene_names = cfg.GENE_NAMES
 
 #csv in
-df = pd.read_csv('data/gene_annotations/tf2TFClass.csv')
+df = pd.read_csv('current/data/gene_annotations/tf2TFClass.csv')
 
 #extract relevant rows
 loc_col = df.loc[df['Transcription factor'].isin(gene_names)]
@@ -20,4 +21,4 @@ s = loc_col['TF family'].astype(str)
 loc_col['TF family'] = s.str.replace("\{.*\}",'')
 
 #out csv
-loc_col.to_csv('data/gene_annotations/TFClass.csv')
+loc_col.to_csv('current/data/gene_annotations/TFClass.csv', index=None)

@@ -6,6 +6,7 @@
 import sys
 from textwrap import wrap
 import csv
+from core import config as cfg
 
 from requests import head
 
@@ -23,7 +24,8 @@ class gaf_parser():
     def set_num_annot(self, num_annot):
         self.num_annotations = num_annot
 
-    def write_annot(self):
+    def write_annot(self,is_write_all):
+
         annot_per_protein = []
         for protein in self.proteins:
             annot_per_protein = annot_per_protein + [{'name':protein, 'P':0, 'F':0, 'C':0}]
@@ -37,18 +39,17 @@ class gaf_parser():
                 next(r) # skip header
                 for row in r:
                     for protein in annot_per_protein:
-                        if (protein['name'] == row[2]) and (protein[row[8]]) < self.num_annotations:
+                        if (protein['name'] == row[2]) and (is_write_all or (protein[row[8]]) < self.num_annotations):
                             w.writerow(row)
                             protein[row[8]]+=1
 
 #main
 num_annotations = 0
-read_path = 'current/data/gene_annotations/namayura_GAF.csv'
+read_path = 'current/data/gene_annotations/goa_human_full.csv'
 write_path = 'current/data/gene_annotations/namayura_GAF_Pruned.csv'
-proteins = ['KLF4','MYC','POU5F1','SOX17','SOX2']
+proteins = cfg.GENE_NAMES
 writer = gaf_parser(num_annot=num_annotations,read_path=read_path,write_path=write_path,proteins=proteins)
-writer.write_annot()
-print("bogo")
+writer.write_annot(True) #write all annotations
 """ num_annotations = 4
 
 proteins = [

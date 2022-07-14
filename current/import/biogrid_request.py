@@ -13,7 +13,7 @@ import pandas as pd
 request_url = cfg.BIOGRID_BASE_URL + "/interactions"
 
 #list of proteins to search for
-geneList = ["KLF4", "MYC", "SOX17", "SOX2", "POU5F1"]
+geneList = cfg.GENE_NAMES
 
 #GET request parameters
 params = {

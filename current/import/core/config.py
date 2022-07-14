@@ -24,3 +24,5 @@ JASPAR_BASE_URL = data["jaspar"]["base_url"]
 USCS_BASE_URL = data["uscs"]["base_url"]
 #Ensembl
 ENSEMBL_BASE_URL = data["ensembl_biomart"]["base_url"]
+
+GENE_NAMES = data['gene_names']
