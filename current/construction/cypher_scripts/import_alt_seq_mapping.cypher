@@ -1,5 +1,4 @@
 //:param ALTSEQMAPPING=>'yamanaka_alt_seq_mapping.csv'
-
 LOAD CSV WITH HEADERS
 	FROM '$ALT_SEQ' as line
 MATCH (g:Gene {ensembl_id:line.Gene_Stable_ID})
