@@ -11,7 +11,45 @@ from requests import head
 
 #from_file = sys.argv[1]
 #to_file = sys.argv[2]
-num_annotations = 4 #int(sys.argv[3])
+ #int(sys.argv[3])
+
+class gaf_parser():
+    def __init__(self, num_annot, read_path, write_path, proteins):
+        self.num_annotations = num_annot
+        self.read_path = read_path
+        self.write_path = write_path
+        self.proteins = proteins
+
+    def set_num_annot(self, num_annot):
+        self.num_annotations = num_annot
+
+    def write_annot(self):
+        annot_per_protein = []
+        for protein in self.proteins:
+            annot_per_protein = annot_per_protein + [{'name':protein, 'P':0, 'F':0, 'C':0}]
+        
+        header = ['DB','DB_Object_ID','DB_Object_Symbol','Qualifier','GO_ID','Reference','Evidence_Code','With_Or_From','Aspect','DB_Object_Name','DB_Object_Synonym','DB_Object_Type','Taxon','Date','Assigned_By','Annotation_Extension','Gene_Product_Form_ID']
+        with open(self.read_path) as from_csv:
+            r = csv.reader(from_csv)
+            with open(self.write_path, mode='w+') as to_csv:
+                w = csv.writer(to_csv)
+                w.writerow(header)
+                next(r) # skip header
+                for row in r:
+                    for protein in annot_per_protein:
+                        if (protein['name'] == row[2]) and (protein[row[8]]) < self.num_annotations:
+                            w.writerow(row)
+                            protein[row[8]]+=1
+
+#main
+num_annotations = 0
+read_path = 'current/data/gene_annotations/namayura_GAF.csv'
+write_path = 'current/data/gene_annotations/namayura_GAF_Pruned.csv'
+proteins = ['KLF4','MYC','POU5F1','SOX17','SOX2']
+writer = gaf_parser(num_annot=num_annotations,read_path=read_path,write_path=write_path,proteins=proteins)
+writer.write_annot()
+print("bogo")
+""" num_annotations = 4
 
 proteins = [
     {'name':"KLF4",'P':0, 'F':0, 'C':0},
@@ -22,20 +60,20 @@ proteins = [
 
 header = ['DB','DB_Object_ID','DB_Object_Symbol','Qualifier','GO_ID','Reference','Evidence_Code','With_Or_From','Aspect','DB_Object_Name','DB_Object_Synonym','DB_Object_Type','Taxon','Date','Assigned_By','Annotation_Extension','Gene_Product_Form_ID']
 
-with open('/Users/samuelsalitra/WassermanGraphTF-1/data/gene_annotations/namayura_GAF.csv') as from_csv:
+with open('current/data/gene_annotations/namayura_GAF.csv') as from_csv:
     r = csv.reader(from_csv)
-    with open('data/gene_annotations/namayura_GAF_Pruned.csv', mode='w') as to_csv:
+    with open('current/data/gene_annotations/namayura_GAF_Pruned.csv', mode='w') as to_csv:
         w = csv.writer(to_csv)
         w.writerow(header)
-        next(r)
+        next(r) # skip header
         for row in r:
             for protein in proteins:
-                if (protein['name'] == row[2]) and (protein[row[8]]) < num_annotations:
+                if (protein['name'] == row[2]): #and (protein[row[8]]) < num_annotations:
                     w.writerow(row)
                     protein[row[8]]+=1
 
 # w.writerow(['DB','DB_Object_ID','DB_Object_Symbol','Qualifier','GO_ID','Reference','Evidence_Code','With_Or_From','Aspect','DB_Object_Name','DB_Object_Synonym','DB_Object_Type','Taxon','Date','Assigned_By','Annotation_Extension','Gene_Product_Form_ID'])
 
-
+ """
 
 
