@@ -1,4 +1,4 @@
-- overlap coefficient is highly biased toward sparesely connected nodes (SCN). SCN will have low neighborhood size, causing them to tend toward higher similarity scores. Take for example a node with 1 relationship which connects to a neighbor which has 100. By the definition of overlap coefficient, the size of the intersecting neighborhood set is 1 and the minimum neighborhood size is 1, so the two nodes are 100% similar.
+- overlap coefficient is highly biased toward sparsely connected nodes (SCN). SCN will have low neighborhood size, causing them to tend toward higher similarity scores. Take, for example, a node with 1 relationship which connects to a neighbor which has 100 relationships. By the definition of overlap coefficient, the size of the intersecting neighborhood set is 1 and the minimum neighborhood size is 1, so the two nodes are 100% similar.
 
 good example of this dynamic:
 
