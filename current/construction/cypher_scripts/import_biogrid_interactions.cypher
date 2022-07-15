@@ -28,8 +28,8 @@ CREATE (a1:Annot {
 
 MERGE (p:Publication {PMID:line.PUBMED_ID, author:line.PUBMED_AUTHOR})
 
-MERGE (pA)-[:HAS_ANNOTATION]->(a1)
-MERGE (pB)-[:HAS_ANNOTATION]->(a1)
+CREATE (pA)-[:HAS_ANNOTATION]->(a1)
+CREATE (pB)-[:HAS_ANNOTATION]->(a1)
 MERGE (a1)-[:ANNOTATED_TO]->(assoc)
 MERGE (a1)-[:BECAUSE]->(p)
 
