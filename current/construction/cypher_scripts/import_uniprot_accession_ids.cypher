@@ -1,6 +1,6 @@
 //:param PROTEINTOUNIPARC=>'ensembl_gene_to_uniprot_accessions.csv'
 LOAD CSV WITH HEADERS
-	FROM '$GENE2UNIPROT' as line
+	FROM '$GENE2UNIPARC' as line
 MATCH (p:Protein)
 WHERE line.Protein_Stable_ID IN p.ensembl_ids
 SET p.isoform_id = coalesce(p.isoform_id,[]) + [coalesce(line.UniProtKB_Isoform_ID,"")] 

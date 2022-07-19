@@ -22,7 +22,10 @@ JASPAR_BASE_URL = data["jaspar"]["base_url"]
 #PFAM
 #USCS Genome Browser
 USCS_BASE_URL = data["uscs"]["base_url"]
-#Ensembl
+#Biomart
 ENSEMBL_BASE_URL = data["ensembl_biomart"]["base_url"]
+
+#STRING
+STRING_BASE_URL = data['string']['base_url']
 
 GENE_NAMES = data['gene_names']

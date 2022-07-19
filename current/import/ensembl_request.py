@@ -1,15 +1,14 @@
 import fetch_endpoint as fe
 from core import config as cfg
-import pandas as pd
-import numpy as np
 
-#request extensions
+import pandas as pd
+
+#request URL extensions
 test_ext = 'info/ping'
 symbol_lookup_ext = 'lookup/symbol/human/'
 id_lookup_ext = 'lookup/id/'
 homology_lookup_ext = 'homology/symbol/human/'
 xref_lookup_ext = 'xrefs/id/'
-#identifiers primary alleles by gene stable id
 
 def test_connection():
     params = {
@@ -37,14 +36,17 @@ def get_all_alleles(gene_names):
         alt_allele_mapping[data['id']] = True #set primary allele to true
         for homology in data['homologies']:
             alt_allele_mapping[homology['id']] = False  #all alternate alleles are false
+
     df = pd.Series(alt_allele_mapping,name='Primary_Seq')
+
     df.index.name = 'Gene_Stable_ID'
     df.reset_index()
+
     df.to_csv('current/data/entities/automated_alt_seq_mapping.csv',index='false')
     print('alt alleles mapped')
     return alt_allele_mapping
 
-#fetch information about multiple genes:
+#fetch information about multiple genes given list of gene stable ids:
 def lookup_all_alleles(alt_allele_mapping):
     header = {'content-type':'application/json','accept':'applications/json'}
     params = {'expand':1,'species':'human'}
@@ -54,9 +56,11 @@ def lookup_all_alleles(alt_allele_mapping):
         data_string+='"' + id + '",'
     data_string = data_string[:-1] #removes last comma in list
     data_string += ']}'
+
     #query ensembl using gene id list
     r = fe.fetch_endpoint_POST(cfg.ENSEMBL_BASE_URL,id_lookup_ext,params=params, header=header, data=data_string)
     response = r.json()
+
     #flatten all useful protein information in response. Also collect each gene's dataframe together
     gene_dfs = []
     for id in alt_allele_mapping:
@@ -65,22 +69,23 @@ def lookup_all_alleles(alt_allele_mapping):
             if t['biotype'] == 'protein_coding':
                 t['protein_id'] = t['Translation']['id']
         gene_dfs += [pd.json_normalize(data=gene,record_path ='Transcript',meta=['display_name','id','description','source','version'],meta_prefix='Gene_')]
-    #combine and prune gene dataframes
+    #combine gene dataframes
     df = pd.concat(gene_dfs)
+    #prune gene dataframes
+    rows_to_keep = ['protein_coding']
+    df = df.loc[df['biotype'].isin(rows_to_keep)]
     columns_to_remove = [
         'Exon','Translation','start','Parent',"assembly_name","db_type","end",
         'species','biotype','seq_region_name','object_type','logic_name','strand',
         ]
-    rows_to_keep = ['protein_coding'] #only keep protein_coding transcripts
-    df = df.loc[df['biotype'].isin(rows_to_keep)]
     for col in columns_to_remove:
         col_mask = df.columns.str.startswith(col)
         df = df.loc[:,~col_mask]
-    df.rename(columns = {'id':'Transcript_Stable_ID','source':'Transcript_Source','display_name':'Transcript_Name','version':'Transcript_Version','is_canonical':'Ensembl_Canonical','protein_id':'Protein_Stable_ID','Gene_display_name':'Gene_Name','Gene_id':'Gene_Stable_ID'}, inplace = True)
+    df.rename(columns = {'id':'Transcript_Stable_ID','source':'Transcript_Source','display_name':'Transcript_Name','version':'Transcript_Version','is_canonical':'Ensembl_Canonical','protein_id':'Protein_Stable_ID','Gene_display_name':'Gene_Name','Gene_id':'Gene_Stable_ID','Gene_version':'Gene_Version','Gene_description':'Gene_Description'}, inplace = True)
     print('lookup by allele performed')
     return df
 
-#get xrefs
+#get xrefs given a dataframe containing protein stable ids and a list of protein stable ids.
 def lookup_all_protein_xrefs(df:pd.DataFrame, protein_ids):
     params = {
         'species':'human',
@@ -115,7 +120,12 @@ gene_names = cfg.GENE_NAMES
 
 # main
 test_connection()
+
 alt_allele_mapping = get_all_alleles(gene_names=gene_names)
+
 gene_information_df = lookup_all_alleles(alt_allele_mapping)
-protein_ids = gene_information_df['Protein_Stable_ID'].values
-gene_information_df = lookup_all_protein_xrefs(df=gene_information_df,protein_ids=set(protein_ids))
+
+gene_information_df = lookup_all_protein_xrefs(
+    df=gene_information_df,
+    protein_ids=gene_information_df['Protein_Stable_ID'].values
+    )

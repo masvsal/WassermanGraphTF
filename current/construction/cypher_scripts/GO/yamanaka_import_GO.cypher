@@ -1,6 +1,6 @@
 //load CSV
 //------------------
-LOAD CSV WITH HEADERS FROM '$GAF_PRUNED_URI' as line
+LOAD CSV WITH HEADERS FROM '$GAF_PRUNED_URI' as line FIELDTERMINATOR '\t'
 //find protein
 match (prot:Protein)<-[:ENCODES]-(t:Transcript)<-[:ENCODES]-(g:Gene)
 where t.ensembl_canonical_flag = TRUE AND g.primary_seq_flag = TRUE AND line.DB_Object_ID IN prot.uniprot_swissprot_id
@@ -29,7 +29,7 @@ MERGE (r:Publication {PMID:'', alt_ids:split(coalesce(line.Reference), "|")})
 MERGE (g)-[:HAS_ANNOTATION]->(ann)-[:ANNOTATED_TO]->(GO)
 MERGE (ann)-[:BECAUSE]->(r)
 
-WITH g, split(coalesce(line.DB_Object_Synonym), "|") as synonyms
+WITH g, coalesce(split(line.DB_Object_Synonyms, "|"),[]) as synonyms
 
 //enrich protein database name
 CALL {
