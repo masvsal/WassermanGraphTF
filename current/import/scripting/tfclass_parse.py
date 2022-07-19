@@ -5,7 +5,6 @@
 #EFFECTS: searches master csv document for familial annotation related to yamanaka TFs
 
 import pandas as pd
-import sys
 from core import config as cfg
 
 gene_names = cfg.GENE_NAMES

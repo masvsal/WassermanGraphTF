@@ -2,17 +2,7 @@
 #MODIFIES: to_file
 #EFFECTS: parses from_file for core protein annotations. Writes maximum=*num_annotations* of 
 #each GO Annotation namespace to to_file.
-
-import sys
-from textwrap import wrap
 import csv
-from core import config as cfg
-
-from requests import head
-
-#from_file = sys.argv[1]
-#to_file = sys.argv[2]
- #int(sys.argv[3])
 
 class gaf_parser():
     def __init__(self, num_annot, read_path, write_path, proteins):
@@ -44,12 +34,12 @@ class gaf_parser():
                             protein[row[8]]+=1
 
 #main
-num_annotations = 0
-read_path = 'current/data/gene_annotations/goa_human_full.csv'
-write_path = 'current/data/gene_annotations/namayura_GAF_Pruned.csv'
-proteins = cfg.GENE_NAMES
-writer = gaf_parser(num_annot=num_annotations,read_path=read_path,write_path=write_path,proteins=proteins)
-writer.write_annot(True) #write all annotations
+def get_go_annotations(gene_names):
+    num_annotations = 0
+    read_path = 'current/data/gene_annotations/goa_human_full.csv'
+    write_path = 'current/data/gene_annotations/namayura_GAF_Pruned.csv'
+    writer = gaf_parser(num_annot=num_annotations,read_path=read_path,write_path=write_path,proteins=gene_names)
+    writer.write_annot(True) #write all annotations
 """ num_annotations = 4
 
 proteins = [

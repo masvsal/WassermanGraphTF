@@ -10,14 +10,16 @@ id_lookup_ext = 'lookup/id/'
 homology_lookup_ext = 'homology/symbol/human/'
 xref_lookup_ext = 'xrefs/id/'
 
-def test_connection():
+def is_connected():
     params = {
         'content-type':'application/json'
     }
     r = fe.fetch_endpoint(cfg.ENSEMBL_BASE_URL, test_ext, params)
     response = r.json()['ping']
     if (response == 1):
-        print('connection to biomart established')
+        return True
+    else:
+        return False
 
 #fetch homology of given gene. Saves alt_seq mapping to alt_seq mapping file.
 def get_all_alleles(gene_names):
@@ -43,7 +45,6 @@ def get_all_alleles(gene_names):
     df.reset_index()
 
     df.to_csv('current/data/entities/automated_alt_seq_mapping.csv',index='false')
-    print('alt alleles mapped')
     return alt_allele_mapping
 
 #fetch information about multiple genes given list of gene stable ids:
@@ -82,7 +83,6 @@ def lookup_all_alleles(alt_allele_mapping):
         col_mask = df.columns.str.startswith(col)
         df = df.loc[:,~col_mask]
     df.rename(columns = {'id':'Transcript_Stable_ID','source':'Transcript_Source','display_name':'Transcript_Name','version':'Transcript_Version','is_canonical':'Ensembl_Canonical','protein_id':'Protein_Stable_ID','Gene_display_name':'Gene_Name','Gene_id':'Gene_Stable_ID','Gene_version':'Gene_Version','Gene_description':'Gene_Description'}, inplace = True)
-    print('lookup by allele performed')
     return df
 
 #get xrefs given a dataframe containing protein stable ids and a list of protein stable ids.
@@ -111,21 +111,29 @@ def lookup_all_protein_xrefs(df:pd.DataFrame, protein_ids):
     genes_xref_df = pd.DataFrame(map).T
     genes_xref_df.rename(columns=xref_dbs_mapping, inplace=True)
     merged = pd.merge(genes_xref_df,df, left_index=True, right_on='Protein_Stable_ID')
-    merged.to_csv('current/data/entities/automated_gene_to_uniparc.csv',index=False)
-    
-    print('cross-references found')
     return merged
 
-gene_names = cfg.GENE_NAMES
+#runs all import functions sequentially
+def import_entities(gene_names):
+    print('ENSEMBL: Testing connection...',end="")
+    if is_connected():
+        print('Connected')
+    else:
+        print('Cannot Connect')
+        exit()
 
-# main
-test_connection()
+    print('ENSEMBL: Mapping gene names to allele IDs...',end="")
+    alt_allele_mapping = get_all_alleles(gene_names=gene_names)
+    print('Done')
 
-alt_allele_mapping = get_all_alleles(gene_names=gene_names)
+    print('ENSEMBL: Looking up allele information using allele IDs and saving...',end="")
+    gene_information_df = lookup_all_alleles(alt_allele_mapping)
+    print('Done')
 
-gene_information_df = lookup_all_alleles(alt_allele_mapping)
-
-gene_information_df = lookup_all_protein_xrefs(
-    df=gene_information_df,
-    protein_ids=gene_information_df['Protein_Stable_ID'].values
-    )
+    print('ENSEMBL: Looking up protein cross references using protein IDs...',end="")
+    gene_information_df = lookup_all_protein_xrefs(
+        df=gene_information_df,
+        protein_ids=gene_information_df['Protein_Stable_ID'].values
+        )
+    gene_information_df.to_csv('current/data/entities/automated_gene_to_uniparc.csv',index=False)
+    print('Done')
