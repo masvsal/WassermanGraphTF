@@ -21,7 +21,7 @@ def get_network(gene_names):
     df = pd.read_csv(io.StringIO(r.decode('utf-8')), delimiter='\t')
     df.drop_duplicates(inplace=True)
     print(df)
-    df = df.rename(columns={'stringId_A':'node1','stringId_B':'node2','preferredName_A':'node1_string_id','preferredName_B':'node2_string_id', 'nscore':'neighborhood_on_chromosome','fscore':'gene_fusion','pscore':'phylogenetic_cooccurrence','ascore':'coexpression','escore':'experimentally_determined_interaction','dscore':'database_annotated','tscore':'automated_textmining','score':'combined_score'},errors='raise')
+    df = df.rename(columns={'stringId_A':'node1_string_id','stringId_B':'node2_string_id','preferredName_A':'node1','preferredName_B':'node2', 'nscore':'neighborhood_on_chromosome','fscore':'gene_fusion','pscore':'phylogenetic_cooccurrence','ascore':'coexpression','escore':'experimentally_determined_interaction','dscore':'database_annotated','tscore':'automated_textmining','score':'combined_score'},errors='raise')
     return df
 def get_annotations(gene_names):
     params = {

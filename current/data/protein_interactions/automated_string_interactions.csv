@@ -1,4 +1,4 @@
-node1,node2,node1_string_id,node2_string_id,ncbiTaxonId,combined_score,neighborhood_on_chromosome,gene_fusion,phylogenetic_cooccurrence,coexpression,experimentally_determined_interaction,database_annotated,automated_textmining
+node1_string_id,node2_string_id,node1,node2,ncbiTaxonId,combined_score,neighborhood_on_chromosome,gene_fusion,phylogenetic_cooccurrence,coexpression,experimentally_determined_interaction,database_annotated,automated_textmining
 9606.ENSP00000259915,9606.ENSP00000479618,POU5F1,MYC,9606,0.9309999999999999,0,0,0,0.0,0.285,0.0,0.907
 9606.ENSP00000259915,9606.ENSP00000363804,POU5F1,KLF4,9606,0.992,0,0,0,0.054000000000000006,0.17300000000000001,0.8,0.958
 9606.ENSP00000259915,9606.ENSP00000297316,POU5F1,SOX17,9606,0.996,0,0,0,0.0,0.35200000000000004,0.0,0.995
