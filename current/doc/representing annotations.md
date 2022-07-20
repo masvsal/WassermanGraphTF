@@ -13,7 +13,11 @@ CTDbase structure:
 - imported monthly from GO: gene-GO
 - predicted interactions: chemical-GO, disease-GO
 
-## Batch querying
+## Batch query - API:
+link: http://ctdbase.org/help/linking.jsp#batchqueries
+
+
+## Batch querying - Browser
 Accepted Data types:
 - Chemicals: MeSH® name, synonym, or accession ID (“MESH:…”), or by CAS RN. To limit your search to official names, use the “name:” prefix.
 - Diseases: MeSH or OMIM name, synonym, or accession ID (“MESH:…” or “OMIM:…”). To limit your search to official names, use the “name:” prefix.
