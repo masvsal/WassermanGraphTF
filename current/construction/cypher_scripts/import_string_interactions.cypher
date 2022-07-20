@@ -2,19 +2,19 @@
 //type: bi-directional
 //~~~~~~~~~~~~~~~~~~~~~~~~
 //load interactions separate relationships
-LOAD CSV WITH HEADERS FROM '$STRING_INTERACTIONS_URI' AS line FIELDTERMINATOR '\t'
+LOAD CSV WITH HEADERS FROM '$STRING_INTERACTIONS_URI' AS line
 
-//MATCH (p1:Protein) #change it back to just proteins
-//WHERE p1.string_id = line.node1_string_id
-//MATCH (p2:Protein)
-//WHERE p2.string_id = line.node2_string_id
+MATCH (p1:Protein) //#change it back to just proteins
+WHERE p1.string_id = line.node1_string_id
+MATCH (p2:Protein)
+WHERE p2.string_id = line.node2_string_id
 
-MATCH (g1:Gene)-[:ENCODES]->(t1:Transcript)-[:ENCODES]->(p1:Protein)
-WHERE g1.primary_seq_flag = TRUE AND t1.ensembl_canonical_flag = TRUE AND p1.string_id = line.node1_string_id
-MATCH (g2:Gene)-[:ENCODES]->(t2:Transcript)-[:ENCODES]->(p2:Protein)
-WHERE g2.primary_seq_flag = TRUE AND t2.ensembl_canonical_flag = TRUE AND p2.string_id = line.node2_string_id
+//MATCH (g1:Gene)-[:ENCODES]->(t1:Transcript)-[:ENCODES]->(p1:Protein)
+//WHERE g1.primary_seq_flag = TRUE AND t1.ensembl_canonical_flag = TRUE AND p1.string_id = line.node1_string_id
+//MATCH (g2:Gene)-[:ENCODES]->(t2:Transcript)-[:ENCODES]->(p2:Protein)
+//WHERE g2.primary_seq_flag = TRUE AND t2.ensembl_canonical_flag = TRUE AND p2.string_id = line.node2_string_id
 
-WITH g1,g2,line, p1, p2
+WITH line, p1, p2
 
 CREATE (assoc:Association {
     from: 'STRING',
@@ -22,7 +22,7 @@ CREATE (assoc:Association {
     confidence: toFloat(line.combined_score),
     neighborhood_on_chromosome:toFloat(line.neighborhood_on_chromosome),
     gene_fusion:toFloat(line.gene_fusion),
-    homology:toFloat(line.homology),
+    //homology:toFloat(line.homology),
     phylogenetic_cooccurrence:toFloat(line.phylogenetic_cooccurrence),
     experimentally_determined:toFloat(line.experimentally_determined_interaction),
     coexpression:toFloat(line.coexpression),
