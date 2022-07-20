@@ -1,0 +1,618 @@
+,# Input,GeneSymbol,GeneID,Ontology,GoTermName,GoTermID
+0,klf4,KLF4,9314,Biological Process,canonical Wnt signaling pathway,GO:0060070
+1,klf4,KLF4,9314,Biological Process,cell differentiation,GO:0030154
+2,klf4,KLF4,9314,Biological Process,cellular response to cycloheximide,GO:0071409
+3,klf4,KLF4,9314,Biological Process,cellular response to growth factor stimulus,GO:0071363
+4,klf4,KLF4,9314,Biological Process,cellular response to hydrogen peroxide,GO:0070301
+5,klf4,KLF4,9314,Biological Process,cellular response to laminar fluid shear stress,GO:0071499
+6,klf4,KLF4,9314,Biological Process,cellular response to leukemia inhibitory factor,GO:1990830
+7,klf4,KLF4,9314,Biological Process,cellular response to organic cyclic compound,GO:0071407
+8,klf4,KLF4,9314,Biological Process,cellular response to peptide,GO:1901653
+9,klf4,KLF4,9314,Biological Process,cellular response to retinoic acid,GO:0071300
+10,klf4,KLF4,9314,Biological Process,defense response to tumor cell,GO:0002357
+11,klf4,KLF4,9314,Biological Process,DNA-templated transcription,GO:0006351
+12,klf4,KLF4,9314,Biological Process,epidermal cell differentiation,GO:0009913
+13,klf4,KLF4,9314,Biological Process,epidermis development,GO:0008544
+14,klf4,KLF4,9314,Biological Process,epidermis morphogenesis,GO:0048730
+15,klf4,KLF4,9314,Biological Process,establishment of skin barrier,GO:0061436
+16,klf4,KLF4,9314,Biological Process,fat cell differentiation,GO:0045444
+17,klf4,KLF4,9314,Biological Process,gene expression,GO:0010467
+18,klf4,KLF4,9314,Biological Process,glandular epithelial cell differentiation,GO:0002067
+19,klf4,KLF4,9314,Biological Process,mesodermal cell fate determination,GO:0007500
+20,klf4,KLF4,9314,Biological Process,negative regulation of angiogenesis,GO:0016525
+21,klf4,KLF4,9314,Biological Process,negative regulation of cell migration,GO:0030336
+22,klf4,KLF4,9314,Biological Process,negative regulation of cell migration involved in sprouting angiogenesis,GO:0090051
+23,klf4,KLF4,9314,Biological Process,negative regulation of cell population proliferation,GO:0008285
+24,klf4,KLF4,9314,Biological Process,negative regulation of chemokine (C-X-C motif) ligand 2 production,GO:2000342
+25,klf4,KLF4,9314,Biological Process,negative regulation of cysteine-type endopeptidase activity involved in apoptotic process,GO:0043154
+26,klf4,KLF4,9314,Biological Process,negative regulation of DNA-binding transcription factor activity,GO:0043433
+27,klf4,KLF4,9314,Biological Process,negative regulation of DNA-templated transcription,GO:0045892
+28,klf4,KLF4,9314,Biological Process,negative regulation of ERK1 and ERK2 cascade,GO:0070373
+29,klf4,KLF4,9314,Biological Process,negative regulation of G1/S transition of mitotic cell cycle,GO:2000134
+30,klf4,KLF4,9314,Biological Process,negative regulation of gene expression,GO:0010629
+31,klf4,KLF4,9314,Biological Process,negative regulation of heterotypic cell-cell adhesion,GO:0034115
+32,klf4,KLF4,9314,Biological Process,negative regulation of inflammatory response,GO:0050728
+33,klf4,KLF4,9314,Biological Process,negative regulation of interleukin-8 production,GO:0032717
+34,klf4,KLF4,9314,Biological Process,negative regulation of leukocyte adhesion to arterial endothelial cell,GO:1904998
+35,klf4,KLF4,9314,Biological Process,negative regulation of muscle hyperplasia,GO:0014740
+36,klf4,KLF4,9314,Biological Process,negative regulation of NF-kappaB transcription factor activity,GO:0032088
+37,klf4,KLF4,9314,Biological Process,negative regulation of phosphatidylinositol 3-kinase signaling,GO:0014067
+38,klf4,KLF4,9314,Biological Process,negative regulation of protein kinase B signaling,GO:0051898
+39,klf4,KLF4,9314,Biological Process,negative regulation of response to cytokine stimulus,GO:0060761
+40,klf4,KLF4,9314,Biological Process,negative regulation of smooth muscle cell proliferation,GO:0048662
+41,klf4,KLF4,9314,Biological Process,negative regulation of transcription by RNA polymerase II,GO:0000122
+42,klf4,KLF4,9314,Biological Process,positive regulation of core promoter binding,GO:1904798
+43,klf4,KLF4,9314,Biological Process,positive regulation of DNA-templated transcription,GO:0045893
+44,klf4,KLF4,9314,Biological Process,positive regulation of gene expression,GO:0010628
+45,klf4,KLF4,9314,Biological Process,positive regulation of hemoglobin biosynthetic process,GO:0046985
+46,klf4,KLF4,9314,Biological Process,positive regulation of miRNA transcription,GO:1902895
+47,klf4,KLF4,9314,Biological Process,positive regulation of nitric oxide biosynthetic process,GO:0045429
+48,klf4,KLF4,9314,Biological Process,positive regulation of protein metabolic process,GO:0051247
+49,klf4,KLF4,9314,Biological Process,positive regulation of sprouting angiogenesis,GO:1903672
+50,klf4,KLF4,9314,Biological Process,positive regulation of telomerase activity,GO:0051973
+51,klf4,KLF4,9314,Biological Process,positive regulation of transcription by RNA polymerase II,GO:0045944
+52,klf4,KLF4,9314,Biological Process,post-embryonic camera-type eye development,GO:0031077
+53,klf4,KLF4,9314,Biological Process,post-embryonic hemopoiesis,GO:0035166
+54,klf4,KLF4,9314,Biological Process,regulation of axon regeneration,GO:0048679
+55,klf4,KLF4,9314,Biological Process,regulation of blastocyst development,GO:0120222
+56,klf4,KLF4,9314,Biological Process,regulation of cell differentiation,GO:0045595
+57,klf4,KLF4,9314,Biological Process,regulation of cell population proliferation,GO:0042127
+58,klf4,KLF4,9314,Biological Process,regulation of phosphatidylinositol 3-kinase activity,GO:0043551
+59,klf4,KLF4,9314,Biological Process,regulation of transcription by RNA polymerase II,GO:0006357
+60,klf4,KLF4,9314,Biological Process,response to organic substance,GO:0010033
+61,klf4,KLF4,9314,Biological Process,response to retinoic acid,GO:0032526
+62,klf4,KLF4,9314,Biological Process,somatic stem cell population maintenance,GO:0035019
+63,klf4,KLF4,9314,Biological Process,stem cell population maintenance,GO:0019827
+64,klf4,KLF4,9314,Biological Process,stem cell proliferation,GO:0072089
+65,klf4,KLF4,9314,Biological Process,transcription by RNA polymerase II,GO:0006366
+66,myc,MYC,4609,Biological Process,acinar cell proliferation,GO:1990863
+67,myc,MYC,4609,Biological Process,activation of cysteine-type endopeptidase activity involved in apoptotic process,GO:0006919
+68,myc,MYC,4609,Biological Process,amino acid transport,GO:0006865
+69,myc,MYC,4609,Biological Process,B cell apoptotic process,GO:0001783
+70,myc,MYC,4609,Biological Process,branching involved in ureteric bud morphogenesis,GO:0001658
+71,myc,MYC,4609,Biological Process,canonical Wnt signaling pathway involved in negative regulation of apoptotic process,GO:0044336
+72,myc,MYC,4609,Biological Process,canonical Wnt signaling pathway involved in positive regulation of apoptotic process,GO:0044337
+73,myc,MYC,4609,Biological Process,cell competition in a multicellular organism,GO:0035212
+74,myc,MYC,4609,Biological Process,cell population proliferation,GO:0008283
+75,myc,MYC,4609,Biological Process,cellular iron ion homeostasis,GO:0006879
+76,myc,MYC,4609,Biological Process,cellular response to angiotensin,GO:1904385
+77,myc,MYC,4609,Biological Process,cellular response to arsenite(3-),GO:1903841
+78,myc,MYC,4609,Biological Process,cellular response to carbohydrate stimulus,GO:0071322
+79,myc,MYC,4609,Biological Process,cellular response to cycloheximide,GO:0071409
+80,myc,MYC,4609,Biological Process,cellular response to cytokine stimulus,GO:0071345
+81,myc,MYC,4609,Biological Process,cellular response to dimethyl sulfoxide,GO:1904620
+82,myc,MYC,4609,Biological Process,cellular response to DNA damage stimulus,GO:0006974
+83,myc,MYC,4609,Biological Process,cellular response to endothelin,GO:1990859
+84,myc,MYC,4609,Biological Process,cellular response to epidermal growth factor stimulus,GO:0071364
+85,myc,MYC,4609,Biological Process,cellular response to estrogen stimulus,GO:0071391
+86,myc,MYC,4609,Biological Process,cellular response to fibroblast growth factor stimulus,GO:0044344
+87,myc,MYC,4609,Biological Process,cellular response to growth hormone stimulus,GO:0071378
+88,myc,MYC,4609,Biological Process,cellular response to hydrostatic pressure,GO:0071464
+89,myc,MYC,4609,Biological Process,cellular response to hypoxia,GO:0071456
+90,myc,MYC,4609,Biological Process,cellular response to insulin stimulus,GO:0032869
+91,myc,MYC,4609,Biological Process,cellular response to interferon-alpha,GO:0035457
+92,myc,MYC,4609,Biological Process,cellular response to interferon-gamma,GO:0071346
+93,myc,MYC,4609,Biological Process,cellular response to interleukin-1,GO:0071347
+94,myc,MYC,4609,Biological Process,cellular response to lectin,GO:1990858
+95,myc,MYC,4609,Biological Process,cellular response to nutrient,GO:0031670
+96,myc,MYC,4609,Biological Process,cellular response to organic cyclic compound,GO:0071407
+97,myc,MYC,4609,Biological Process,cellular response to phorbol 13-acetate 12-myristate,GO:1904628
+98,myc,MYC,4609,Biological Process,cellular response to platelet-derived growth factor stimulus,GO:0036120
+99,myc,MYC,4609,Biological Process,cellular response to prolactin,GO:1990646
+100,myc,MYC,4609,Biological Process,cellular response to putrescine,GO:1904586
+101,myc,MYC,4609,Biological Process,cellular response to retinoic acid,GO:0071300
+102,myc,MYC,4609,Biological Process,cellular response to testosterone stimulus,GO:0071394
+103,myc,MYC,4609,Biological Process,cellular response to UV,GO:0034644
+104,myc,MYC,4609,Biological Process,cellular response to xenobiotic stimulus,GO:0071466
+105,myc,MYC,4609,Biological Process,chromatin remodeling,GO:0006338
+106,myc,MYC,4609,Biological Process,chromosome organization,GO:0051276
+107,myc,MYC,4609,Biological Process,detection of mechanical stimulus involved in sensory perception of sound,GO:0050910
+108,myc,MYC,4609,Biological Process,DNA endoreduplication,GO:0042023
+109,myc,MYC,4609,Biological Process,DNA-templated transcription,GO:0006351
+110,myc,MYC,4609,Biological Process,DNA-templated transcription initiation,GO:0006352
+111,myc,MYC,4609,Biological Process,embryonic pattern specification,GO:0009880
+112,myc,MYC,4609,Biological Process,energy reserve metabolic process,GO:0006112
+113,myc,MYC,4609,Biological Process,epidermis morphogenesis,GO:0048730
+114,myc,MYC,4609,Biological Process,ERK1 and ERK2 cascade,GO:0070371
+115,myc,MYC,4609,Biological Process,fibroblast apoptotic process,GO:0044346
+116,myc,MYC,4609,Biological Process,G0 to G1 transition,GO:0045023
+117,myc,MYC,4609,Biological Process,G1/S transition of mitotic cell cycle,GO:0000082
+118,myc,MYC,4609,Biological Process,glucose metabolic process,GO:0006006
+119,myc,MYC,4609,Biological Process,hypothalamus development,GO:0021854
+120,myc,MYC,4609,Biological Process,inner mitochondrial membrane organization,GO:0007007
+121,myc,MYC,4609,Biological Process,insulin receptor signaling pathway,GO:0008286
+122,myc,MYC,4609,Biological Process,intrinsic apoptotic signaling pathway,GO:0097193
+123,myc,MYC,4609,Biological Process,intrinsic apoptotic signaling pathway in response to DNA damage,GO:0008630
+124,myc,MYC,4609,Biological Process,in utero embryonic development,GO:0001701
+125,myc,MYC,4609,Biological Process,lactic acid secretion,GO:0046722
+126,myc,MYC,4609,Biological Process,lipid homeostasis,GO:0055088
+127,myc,MYC,4609,Biological Process,liver regeneration,GO:0097421
+128,myc,MYC,4609,Biological Process,MAPK cascade,GO:0000165
+129,myc,MYC,4609,Biological Process,middle ear morphogenesis,GO:0042474
+130,myc,MYC,4609,Biological Process,myoblast proliferation,GO:0051450
+131,myc,MYC,4609,Biological Process,myotube differentiation,GO:0014902
+132,myc,MYC,4609,Biological Process,negative regulation of apoptotic process,GO:0043066
+133,myc,MYC,4609,Biological Process,negative regulation of cell death,GO:0060548
+134,myc,MYC,4609,Biological Process,negative regulation of cell division,GO:0051782
+135,myc,MYC,4609,Biological Process,negative regulation of fibroblast proliferation,GO:0048147
+136,myc,MYC,4609,Biological Process,negative regulation of gene expression,GO:0010629
+137,myc,MYC,4609,Biological Process,negative regulation of glucose import,GO:0046325
+138,myc,MYC,4609,Biological Process,negative regulation of monocyte differentiation,GO:0045656
+139,myc,MYC,4609,Biological Process,negative regulation of peptidoglycan recognition protein signaling pathway,GO:0061060
+140,myc,MYC,4609,Biological Process,negative regulation of protein binding,GO:0032091
+141,myc,MYC,4609,Biological Process,negative regulation of stress-activated MAPK cascade,GO:0032873
+142,myc,MYC,4609,Biological Process,negative regulation of transcription by RNA polymerase II,GO:0000122
+143,myc,MYC,4609,Biological Process,neurogenesis,GO:0022008
+144,myc,MYC,4609,Biological Process,NK T cell proliferation,GO:0001866
+145,myc,MYC,4609,Biological Process,nucleologenesis,GO:0017126
+146,myc,MYC,4609,Biological Process,ovarian follicle development,GO:0001541
+147,myc,MYC,4609,Biological Process,ovulation,GO:0030728
+148,myc,MYC,4609,Biological Process,oxygen transport,GO:0015671
+149,myc,MYC,4609,Biological Process,pigmentation,GO:0043473
+150,myc,MYC,4609,Biological Process,positive regulation of acinar cell proliferation,GO:1904699
+151,myc,MYC,4609,Biological Process,positive regulation of apoptotic signaling pathway,GO:2001235
+152,myc,MYC,4609,Biological Process,positive regulation of ATP biosynthetic process,GO:2001171
+153,myc,MYC,4609,Biological Process,positive regulation of B cell apoptotic process,GO:0002904
+154,myc,MYC,4609,Biological Process,positive regulation of catalytic activity,GO:0043085
+155,myc,MYC,4609,Biological Process,positive regulation of cell cycle,GO:0045787
+156,myc,MYC,4609,Biological Process,positive regulation of cell growth,GO:0030307
+157,myc,MYC,4609,Biological Process,positive regulation of cell population proliferation,GO:0008284
+158,myc,MYC,4609,Biological Process,positive regulation of cell size,GO:0045793
+159,myc,MYC,4609,Biological Process,positive regulation of cellular respiration,GO:1901857
+160,myc,MYC,4609,Biological Process,positive regulation of cysteine-type endopeptidase activity involved in apoptotic process,GO:0043280
+161,myc,MYC,4609,Biological Process,positive regulation of developmental growth,GO:0048639
+162,myc,MYC,4609,Biological Process,positive regulation of DNA binding,GO:0043388
+163,myc,MYC,4609,Biological Process,positive regulation of DNA biosynthetic process,GO:2000573
+164,myc,MYC,4609,Biological Process,positive regulation of DNA methylation,GO:1905643
+165,myc,MYC,4609,Biological Process,positive regulation of DNA-templated transcription,GO:0045893
+166,myc,MYC,4609,Biological Process,positive regulation of epithelial cell proliferation,GO:0050679
+167,myc,MYC,4609,Biological Process,positive regulation of fibroblast proliferation,GO:0048146
+168,myc,MYC,4609,Biological Process,positive regulation of gene expression,GO:0010628
+169,myc,MYC,4609,Biological Process,positive regulation of glial cell proliferation,GO:0060252
+170,myc,MYC,4609,Biological Process,positive regulation of glycolytic process,GO:0045821
+171,myc,MYC,4609,Biological Process,positive regulation of growth,GO:0045927
+172,myc,MYC,4609,Biological Process,positive regulation of imaginal disc growth,GO:0045572
+173,myc,MYC,4609,Biological Process,positive regulation of intrinsic apoptotic signaling pathway by p53 class mediator,GO:1902255
+174,myc,MYC,4609,Biological Process,positive regulation of mesenchymal cell proliferation,GO:0002053
+175,myc,MYC,4609,Biological Process,positive regulation of metanephric cap mesenchymal cell proliferation,GO:0090096
+176,myc,MYC,4609,Biological Process,positive regulation of miRNA transcription,GO:1902895
+177,myc,MYC,4609,Biological Process,positive regulation of mitochondrial membrane potential,GO:0010918
+178,myc,MYC,4609,Biological Process,positive regulation of multicellular organism growth,GO:0040018
+179,myc,MYC,4609,Biological Process,positive regulation of neurogenesis,GO:0050769
+180,myc,MYC,4609,Biological Process,positive regulation of organ growth,GO:0046622
+181,myc,MYC,4609,Biological Process,positive regulation of oxidative phosphorylation,GO:1903862
+182,myc,MYC,4609,Biological Process,positive regulation of response to DNA damage stimulus,GO:2001022
+183,myc,MYC,4609,Biological Process,positive regulation of smooth muscle cell migration,GO:0014911
+184,myc,MYC,4609,Biological Process,positive regulation of smooth muscle cell proliferation,GO:0048661
+185,myc,MYC,4609,Biological Process,positive regulation of telomerase activity,GO:0051973
+186,myc,MYC,4609,Biological Process,positive regulation of transcription by RNA polymerase I,GO:0045943
+187,myc,MYC,4609,Biological Process,positive regulation of transcription by RNA polymerase II,GO:0045944
+188,myc,MYC,4609,Biological Process,positive regulation of transcription by RNA polymerase III,GO:0045945
+189,myc,MYC,4609,Biological Process,positive regulation of transcription initiation by RNA polymerase II,GO:0060261
+190,myc,MYC,4609,Biological Process,protein-DNA complex disassembly,GO:0032986
+191,myc,MYC,4609,Biological Process,protein processing,GO:0016485
+192,myc,MYC,4609,Biological Process,pyruvate transport,GO:0006848
+193,myc,MYC,4609,Biological Process,re-entry into mitotic cell cycle,GO:0000320
+194,myc,MYC,4609,Biological Process,regulation of apoptotic process,GO:0042981
+195,myc,MYC,4609,Biological Process,regulation of autophagy,GO:0010506
+196,myc,MYC,4609,Biological Process,regulation of cell cycle process,GO:0010564
+197,myc,MYC,4609,Biological Process,regulation of DNA-templated transcription,GO:0006355
+198,myc,MYC,4609,Biological Process,regulation of gene expression,GO:0010468
+199,myc,MYC,4609,Biological Process,regulation of mitotic cell cycle,GO:0007346
+200,myc,MYC,4609,Biological Process,regulation of organ growth,GO:0046620
+201,myc,MYC,4609,Biological Process,regulation of oxidative phosphorylation,GO:0002082
+202,myc,MYC,4609,Biological Process,regulation of somatic stem cell population maintenance,GO:1904672
+203,myc,MYC,4609,Biological Process,regulation of telomere maintenance,GO:0032204
+204,myc,MYC,4609,Biological Process,regulation of trehalose metabolic process,GO:0090062
+205,myc,MYC,4609,Biological Process,response to alkaloid,GO:0043279
+206,myc,MYC,4609,Biological Process,response to estradiol,GO:0032355
+207,myc,MYC,4609,Biological Process,response to ethanol,GO:0045471
+208,myc,MYC,4609,Biological Process,response to gamma radiation,GO:0010332
+209,myc,MYC,4609,Biological Process,response to growth factor,GO:0070848
+210,myc,MYC,4609,Biological Process,response to human chorionic gonadotropin,GO:0044752
+211,myc,MYC,4609,Biological Process,response to radiation,GO:0009314
+212,myc,MYC,4609,Biological Process,response to starvation,GO:0042594
+213,myc,MYC,4609,Biological Process,response to wounding,GO:0009611
+214,myc,MYC,4609,Biological Process,response to xenobiotic stimulus,GO:0009410
+215,myc,MYC,4609,Biological Process,skeletal muscle cell differentiation,GO:0035914
+216,myc,MYC,4609,Biological Process,skeletal system morphogenesis,GO:0048705
+217,myc,MYC,4609,Biological Process,tissue regeneration,GO:0042246
+218,myc,MYC,4609,Biological Process,transcription by RNA polymerase II,GO:0006366
+219,myc,MYC,4609,Biological Process,transformation of host cell by virus,GO:0019087
+220,myc,MYC,4609,Biological Process,Wnt signaling pathway,GO:0016055
+221,sox17,SOX17,64321,Biological Process,angiogenesis,GO:0001525
+222,sox17,SOX17,64321,Biological Process,biological_process,GO:0008150
+223,sox17,SOX17,64321,Biological Process,cardiac cell fate determination,GO:0060913
+224,sox17,SOX17,64321,Biological Process,cardiogenic plate morphogenesis,GO:0003142
+225,sox17,SOX17,64321,Biological Process,cell migration involved in gastrulation,GO:0042074
+226,sox17,SOX17,64321,Biological Process,cellular response to leukemia inhibitory factor,GO:1990830
+227,sox17,SOX17,64321,Biological Process,common bile duct development,GO:0061009
+228,sox17,SOX17,64321,Biological Process,determination of heart left/right asymmetry,GO:0061371
+229,sox17,SOX17,64321,Biological Process,determination of pancreatic left/right asymmetry,GO:0035469
+230,sox17,SOX17,64321,Biological Process,embryonic foregut morphogenesis,GO:0048617
+231,sox17,SOX17,64321,Biological Process,embryonic heart tube development,GO:0035050
+232,sox17,SOX17,64321,Biological Process,embryonic heart tube morphogenesis,GO:0003143
+233,sox17,SOX17,64321,Biological Process,embryonic organ development,GO:0048568
+234,sox17,SOX17,64321,Biological Process,endocardial cell differentiation,GO:0060956
+235,sox17,SOX17,64321,Biological Process,endocardium formation,GO:0060214
+236,sox17,SOX17,64321,Biological Process,endodermal cell differentiation,GO:0035987
+237,sox17,SOX17,64321,Biological Process,endodermal cell fate determination,GO:0007493
+238,sox17,SOX17,64321,Biological Process,endodermal cell fate specification,GO:0001714
+239,sox17,SOX17,64321,Biological Process,endodermal digestive tract morphogenesis,GO:0061031
+240,sox17,SOX17,64321,Biological Process,endoderm development,GO:0007492
+241,sox17,SOX17,64321,Biological Process,endoderm formation,GO:0001706
+242,sox17,SOX17,64321,Biological Process,gall bladder development,GO:0061010
+243,sox17,SOX17,64321,Biological Process,gastrulation,GO:0007369
+244,sox17,SOX17,64321,Biological Process,gene expression,GO:0010467
+245,sox17,SOX17,64321,Biological Process,heart formation,GO:0060914
+246,sox17,SOX17,64321,Biological Process,heart looping,GO:0001947
+247,sox17,SOX17,64321,Biological Process,inner cell mass cellular morphogenesis,GO:0001828
+248,sox17,SOX17,64321,Biological Process,Kupffer's vesicle development,GO:0070121
+249,sox17,SOX17,64321,Biological Process,metanephros development,GO:0001656
+250,sox17,SOX17,64321,Biological Process,negative regulation of canonical Wnt signaling pathway,GO:0090090
+251,sox17,SOX17,64321,Biological Process,negative regulation of cell growth,GO:0030308
+252,sox17,SOX17,64321,Biological Process,negative regulation of Wnt signaling pathway,GO:0030178
+253,sox17,SOX17,64321,Biological Process,negative regulation of Wnt signaling pathway involved in heart development,GO:0003308
+254,sox17,SOX17,64321,Biological Process,outflow tract morphogenesis,GO:0003151
+255,sox17,SOX17,64321,Biological Process,positive regulation of cell differentiation,GO:0045597
+256,sox17,SOX17,64321,Biological Process,positive regulation of DNA-templated transcription,GO:0045893
+257,sox17,SOX17,64321,Biological Process,positive regulation of endodermal cell differentiation,GO:1903226
+258,sox17,SOX17,64321,Biological Process,positive regulation of gene expression,GO:0010628
+259,sox17,SOX17,64321,Biological Process,positive regulation of protein catabolic process,GO:0045732
+260,sox17,SOX17,64321,Biological Process,positive regulation of stem cell differentiation,GO:2000738
+261,sox17,SOX17,64321,Biological Process,positive regulation of transcription by RNA polymerase II,GO:0045944
+262,sox17,SOX17,64321,Biological Process,primitive hemopoiesis,GO:0060215
+263,sox17,SOX17,64321,Biological Process,protein destabilization,GO:0031648
+264,sox17,SOX17,64321,Biological Process,protein stabilization,GO:0050821
+265,sox17,SOX17,64321,Biological Process,regulation of cardiac cell fate specification,GO:2000043
+266,sox17,SOX17,64321,Biological Process,regulation of cell differentiation,GO:0045595
+267,sox17,SOX17,64321,Biological Process,regulation of DNA-templated transcription,GO:0006355
+268,sox17,SOX17,64321,Biological Process,regulation of embryonic development,GO:0045995
+269,sox17,SOX17,64321,Biological Process,regulation of stem cell division,GO:2000035
+270,sox17,SOX17,64321,Biological Process,regulation of stem cell proliferation,GO:0072091
+271,sox17,SOX17,64321,Biological Process,regulation of transcription by RNA polymerase II,GO:0006357
+272,sox17,SOX17,64321,Biological Process,rostrocaudal neural tube patterning,GO:0021903
+273,sox17,SOX17,64321,Biological Process,signal transduction involved in regulation of gene expression,GO:0023019
+274,sox17,SOX17,64321,Biological Process,spermatogenesis,GO:0007283
+275,sox17,SOX17,64321,Biological Process,stem cell differentiation,GO:0048863
+276,sox17,SOX17,64321,Biological Process,stem cell fate specification,GO:0048866
+277,sox17,SOX17,64321,Biological Process,ureter development,GO:0072189
+278,sox17,SOX17,64321,Biological Process,vasculogenesis,GO:0001570
+279,sox17,SOX17,64321,Biological Process,Wnt signaling pathway,GO:0016055
+280,sox2,SOX2,6657,Biological Process,adenohypophysis development,GO:0021984
+281,sox2,SOX2,6657,Biological Process,anatomical structure formation involved in morphogenesis,GO:0048646
+282,sox2,SOX2,6657,Biological Process,cell fate commitment,GO:0045165
+283,sox2,SOX2,6657,Biological Process,cell fate specification,GO:0001708
+284,sox2,SOX2,6657,Biological Process,cell population proliferation,GO:0008283
+285,sox2,SOX2,6657,Biological Process,cellular response to cadmium ion,GO:0071276
+286,sox2,SOX2,6657,Biological Process,cerebral cortex development,GO:0021987
+287,sox2,SOX2,6657,Biological Process,chromatin organization,GO:0006325
+288,sox2,SOX2,6657,Biological Process,detection of mechanical stimulus involved in equilibrioception,GO:0050973
+289,sox2,SOX2,6657,Biological Process,detection of mechanical stimulus involved in sensory perception of sound,GO:0050910
+290,sox2,SOX2,6657,Biological Process,diencephalon morphogenesis,GO:0048852
+291,sox2,SOX2,6657,Biological Process,embryonic organ development,GO:0048568
+292,sox2,SOX2,6657,Biological Process,endodermal cell fate specification,GO:0001714
+293,sox2,SOX2,6657,Biological Process,epithalamus development,GO:0021538
+294,sox2,SOX2,6657,Biological Process,epithelial tube branching involved in lung morphogenesis,GO:0060441
+295,sox2,SOX2,6657,Biological Process,eye development,GO:0001654
+296,sox2,SOX2,6657,Biological Process,eye morphogenesis,GO:0048592
+297,sox2,SOX2,6657,Biological Process,fin regeneration,GO:0031101
+298,sox2,SOX2,6657,Biological Process,forebrain development,GO:0030900
+299,sox2,SOX2,6657,Biological Process,forebrain neuron differentiation,GO:0021879
+300,sox2,SOX2,6657,Biological Process,gene expression,GO:0010467
+301,sox2,SOX2,6657,Biological Process,glial cell fate commitment,GO:0021781
+302,sox2,SOX2,6657,Biological Process,inner ear development,GO:0048839
+303,sox2,SOX2,6657,Biological Process,inner ear morphogenesis,GO:0042472
+304,sox2,SOX2,6657,Biological Process,inner ear receptor cell development,GO:0060119
+305,sox2,SOX2,6657,Biological Process,lens induction in camera-type eye,GO:0060235
+306,sox2,SOX2,6657,Biological Process,lung alveolus development,GO:0048286
+307,sox2,SOX2,6657,Biological Process,male genitalia development,GO:0030539
+308,sox2,SOX2,6657,Biological Process,multicellular organism development,GO:0007275
+309,sox2,SOX2,6657,Biological Process,negative regulation of canonical Wnt signaling pathway,GO:0090090
+310,sox2,SOX2,6657,Biological Process,negative regulation of cell cycle G1/S phase transition,GO:1902807
+311,sox2,SOX2,6657,Biological Process,negative regulation of cell differentiation,GO:0045596
+312,sox2,SOX2,6657,Biological Process,negative regulation of epithelial cell proliferation,GO:0050680
+313,sox2,SOX2,6657,Biological Process,negative regulation of neuron differentiation,GO:0045665
+314,sox2,SOX2,6657,Biological Process,negative regulation of osteoblast differentiation,GO:0045668
+315,sox2,SOX2,6657,Biological Process,negative regulation of transcription by RNA polymerase II,GO:0000122
+316,sox2,SOX2,6657,Biological Process,negative regulation of Wnt signaling pathway,GO:0030178
+317,sox2,SOX2,6657,Biological Process,neuroblast proliferation,GO:0007405
+318,sox2,SOX2,6657,Biological Process,neuronal stem cell population maintenance,GO:0097150
+319,sox2,SOX2,6657,Biological Process,neuron differentiation,GO:0030182
+320,sox2,SOX2,6657,Biological Process,neuron fate commitment,GO:0048663
+321,sox2,SOX2,6657,Biological Process,Notch signaling pathway,GO:0007219
+322,sox2,SOX2,6657,Biological Process,olfactory placode formation,GO:0030910
+323,sox2,SOX2,6657,Biological Process,osteoblast differentiation,GO:0001649
+324,sox2,SOX2,6657,Biological Process,otic placode development,GO:1905040
+325,sox2,SOX2,6657,Biological Process,otic vesicle development,GO:0071599
+326,sox2,SOX2,6657,Biological Process,pigment biosynthetic process,GO:0046148
+327,sox2,SOX2,6657,Biological Process,pineal gland development,GO:0021982
+328,sox2,SOX2,6657,Biological Process,pituitary gland development,GO:0021983
+329,sox2,SOX2,6657,Biological Process,positive regulation of cell-cell adhesion,GO:0022409
+330,sox2,SOX2,6657,Biological Process,positive regulation of cell differentiation,GO:0045597
+331,sox2,SOX2,6657,Biological Process,positive regulation of DNA-binding transcription factor activity,GO:0051091
+332,sox2,SOX2,6657,Biological Process,positive regulation of DNA-templated transcription,GO:0045893
+333,sox2,SOX2,6657,Biological Process,positive regulation of epithelial cell differentiation,GO:0030858
+334,sox2,SOX2,6657,Biological Process,positive regulation of MAPK cascade,GO:0043410
+335,sox2,SOX2,6657,Biological Process,positive regulation of neuroblast proliferation,GO:0002052
+336,sox2,SOX2,6657,Biological Process,positive regulation of neuron differentiation,GO:0045666
+337,sox2,SOX2,6657,Biological Process,positive regulation of Notch signaling pathway,GO:0045747
+338,sox2,SOX2,6657,Biological Process,positive regulation of transcription by RNA polymerase II,GO:0045944
+339,sox2,SOX2,6657,Biological Process,regeneration,GO:0031099
+340,sox2,SOX2,6657,Biological Process,regulation of cysteine-type endopeptidase activity involved in apoptotic process,GO:0043281
+341,sox2,SOX2,6657,Biological Process,regulation of DNA-templated transcription,GO:0006355
+342,sox2,SOX2,6657,Biological Process,regulation of gene expression,GO:0010468
+343,sox2,SOX2,6657,Biological Process,regulation of neurogenesis,GO:0050767
+344,sox2,SOX2,6657,Biological Process,regulation of transcription by RNA polymerase II,GO:0006357
+345,sox2,SOX2,6657,Biological Process,response to growth factor,GO:0070848
+346,sox2,SOX2,6657,Biological Process,response to organic substance,GO:0010033
+347,sox2,SOX2,6657,Biological Process,response to retinoic acid,GO:0032526
+348,sox2,SOX2,6657,Biological Process,response to wounding,GO:0009611
+349,sox2,SOX2,6657,Biological Process,retina morphogenesis in camera-type eye,GO:0060042
+350,sox2,SOX2,6657,Biological Process,sensory organ precursor cell fate determination,GO:0016360
+351,sox2,SOX2,6657,Biological Process,sensory perception of sound,GO:0007605
+352,sox2,SOX2,6657,Biological Process,somatic stem cell population maintenance,GO:0035019
+353,sox2,SOX2,6657,Biological Process,stem cell differentiation,GO:0048863
+354,sox2,SOX2,6657,Biological Process,stem cell population maintenance,GO:0019827
+355,sox2,SOX2,6657,Biological Process,tissue regeneration,GO:0042246
+356,sox2,SOX2,6657,Biological Process,tongue development,GO:0043586
+357,sox2,SOX2,6657,Biological Process,trophectodermal cell differentiation,GO:0001829
+358,sox2,SOX2,6657,Biological Process,Wnt signaling pathway,GO:0016055
+359,pou5f1,POU5F1,5460,Biological Process,anatomical structure morphogenesis,GO:0009653
+360,pou5f1,POU5F1,5460,Biological Process,blastocyst development,GO:0001824
+361,pou5f1,POU5F1,5460,Biological Process,blastocyst growth,GO:0001832
+362,pou5f1,POU5F1,5460,Biological Process,BMP signaling pathway involved in heart induction,GO:0003130
+363,pou5f1,POU5F1,5460,Biological Process,cardiac cell fate determination,GO:0060913
+364,pou5f1,POU5F1,5460,Biological Process,cell fate commitment,GO:0045165
+365,pou5f1,POU5F1,5460,Biological Process,cell fate commitment involved in formation of primary germ layer,GO:0060795
+366,pou5f1,POU5F1,5460,Biological Process,cellular response to leukemia inhibitory factor,GO:1990830
+367,pou5f1,POU5F1,5460,Biological Process,ectodermal cell fate commitment,GO:0001712
+368,pou5f1,POU5F1,5460,Biological Process,endodermal cell fate commitment,GO:0001711
+369,pou5f1,POU5F1,5460,Biological Process,endodermal cell fate specification,GO:0001714
+370,pou5f1,POU5F1,5460,Biological Process,gene expression,GO:0010467
+371,pou5f1,POU5F1,5460,Biological Process,germ-line stem cell population maintenance,GO:0030718
+372,pou5f1,POU5F1,5460,Biological Process,histone H3-K56 acetylation,GO:0097043
+373,pou5f1,POU5F1,5460,Biological Process,mesodermal cell fate commitment,GO:0001710
+374,pou5f1,POU5F1,5460,Biological Process,multicellular organism development,GO:0007275
+375,pou5f1,POU5F1,5460,Biological Process,negative regulation of calcium ion-dependent exocytosis,GO:0045955
+376,pou5f1,POU5F1,5460,Biological Process,negative regulation of cell differentiation,GO:0045596
+377,pou5f1,POU5F1,5460,Biological Process,negative regulation of DNA-templated transcription,GO:0045892
+378,pou5f1,POU5F1,5460,Biological Process,negative regulation of gene expression,GO:0010629
+379,pou5f1,POU5F1,5460,Biological Process,negative regulation of miRNA-mediated gene silencing,GO:0060965
+380,pou5f1,POU5F1,5460,Biological Process,negative regulation of miRNA transcription,GO:1902894
+381,pou5f1,POU5F1,5460,Biological Process,negative regulation of protein kinase B signaling,GO:0051898
+382,pou5f1,POU5F1,5460,Biological Process,negative regulation of transcription by RNA polymerase II,GO:0000122
+383,pou5f1,POU5F1,5460,Biological Process,positive regulation of canonical Wnt signaling pathway,GO:0090263
+384,pou5f1,POU5F1,5460,Biological Process,positive regulation of DNA-templated transcription,GO:0045893
+385,pou5f1,POU5F1,5460,Biological Process,positive regulation of gene expression,GO:0010628
+386,pou5f1,POU5F1,5460,Biological Process,positive regulation of protein kinase B signaling,GO:0051897
+387,pou5f1,POU5F1,5460,Biological Process,positive regulation of SMAD protein signal transduction,GO:0060391
+388,pou5f1,POU5F1,5460,Biological Process,positive regulation of transcription by RNA polymerase II,GO:0045944
+389,pou5f1,POU5F1,5460,Biological Process,positive regulation of transcription initiation by RNA polymerase II,GO:0060261
+390,pou5f1,POU5F1,5460,Biological Process,regulation of asymmetric cell division,GO:0009786
+391,pou5f1,POU5F1,5460,Biological Process,regulation of DNA methylation-dependent heterochromatin assembly,GO:0090308
+392,pou5f1,POU5F1,5460,Biological Process,regulation of DNA-templated transcription,GO:0006355
+393,pou5f1,POU5F1,5460,Biological Process,regulation of gene expression,GO:0010468
+394,pou5f1,POU5F1,5460,Biological Process,regulation of heart induction by regulation of canonical Wnt signaling pathway,GO:0090081
+395,pou5f1,POU5F1,5460,Biological Process,regulation of transcription by RNA polymerase II,GO:0006357
+396,pou5f1,POU5F1,5460,Biological Process,response to benzoic acid,GO:0080021
+397,pou5f1,POU5F1,5460,Biological Process,response to cytokine,GO:0034097
+398,pou5f1,POU5F1,5460,Biological Process,response to organic substance,GO:0010033
+399,pou5f1,POU5F1,5460,Biological Process,response to retinoic acid,GO:0032526
+400,pou5f1,POU5F1,5460,Biological Process,response to wounding,GO:0009611
+401,pou5f1,POU5F1,5460,Biological Process,somatic stem cell population maintenance,GO:0035019
+402,pou5f1,POU5F1,5460,Biological Process,stem cell differentiation,GO:0048863
+403,pou5f1,POU5F1,5460,Biological Process,stem cell population maintenance,GO:0019827
+404,pou5f1,POU5F1,5460,Biological Process,transcription by RNA polymerase II,GO:0006366
+405,pou5f1,POU5F1,5460,Biological Process,trophectodermal cell differentiation,GO:0001829
+406,pou5f1,POU5F1,5460,Biological Process,trophectodermal cell fate commitment,GO:0001830
+407,cd44,CD44,960,Biological Process,blood vessel maturation,GO:0001955
+408,cd44,CD44,960,Biological Process,branching involved in prostate gland morphogenesis,GO:0060442
+409,cd44,CD44,960,Biological Process,branching involved in ureteric bud morphogenesis,GO:0001658
+410,cd44,CD44,960,Biological Process,cartilage development,GO:0051216
+411,cd44,CD44,960,Biological Process,cell adhesion,GO:0007155
+412,cd44,CD44,960,Biological Process,cell-cell adhesion,GO:0098609
+413,cd44,CD44,960,Biological Process,cell-matrix adhesion,GO:0007160
+414,cd44,CD44,960,Biological Process,cell migration,GO:0016477
+415,cd44,CD44,960,Biological Process,cellular response to fibroblast growth factor stimulus,GO:0044344
+416,cd44,CD44,960,Biological Process,cytokine-mediated signaling pathway,GO:0019221
+417,cd44,CD44,960,Biological Process,hyaluronan catabolic process,GO:0030214
+418,cd44,CD44,960,Biological Process,inflammatory response,GO:0006954
+419,cd44,CD44,960,Biological Process,macrophage fusion,GO:0034238
+420,cd44,CD44,960,Biological Process,monocyte aggregation,GO:0070487
+421,cd44,CD44,960,Biological Process,negative regulation of apoptotic process,GO:0043066
+422,cd44,CD44,960,Biological Process,"negative regulation of CD4-positive, alpha-beta T cell proliferation",GO:2000562
+423,cd44,CD44,960,Biological Process,negative regulation of cysteine-type endopeptidase activity involved in apoptotic process,GO:0043154
+424,cd44,CD44,960,Biological Process,"negative regulation of DNA damage response, signal transduction by p53 class mediator",GO:0043518
+425,cd44,CD44,960,Biological Process,negative regulation of inflammatory response,GO:0050728
+426,cd44,CD44,960,Biological Process,negative regulation of intrinsic apoptotic signaling pathway in response to DNA damage by p53 class mediator,GO:1902166
+427,cd44,CD44,960,Biological Process,negative regulation of mature B cell apoptotic process,GO:0002906
+428,cd44,CD44,960,Biological Process,negative regulation of regulatory T cell differentiation,GO:0045590
+429,cd44,CD44,960,Biological Process,neuron projection development,GO:0031175
+430,cd44,CD44,960,Biological Process,positive regulation of adaptive immune response,GO:0002821
+431,cd44,CD44,960,Biological Process,positive regulation of ERK1 and ERK2 cascade,GO:0070374
+432,cd44,CD44,960,Biological Process,positive regulation of gene expression,GO:0010628
+433,cd44,CD44,960,Biological Process,positive regulation of heterotypic cell-cell adhesion,GO:0034116
+434,cd44,CD44,960,Biological Process,positive regulation of kinase activity,GO:0033674
+435,cd44,CD44,960,Biological Process,positive regulation of monocyte aggregation,GO:1900625
+436,cd44,CD44,960,Biological Process,positive regulation of neutrophil apoptotic process,GO:0033031
+437,cd44,CD44,960,Biological Process,positive regulation of peptidyl-serine phosphorylation,GO:0033138
+438,cd44,CD44,960,Biological Process,positive regulation of peptidyl-tyrosine phosphorylation,GO:0050731
+439,cd44,CD44,960,Biological Process,receptor-mediated endocytosis,GO:0006898
+440,cd44,CD44,960,Biological Process,regulation of cell growth,GO:0001558
+441,cd44,CD44,960,Biological Process,regulation of lamellipodium morphogenesis,GO:2000392
+442,cd44,CD44,960,Biological Process,response to nutrient levels,GO:0031667
+443,cd44,CD44,960,Biological Process,response to organic cyclic compound,GO:0014070
+444,cd44,CD44,960,Biological Process,response to vitamin A,GO:0033189
+445,cd44,CD44,960,Biological Process,T cell activation,GO:0042110
+446,cd44,CD44,960,Biological Process,Wnt signaling pathway,GO:0016055
+447,cd44,CD44,960,Biological Process,wound healing involved in inflammatory response,GO:0002246
+448,cd44,CD44,960,Biological Process,"wound healing, spreading of cells",GO:0044319
+0,klf4,KLF4,9314,Cellular Component,chromatin,GO:0000785
+1,klf4,KLF4,9314,Cellular Component,cytoplasm,GO:0005737
+2,klf4,KLF4,9314,Cellular Component,cytosol,GO:0005829
+3,klf4,KLF4,9314,Cellular Component,euchromatin,GO:0000791
+4,klf4,KLF4,9314,Cellular Component,microtubule cytoskeleton,GO:0015630
+5,klf4,KLF4,9314,Cellular Component,nucleoplasm,GO:0005654
+6,klf4,KLF4,9314,Cellular Component,nucleus,GO:0005634
+7,klf4,KLF4,9314,Cellular Component,transcription regulator complex,GO:0005667
+8,myc,MYC,4609,Cellular Component,axon,GO:0030424
+9,myc,MYC,4609,Cellular Component,chromatin,GO:0000785
+10,myc,MYC,4609,Cellular Component,cytoplasm,GO:0005737
+11,myc,MYC,4609,Cellular Component,euchromatin,GO:0000791
+12,myc,MYC,4609,Cellular Component,histone locus body,GO:0035363
+13,myc,MYC,4609,Cellular Component,mitochondrion,GO:0005739
+14,myc,MYC,4609,Cellular Component,Myc-Max complex,GO:0071943
+15,myc,MYC,4609,Cellular Component,nuclear body,GO:0016604
+16,myc,MYC,4609,Cellular Component,nuclear envelope,GO:0005635
+17,myc,MYC,4609,Cellular Component,nucleolus,GO:0005730
+18,myc,MYC,4609,Cellular Component,nucleoplasm,GO:0005654
+19,myc,MYC,4609,Cellular Component,nucleoplasmic reticulum,GO:0044195
+20,myc,MYC,4609,Cellular Component,nucleus,GO:0005634
+21,myc,MYC,4609,Cellular Component,perinuclear region of cytoplasm,GO:0048471
+22,myc,MYC,4609,Cellular Component,protein-containing complex,GO:0032991
+23,myc,MYC,4609,Cellular Component,RNA polymerase II transcription repressor complex,GO:0090571
+24,myc,MYC,4609,Cellular Component,rough endoplasmic reticulum,GO:0005791
+25,myc,MYC,4609,Cellular Component,spindle,GO:0005819
+26,sox17,SOX17,64321,Cellular Component,cellular_component,GO:0005575
+27,sox17,SOX17,64321,Cellular Component,chromatin,GO:0000785
+28,sox17,SOX17,64321,Cellular Component,nucleoplasm,GO:0005654
+29,sox17,SOX17,64321,Cellular Component,nucleus,GO:0005634
+30,sox17,SOX17,64321,Cellular Component,transcription regulator complex,GO:0005667
+31,sox2,SOX2,6657,Cellular Component,chromatin,GO:0000785
+32,sox2,SOX2,6657,Cellular Component,cytoplasm,GO:0005737
+33,sox2,SOX2,6657,Cellular Component,cytosol,GO:0005829
+34,sox2,SOX2,6657,Cellular Component,nuclear speck,GO:0016607
+35,sox2,SOX2,6657,Cellular Component,nucleoplasm,GO:0005654
+36,sox2,SOX2,6657,Cellular Component,nucleus,GO:0005634
+37,sox2,SOX2,6657,Cellular Component,transcription regulator complex,GO:0005667
+38,pou5f1,POU5F1,5460,Cellular Component,chromatin,GO:0000785
+39,pou5f1,POU5F1,5460,Cellular Component,cytoplasm,GO:0005737
+40,pou5f1,POU5F1,5460,Cellular Component,cytosol,GO:0005829
+41,pou5f1,POU5F1,5460,Cellular Component,female germ cell nucleus,GO:0001674
+42,pou5f1,POU5F1,5460,Cellular Component,germ cell nucleus,GO:0043073
+43,pou5f1,POU5F1,5460,Cellular Component,male germ cell nucleus,GO:0001673
+44,pou5f1,POU5F1,5460,Cellular Component,mitochondrion,GO:0005739
+45,pou5f1,POU5F1,5460,Cellular Component,nucleolus,GO:0005730
+46,pou5f1,POU5F1,5460,Cellular Component,nucleoplasm,GO:0005654
+47,pou5f1,POU5F1,5460,Cellular Component,nucleus,GO:0005634
+48,pou5f1,POU5F1,5460,Cellular Component,transcription regulator complex,GO:0005667
+49,pou5f1,POU5F1,5460,Cellular Component,transcription repressor complex,GO:0017053
+50,cd44,CD44,960,Cellular Component,apical plasma membrane,GO:0016324
+51,cd44,CD44,960,Cellular Component,basolateral plasma membrane,GO:0016323
+52,cd44,CD44,960,Cellular Component,cell projection,GO:0042995
+53,cd44,CD44,960,Cellular Component,cell surface,GO:0009986
+54,cd44,CD44,960,Cellular Component,cytosol,GO:0005829
+55,cd44,CD44,960,Cellular Component,external side of plasma membrane,GO:0009897
+56,cd44,CD44,960,Cellular Component,Golgi apparatus,GO:0005794
+57,cd44,CD44,960,Cellular Component,integral component of membrane,GO:0016021
+58,cd44,CD44,960,Cellular Component,integral component of plasma membrane,GO:0005887
+59,cd44,CD44,960,Cellular Component,lamellipodium membrane,GO:0031258
+60,cd44,CD44,960,Cellular Component,macrophage migration inhibitory factor receptor complex,GO:0035692
+61,cd44,CD44,960,Cellular Component,membrane,GO:0016020
+62,cd44,CD44,960,Cellular Component,membrane raft,GO:0045121
+63,cd44,CD44,960,Cellular Component,microvillus,GO:0005902
+64,cd44,CD44,960,Cellular Component,nucleus,GO:0005634
+65,cd44,CD44,960,Cellular Component,plasma membrane,GO:0005886
+66,cd44,CD44,960,Cellular Component,protein-containing complex,GO:0032991
+67,cd44,CD44,960,Cellular Component,secretory granule membrane,GO:0030667
+0,klf4,KLF4,9314,Molecular Function,beta-catenin binding,GO:0008013
+1,klf4,KLF4,9314,Molecular Function,chromatin DNA binding,GO:0031490
+2,klf4,KLF4,9314,Molecular Function,cis-regulatory region sequence-specific DNA binding,GO:0000987
+3,klf4,KLF4,9314,Molecular Function,DNA binding,GO:0003677
+4,klf4,KLF4,9314,Molecular Function,"DNA-binding transcription activator activity, RNA polymerase II-specific",GO:0001228
+5,klf4,KLF4,9314,Molecular Function,DNA-binding transcription factor activity,GO:0003700
+6,klf4,KLF4,9314,Molecular Function,"DNA-binding transcription factor activity, RNA polymerase II-specific",GO:0000981
+7,klf4,KLF4,9314,Molecular Function,double-stranded DNA binding,GO:0003690
+8,klf4,KLF4,9314,Molecular Function,histone deacetylase binding,GO:0042826
+9,klf4,KLF4,9314,Molecular Function,metal ion binding,GO:0046872
+10,klf4,KLF4,9314,Molecular Function,phosphatidylinositol 3-kinase regulator activity,GO:0035014
+11,klf4,KLF4,9314,Molecular Function,promoter-specific chromatin binding,GO:1990841
+12,klf4,KLF4,9314,Molecular Function,protein binding,GO:0005515
+13,klf4,KLF4,9314,Molecular Function,RNA polymerase II cis-regulatory region sequence-specific DNA binding,GO:0000978
+14,klf4,KLF4,9314,Molecular Function,RNA polymerase II sequence-specific DNA-binding transcription factor recruiting activity,GO:0001010
+15,klf4,KLF4,9314,Molecular Function,RNA polymerase II-specific DNA-binding transcription factor binding,GO:0061629
+16,klf4,KLF4,9314,Molecular Function,sequence-specific DNA binding,GO:0043565
+17,klf4,KLF4,9314,Molecular Function,sequence-specific double-stranded DNA binding,GO:1990837
+18,klf4,KLF4,9314,Molecular Function,transcription cis-regulatory region binding,GO:0000976
+19,klf4,KLF4,9314,Molecular Function,transcription coregulator binding,GO:0001221
+20,klf4,KLF4,9314,Molecular Function,zinc ion binding,GO:0008270
+21,myc,MYC,4609,Molecular Function,cis-regulatory region sequence-specific DNA binding,GO:0000987
+22,myc,MYC,4609,Molecular Function,core promoter sequence-specific DNA binding,GO:0001046
+23,myc,MYC,4609,Molecular Function,DNA binding,GO:0003677
+24,myc,MYC,4609,Molecular Function,"DNA-binding transcription activator activity, RNA polymerase II-specific",GO:0001228
+25,myc,MYC,4609,Molecular Function,DNA-binding transcription factor activity,GO:0003700
+26,myc,MYC,4609,Molecular Function,"DNA-binding transcription factor activity, RNA polymerase II-specific",GO:0000981
+27,myc,MYC,4609,Molecular Function,DNA-binding transcription factor binding,GO:0140297
+28,myc,MYC,4609,Molecular Function,"DNA-binding transcription repressor activity, RNA polymerase II-specific",GO:0001227
+29,myc,MYC,4609,Molecular Function,double-stranded DNA binding,GO:0003690
+30,myc,MYC,4609,Molecular Function,E-box binding,GO:0070888
+31,myc,MYC,4609,Molecular Function,eukaryotic initiation factor eIF2 binding,GO:0071074
+32,myc,MYC,4609,Molecular Function,mRNA binding,GO:0003729
+33,myc,MYC,4609,Molecular Function,protein binding,GO:0005515
+34,myc,MYC,4609,Molecular Function,protein-containing complex binding,GO:0044877
+35,myc,MYC,4609,Molecular Function,protein dimerization activity,GO:0046983
+36,myc,MYC,4609,Molecular Function,RNA polymerase II cis-regulatory region sequence-specific DNA binding,GO:0000978
+37,myc,MYC,4609,Molecular Function,sequence-specific DNA binding,GO:0043565
+38,myc,MYC,4609,Molecular Function,transcription coregulator binding,GO:0001221
+39,myc,MYC,4609,Molecular Function,ubiquitin protein ligase binding,GO:0031625
+40,myc,MYC,4609,Molecular Function,ubiquitin-specific protease binding,GO:1990381
+41,sox17,SOX17,64321,Molecular Function,beta-catenin binding,GO:0008013
+42,sox17,SOX17,64321,Molecular Function,DNA binding,GO:0003677
+43,sox17,SOX17,64321,Molecular Function,"DNA-binding transcription activator activity, RNA polymerase II-specific",GO:0001228
+44,sox17,SOX17,64321,Molecular Function,DNA-binding transcription factor activity,GO:0003700
+45,sox17,SOX17,64321,Molecular Function,"DNA-binding transcription factor activity, RNA polymerase II-specific",GO:0000981
+46,sox17,SOX17,64321,Molecular Function,molecular_function,GO:0003674
+47,sox17,SOX17,64321,Molecular Function,protein binding,GO:0005515
+48,sox17,SOX17,64321,Molecular Function,RNA polymerase II-specific DNA-binding transcription factor binding,GO:0061629
+49,sox17,SOX17,64321,Molecular Function,sequence-specific DNA binding,GO:0043565
+50,sox17,SOX17,64321,Molecular Function,transcription cis-regulatory region binding,GO:0000976
+51,sox2,SOX2,6657,Molecular Function,chromatin binding,GO:0003682
+52,sox2,SOX2,6657,Molecular Function,chromatin DNA binding,GO:0031490
+53,sox2,SOX2,6657,Molecular Function,DNA binding,GO:0003677
+54,sox2,SOX2,6657,Molecular Function,"DNA-binding transcription activator activity, RNA polymerase II-specific",GO:0001228
+55,sox2,SOX2,6657,Molecular Function,DNA-binding transcription factor activity,GO:0003700
+56,sox2,SOX2,6657,Molecular Function,"DNA-binding transcription factor activity, RNA polymerase II-specific",GO:0000981
+57,sox2,SOX2,6657,Molecular Function,DNA-binding transcription factor binding,GO:0140297
+58,sox2,SOX2,6657,Molecular Function,miRNA binding,GO:0035198
+59,sox2,SOX2,6657,Molecular Function,molecular_function,GO:0003674
+60,sox2,SOX2,6657,Molecular Function,protein binding,GO:0005515
+61,sox2,SOX2,6657,Molecular Function,RNA polymerase II cis-regulatory region sequence-specific DNA binding,GO:0000978
+62,sox2,SOX2,6657,Molecular Function,RNA polymerase II-specific DNA-binding transcription factor binding,GO:0061629
+63,sox2,SOX2,6657,Molecular Function,sequence-specific DNA binding,GO:0043565
+64,sox2,SOX2,6657,Molecular Function,transcription cis-regulatory region binding,GO:0000976
+65,pou5f1,POU5F1,5460,Molecular Function,chromatin binding,GO:0003682
+66,pou5f1,POU5F1,5460,Molecular Function,chromatin DNA binding,GO:0031490
+67,pou5f1,POU5F1,5460,Molecular Function,cis-regulatory region sequence-specific DNA binding,GO:0000987
+68,pou5f1,POU5F1,5460,Molecular Function,cytokine binding,GO:0019955
+69,pou5f1,POU5F1,5460,Molecular Function,DNA binding,GO:0003677
+70,pou5f1,POU5F1,5460,Molecular Function,"DNA-binding transcription activator activity, RNA polymerase II-specific",GO:0001228
+71,pou5f1,POU5F1,5460,Molecular Function,DNA-binding transcription factor activity,GO:0003700
+72,pou5f1,POU5F1,5460,Molecular Function,"DNA-binding transcription factor activity, RNA polymerase II-specific",GO:0000981
+73,pou5f1,POU5F1,5460,Molecular Function,DNA-binding transcription factor binding,GO:0140297
+74,pou5f1,POU5F1,5460,Molecular Function,"DNA-binding transcription repressor activity, RNA polymerase II-specific",GO:0001227
+75,pou5f1,POU5F1,5460,Molecular Function,HMG box domain binding,GO:0071837
+76,pou5f1,POU5F1,5460,Molecular Function,lysine-acetylated histone binding,GO:0070577
+77,pou5f1,POU5F1,5460,Molecular Function,miRNA binding,GO:0035198
+78,pou5f1,POU5F1,5460,Molecular Function,nucleosome binding,GO:0031491
+79,pou5f1,POU5F1,5460,Molecular Function,POU domain binding,GO:0070974
+80,pou5f1,POU5F1,5460,Molecular Function,protein binding,GO:0005515
+81,pou5f1,POU5F1,5460,Molecular Function,RNA polymerase II cis-regulatory region sequence-specific DNA binding,GO:0000978
+82,pou5f1,POU5F1,5460,Molecular Function,RNA polymerase II intronic transcription regulatory region sequence-specific DNA binding,GO:0001162
+83,pou5f1,POU5F1,5460,Molecular Function,RNA polymerase II-specific DNA-binding transcription factor binding,GO:0061629
+84,pou5f1,POU5F1,5460,Molecular Function,sequence-specific DNA binding,GO:0043565
+85,pou5f1,POU5F1,5460,Molecular Function,sequence-specific double-stranded DNA binding,GO:1990837
+86,pou5f1,POU5F1,5460,Molecular Function,transcription cis-regulatory region binding,GO:0000976
+87,pou5f1,POU5F1,5460,Molecular Function,ubiquitin protein ligase binding,GO:0031625
+88,cd44,CD44,960,Molecular Function,cargo receptor activity,GO:0038024
+89,cd44,CD44,960,Molecular Function,channel regulator activity,GO:0016247
+90,cd44,CD44,960,Molecular Function,collagen binding,GO:0005518
+91,cd44,CD44,960,Molecular Function,cytokine binding,GO:0019955
+92,cd44,CD44,960,Molecular Function,cytokine receptor activity,GO:0004896
+93,cd44,CD44,960,Molecular Function,enzyme activator activity,GO:0008047
+94,cd44,CD44,960,Molecular Function,epidermal growth factor receptor binding,GO:0005154
+95,cd44,CD44,960,Molecular Function,hyaluronic acid binding,GO:0005540
+96,cd44,CD44,960,Molecular Function,phosphoprotein binding,GO:0051219
+97,cd44,CD44,960,Molecular Function,protein binding,GO:0005515
+98,cd44,CD44,960,Molecular Function,protein kinase binding,GO:0019901
+99,cd44,CD44,960,Molecular Function,type II transforming growth factor beta receptor binding,GO:0005114

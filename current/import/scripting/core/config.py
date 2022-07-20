@@ -24,7 +24,8 @@ JASPAR_BASE_URL = data["jaspar"]["base_url"]
 USCS_BASE_URL = data["uscs"]["base_url"]
 #Biomart
 ENSEMBL_BASE_URL = data["ensembl_biomart"]["base_url"]
-
+#CTDbase
+CTDBASE_BASE_URL = data['ctdbase']['base_url']
 #STRING
 STRING_BASE_URL = data['string']['base_url']
 

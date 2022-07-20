@@ -1,0 +1,119 @@
+,# Input,GeneSymbol,GeneID,PathwayName,PathwayID
+0,klf4,KLF4,9314,Developmental Biology,REACT:R-HSA-1266738
+1,klf4,KLF4,9314,Metabolism of proteins,REACT:R-HSA-392499
+2,klf4,KLF4,9314,Peptide hormone metabolism,REACT:R-HSA-2980736
+3,klf4,KLF4,9314,Signaling pathways regulating pluripotency of stem cells,KEGG:hsa04550
+4,klf4,KLF4,9314,"Synthesis, secretion, and deacylation of Ghrelin",REACT:R-HSA-422085
+5,klf4,KLF4,9314,Transcriptional regulation of pluripotent stem cells,REACT:R-HSA-452723
+6,klf4,KLF4,9314,Transcriptional regulation of white adipocyte differentiation,REACT:R-HSA-381340
+7,myc,MYC,4609,Acute myeloid leukemia,KEGG:hsa05221
+8,myc,MYC,4609,Binding of TCF/LEF:CTNNB1 to target gene promoters,REACT:R-HSA-4411364
+9,myc,MYC,4609,Bladder cancer,KEGG:hsa05219
+10,myc,MYC,4609,Breast cancer,KEGG:hsa05224
+11,myc,MYC,4609,Cell cycle,KEGG:hsa04110
+12,myc,MYC,4609,Cell Cycle,REACT:R-HSA-1640170
+13,myc,MYC,4609,"Cell Cycle, Mitotic",REACT:R-HSA-69278
+14,myc,MYC,4609,Central carbon metabolism in cancer,KEGG:hsa05230
+15,myc,MYC,4609,Chronic myeloid leukemia,KEGG:hsa05220
+16,myc,MYC,4609,Colorectal cancer,KEGG:hsa05210
+17,myc,MYC,4609,Constitutive Signaling by NOTCH1 HD+PEST Domain Mutants,REACT:R-HSA-2894862
+18,myc,MYC,4609,Constitutive Signaling by NOTCH1 PEST Domain Mutants,REACT:R-HSA-2644606
+19,myc,MYC,4609,Cyclin A:Cdk2-associated events at S phase entry,REACT:R-HSA-69656
+20,myc,MYC,4609,Cyclin E associated events during G1/S transition,REACT:R-HSA-69202
+21,myc,MYC,4609,Cytokine Signaling in Immune system,REACT:R-HSA-1280215
+22,myc,MYC,4609,Deubiquitination,REACT:R-HSA-5688426
+23,myc,MYC,4609,Disease,REACT:R-HSA-1643685
+24,myc,MYC,4609,Diseases of signal transduction,REACT:R-HSA-5663202
+25,myc,MYC,4609,Endometrial cancer,KEGG:hsa05213
+26,myc,MYC,4609,Epstein-Barr virus infection,KEGG:hsa05169
+27,myc,MYC,4609,ErbB signaling pathway,KEGG:hsa04012
+28,myc,MYC,4609,Formation of the beta-catenin:TCF transactivating complex,REACT:R-HSA-201722
+29,myc,MYC,4609,G1/S Transition,REACT:R-HSA-69206
+30,myc,MYC,4609,Gene Expression,REACT:R-HSA-74160
+31,myc,MYC,4609,Generic Transcription Pathway,REACT:R-HSA-212436
+32,myc,MYC,4609,Hepatitis B,KEGG:hsa05161
+33,myc,MYC,4609,Hippo signaling pathway,KEGG:hsa04390
+34,myc,MYC,4609,HTLV-I infection,KEGG:hsa05166
+35,myc,MYC,4609,Immune System,REACT:R-HSA-168256
+36,myc,MYC,4609,Interleukin-4 and 13 signaling,REACT:R-HSA-6785807
+37,myc,MYC,4609,Jak-STAT signaling pathway,KEGG:hsa04630
+38,myc,MYC,4609,MAPK6/MAPK4 signaling,REACT:R-HSA-5687128
+39,myc,MYC,4609,MAPK family signaling cascades,REACT:R-HSA-5683057
+40,myc,MYC,4609,MAPK signaling pathway,KEGG:hsa04010
+41,myc,MYC,4609,Metabolism of proteins,REACT:R-HSA-392499
+42,myc,MYC,4609,MicroRNAs in cancer,KEGG:hsa05206
+43,myc,MYC,4609,Mitotic G1-G1/S phases,REACT:R-HSA-453279
+44,myc,MYC,4609,NOTCH1 Intracellular Domain Regulates Transcription,REACT:R-HSA-2122947
+45,myc,MYC,4609,Pathways in cancer,KEGG:hsa05200
+46,myc,MYC,4609,PI3K-Akt signaling pathway,KEGG:hsa04151
+47,myc,MYC,4609,Post-translational protein modification,REACT:R-HSA-597592
+48,myc,MYC,4609,Proteoglycans in cancer,KEGG:hsa05205
+49,myc,MYC,4609,Signaling by Interleukins,REACT:R-HSA-449147
+50,myc,MYC,4609,Signaling by NOTCH,REACT:R-HSA-157118
+51,myc,MYC,4609,Signaling by NOTCH1,REACT:R-HSA-1980143
+52,myc,MYC,4609,Signaling by NOTCH1 HD+PEST Domain Mutants in Cancer,REACT:R-HSA-2894858
+53,myc,MYC,4609,Signaling by NOTCH1 in Cancer,REACT:R-HSA-2644603
+54,myc,MYC,4609,Signaling by NOTCH1 PEST Domain Mutants in Cancer,REACT:R-HSA-2644602
+55,myc,MYC,4609,Signaling by TGF-beta Receptor Complex,REACT:R-HSA-170834
+56,myc,MYC,4609,Signaling by Wnt,REACT:R-HSA-195721
+57,myc,MYC,4609,Signaling pathways regulating pluripotency of stem cells,KEGG:hsa04550
+58,myc,MYC,4609,Signal Transduction,REACT:R-HSA-162582
+59,myc,MYC,4609,SMAD2/SMAD3:SMAD4 heterotrimer regulates transcription,REACT:R-HSA-2173796
+60,myc,MYC,4609,Small cell lung cancer,KEGG:hsa05222
+61,myc,MYC,4609,S Phase,REACT:R-HSA-69242
+62,myc,MYC,4609,TCF dependent signaling in response to WNT,REACT:R-HSA-201681
+63,myc,MYC,4609,TFAP2 (AP-2) family regulates transcription of cell cycle factors,REACT:R-HSA-8866911
+64,myc,MYC,4609,TGF-beta signaling pathway,KEGG:hsa04350
+65,myc,MYC,4609,Thyroid cancer,KEGG:hsa05216
+66,myc,MYC,4609,Thyroid hormone signaling pathway,KEGG:hsa04919
+67,myc,MYC,4609,Transcriptional activity of SMAD2/SMAD3:SMAD4 heterotrimer,REACT:R-HSA-2173793
+68,myc,MYC,4609,Transcriptional misregulation in cancer,KEGG:hsa05202
+69,myc,MYC,4609,Transcriptional regulation by the AP-2 (TFAP2) family of transcription factors,REACT:R-HSA-8864260
+70,myc,MYC,4609,Ub-specific processing proteases,REACT:R-HSA-5689880
+71,myc,MYC,4609,Wnt signaling pathway,KEGG:hsa04310
+72,sox17,SOX17,64321,Deactivation of the beta-catenin transactivating complex,REACT:R-HSA-3769402
+73,sox17,SOX17,64321,Signaling by Wnt,REACT:R-HSA-195721
+74,sox17,SOX17,64321,Signal Transduction,REACT:R-HSA-162582
+75,sox17,SOX17,64321,TCF dependent signaling in response to WNT,REACT:R-HSA-201681
+76,sox17,SOX17,64321,Wnt signaling pathway,KEGG:hsa04310
+77,sox2,SOX2,6657,Cytokine Signaling in Immune system,REACT:R-HSA-1280215
+78,sox2,SOX2,6657,Deactivation of the beta-catenin transactivating complex,REACT:R-HSA-3769402
+79,sox2,SOX2,6657,Developmental Biology,REACT:R-HSA-1266738
+80,sox2,SOX2,6657,Hippo signaling pathway,KEGG:hsa04390
+81,sox2,SOX2,6657,Immune System,REACT:R-HSA-168256
+82,sox2,SOX2,6657,Interleukin-4 and 13 signaling,REACT:R-HSA-6785807
+83,sox2,SOX2,6657,"POU5F1 (OCT4), SOX2, NANOG activate genes related to proliferation",REACT:R-HSA-2892247
+84,sox2,SOX2,6657,"POU5F1 (OCT4), SOX2, NANOG repress genes related to differentiation",REACT:R-HSA-2892245
+85,sox2,SOX2,6657,Signaling by Interleukins,REACT:R-HSA-449147
+86,sox2,SOX2,6657,Signaling by Wnt,REACT:R-HSA-195721
+87,sox2,SOX2,6657,Signaling pathways regulating pluripotency of stem cells,KEGG:hsa04550
+88,sox2,SOX2,6657,Signal Transduction,REACT:R-HSA-162582
+89,sox2,SOX2,6657,TCF dependent signaling in response to WNT,REACT:R-HSA-201681
+90,sox2,SOX2,6657,Transcriptional regulation of pluripotent stem cells,REACT:R-HSA-452723
+91,pou5f1,POU5F1,5460,Developmental Biology,REACT:R-HSA-1266738
+92,pou5f1,POU5F1,5460,"POU5F1 (OCT4), SOX2, NANOG activate genes related to proliferation",REACT:R-HSA-2892247
+93,pou5f1,POU5F1,5460,"POU5F1 (OCT4), SOX2, NANOG repress genes related to differentiation",REACT:R-HSA-2892245
+94,pou5f1,POU5F1,5460,Signaling pathways regulating pluripotency of stem cells,KEGG:hsa04550
+95,pou5f1,POU5F1,5460,Transcriptional regulation of pluripotent stem cells,REACT:R-HSA-452723
+96,cd44,CD44,960,Cell surface interactions at the vascular wall,REACT:R-HSA-202733
+97,cd44,CD44,960,Cytokine Signaling in Immune system,REACT:R-HSA-1280215
+98,cd44,CD44,960,Degradation of the extracellular matrix,REACT:R-HSA-1474228
+99,cd44,CD44,960,ECM-receptor interaction,KEGG:hsa04512
+100,cd44,CD44,960,Epstein-Barr virus infection,KEGG:hsa05169
+101,cd44,CD44,960,Extracellular matrix organization,REACT:R-HSA-1474244
+102,cd44,CD44,960,Glycosaminoglycan metabolism,REACT:R-HSA-1630316
+103,cd44,CD44,960,Hematopoietic cell lineage,KEGG:hsa04640
+104,cd44,CD44,960,Hemostasis,REACT:R-HSA-109582
+105,cd44,CD44,960,Hyaluronan metabolism,REACT:R-HSA-2142845
+106,cd44,CD44,960,Hyaluronan uptake and degradation,REACT:R-HSA-2160916
+107,cd44,CD44,960,Immune System,REACT:R-HSA-168256
+108,cd44,CD44,960,Innate Immune System,REACT:R-HSA-168249
+109,cd44,CD44,960,Integrin cell surface interactions,REACT:R-HSA-216083
+110,cd44,CD44,960,Interferon gamma signaling,REACT:R-HSA-877300
+111,cd44,CD44,960,Interferon Signaling,REACT:R-HSA-913531
+112,cd44,CD44,960,Metabolism,REACT:R-HSA-1430728
+113,cd44,CD44,960,Metabolism of carbohydrates,REACT:R-HSA-71387
+114,cd44,CD44,960,MicroRNAs in cancer,KEGG:hsa05206
+115,cd44,CD44,960,Neutrophil degranulation,REACT:R-HSA-6798695
+116,cd44,CD44,960,Proteoglycans in cancer,KEGG:hsa05205
+117,cd44,CD44,960,Shigellosis,KEGG:hsa05131
