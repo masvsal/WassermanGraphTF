@@ -1,15 +1,15 @@
-from typing import Dict
 import fetch_endpoint as fe
 import pandas as pd
 from core import config as cfg
 import utility_functions as uf
 import io
+from functools import reduce
 
 gene_names = cfg.GENE_NAMES
 
-def use_genes_to_request_report_as_csv(report_name, gene_names, extra_params = {}):
+def request_report_as_csv(report_name, gene_names,input_type, extra_params = {}):
     params = {
-        'inputType':'gene',
+        'inputType':input_type,
         'inputTerms':uf.list_to_pipe_del(gene_names), #pipe delimited term list
         'report':report_name,
         'format':'csv',
@@ -22,48 +22,64 @@ def use_genes_to_request_report_as_csv(report_name, gene_names, extra_params = {
     return df
 
 def get_chemical_gene_interactions(gene_names):
-    df = use_genes_to_request_report_as_csv('cgixns', gene_names, {'actionTypes':'Any'})
+    df = request_report_as_csv('cgixns', gene_names, 'gene', {'actionTypes':'ANY'})
     df = df[df.Organism == 'Homo sapiens']
     df.to_csv('current/data/gene_annotations/ctdbase/automated_chem_gene_interactions.csv', index=False)
     return df
 def get_chemical_associations(gene_names):
-    df = use_genes_to_request_report_as_csv('chems_curated',gene_names)
+    df = request_report_as_csv('chems_curated',gene_names, 'gene')
     df = df[df.Organism == 'Homo sapiens']
     df.to_csv('current/data/gene_annotations/ctdbase/automated_curated_chem_associations.csv', index=False)
     return df
 def get_gene_associations(gene_names):
-    df = use_genes_to_request_report_as_csv('genes_curated',gene_names)
+    df = request_report_as_csv('genes_curated',gene_names, 'gene')
     df = df[(df['SrcOrganism'] == 'Homo sapiens') & (df['TgtOrganism'] == 'Homo sapiens')]
     df.to_csv('current/data/gene_annotations/ctdbase/automated_curated_gene_associations.csv', index=False)
     return df
 def get_disease_associations(gene_names):
-    df = use_genes_to_request_report_as_csv('diseases_curated',gene_names)
+    df = request_report_as_csv('diseases_curated',gene_names, 'gene')
     #df = df[df.Organism == 'Homo sapiens']
     df.to_csv('current/data/gene_annotations/ctdbase/automated_curated_disease_associations.csv')
     return df
 def get_pathway_associations(gene_names):
-    df = use_genes_to_request_report_as_csv('pathways_curated',gene_names)
+    df = request_report_as_csv('pathways_curated',gene_names, 'gene')
     df.to_csv('current/data/gene_annotations/ctdbase/automated_curated_pathway_associations.csv')
     return df
 def get_go_annotations(gene_names):
-    df_bp = use_genes_to_request_report_as_csv('go',gene_names,{'ontology':'go_bp'})
-    df_cc = use_genes_to_request_report_as_csv('go',gene_names,{'ontology':'go_cc'})
-    df_mf = use_genes_to_request_report_as_csv('go',gene_names,{'ontology':'go_mf'})
+    df_bp = request_report_as_csv('go',gene_names,'gene',{'ontology':'go_bp'})
+    df_cc = request_report_as_csv('go',gene_names,'gene',{'ontology':'go_cc'})
+    df_mf = request_report_as_csv('go',gene_names,'gene',{'ontology':'go_mf'})
     df = pd.concat([df_bp, df_cc, df_mf])
     df.to_csv('current/data/gene_annotations/ctdbase/automated_go_annotations.csv')
     return df
 
+def get_chem_disease_associations(disease_names, chemical_names):
+    df =  request_report_as_csv('chems_curated',disease_names,'disease')
+    df = df[~df['ChemicalID'].isin(chemical_names)]
+    df.to_csv('current/data/gene_annotations/ctdbase/automated_chem_disease_associations.csv')
 #main
-hmn_chemixns=get_chemical_gene_interactions(gene_names=gene_names)
-hmn_chems_curated=get_chemical_associations(gene_names=gene_names)
-hmn_gene_assc_curated=get_gene_associations(gene_names=gene_names)
-hmn_disease_assc_curated=get_disease_associations(gene_names = gene_names)
-hmn_pathway_assc_curated = get_pathway_associations(gene_names=gene_names)
-hmn_go_annots = get_go_annotations(gene_names=gene_names)
 
-print("human chemical-gene interaction # \n", hmn_chemixns['GeneSymbol'].value_counts())
-print("human chemical association # \n",hmn_chems_curated['GeneSymbol'].value_counts())
-print("human gene association # \n",hmn_gene_assc_curated['SrcGeneSymbol'].value_counts())
-print("human dis association # \n",hmn_disease_assc_curated['GeneSymbol'].value_counts())
-print("pathway association # \n",hmn_pathway_assc_curated['GeneSymbol'].value_counts())
-print("GO annot # \n",hmn_go_annots['GeneSymbol'].value_counts())
+hmn_chemixns=get_chemical_gene_interactions(gene_names=gene_names)
+#hmn_chems_curated=get_chemical_associations(gene_names=gene_names)
+#hmn_gene_assc_curated=get_gene_associations(gene_names=gene_names)
+hmn_disease_assc_curated=get_disease_associations(gene_names = gene_names)
+#hmn_pathway_assc_curated = get_pathway_associations(gene_names=gene_names)
+#hmn_go_annots = get_go_annotations(gene_names=gene_names)
+disease_ids = list(hmn_disease_assc_curated['DiseaseID'].unique())
+chemical_ids = list(hmn_chemixns['ChemicalID'].unique())
+get_chem_disease_associations(disease_ids,chemical_ids)
+
+lol = hmn_disease_assc_curated.groupby(["GeneSymbol", "Size"]).size()
+""" 
+chmixns = hmn_chemixns['GeneSymbol'].value_counts().to_frame().rename(columns={'GeneSymbol':'chem-gene associations(curated)'})
+print(chmixns)
+chems = hmn_chems_curated['GeneSymbol'].value_counts().to_frame().rename(columns={'GeneSymbol':'chem (curated)'})
+gene_assc = hmn_gene_assc_curated['SrcGeneSymbol'].value_counts().to_frame().rename(columns={'GeneSymbol':'gene (curated)'})
+disease_assc = hmn_disease_assc_curated['GeneSymbol'].value_counts().to_frame().rename(columns={'GeneSymbol':'disease (curated)'})
+pathway_assc = hmn_pathway_assc_curated['GeneSymbol'].value_counts().to_frame().rename(columns={'GeneSymbol':'pathway'})
+go_annots = hmn_go_annots['GeneSymbol'].value_counts().to_frame().rename(columns={'GeneSymbol':'gene ontology'})
+
+merged = [chmixns, chems, disease_assc, pathway_assc, go_annots]
+merged = pd.concat(merged, axis=1)
+
+lol.to_csv('current/analysis/similarity_data/similarity_data.csv',index=True) """

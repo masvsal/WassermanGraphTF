@@ -30,5 +30,5 @@ WHERE (manual_entry.uniprot_swissprot_id <> [""])
 MATCH (automatic_entry:Protein)
 WHERE (automatic_entry.uniprot_trembl_id <> [""])
 
-RETURN count(isoforms) AS isoforms, count(manual_entry) as manual_entry, count(automatic_entry) as automatic_entry
+RETURN count(DISTINCT isoforms) AS isoforms, count(DISTINCT manual_entry) as manual_entry, count(DISTINCT automatic_entry) as automatic_entry
 ;

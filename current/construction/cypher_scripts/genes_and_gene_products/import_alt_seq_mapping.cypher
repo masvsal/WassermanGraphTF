@@ -6,5 +6,5 @@ SET g.primary_seq_flag=toBoolean(line.Primary_Seq)
 with g
 MATCH (primary:Gene {primary_seq_flag:TRUE})
 MATCH (alternate:Gene {primary_seq_flag:FALSE})
-RETURN count(primary) as primary, count(alternate) as alternate
+RETURN count(DISTINCT primary) as primary, count(DISTINCT alternate) as alternate
 ;

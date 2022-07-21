@@ -1,3 +1,5 @@
+//used for testing purposes. Parses GO annotations formatted by the CTDbase database.
+
 LOAD CSV WITH HEADERS
 	FROM '$CDTBASE_GO_URI' as line
 

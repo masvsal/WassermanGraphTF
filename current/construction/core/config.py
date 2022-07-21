@@ -30,10 +30,15 @@ ALTSEQ_AUTOMATED_URI = data['data_uri']['alt_seq_automated']
 GOA_PRUNED = data['data_uri']['goa_pruned']
 PIR_SLIM_PRUNED = data['data_uri']['pir_slim_pruned']
 GENERIC_SLIM_PRUNED = data['data_uri']['generic_slim_pruned']
+CTDBASE_GO = data['data_uri']['ctdbase']['go']
 
 PROT_SEQ = data['data_uri']['cis_bp_prot_seq']
 TFCLASS = data['data_uri']['tfclass']
 JASPAR_PFM = data['data_uri']['jaspar_pfm']
+
+CTDBASE_GENE_DISEASE = data['data_uri']['ctdbase']['gene_disease']
+CTDBASE_PATHWAY = data['data_uri']['ctdbase']['pathway']
+CTDBASE_GENE_CHEMICAL = data['data_uri']['ctdbase']['gene_chem_association']
 
 BIOGRID = data['data_uri']['biogrid']
 STRING_ANNOTATION = data['data_uri']['string_annotation']

@@ -27,6 +27,6 @@ SET g.aliases = aliases_G
 SET t.aliases = aliases_T
 SET p.ensembl_ids = ensembl_ids
 
-WITH count(g) as genes, count(t) as transcripts, count(p) as uniparc
+WITH count(DISTINCT g) as genes, count(DISTINCT t) as transcripts, count(DISTINCT p) as uniparc
 RETURN genes, transcripts, uniparc
 ;
