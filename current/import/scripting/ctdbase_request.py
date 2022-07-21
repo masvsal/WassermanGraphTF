@@ -76,7 +76,7 @@ def request_CTDbase(gene_names):
     print('CTDBASE: using disease ids to get disease-chemical associations...',end='')
     chem_disease = get_chem_disease_associations(disease_ids,chemical_ids)
     print('saving...', end='')
-    chem_disease.to_csv('current/data/gene_annotations/ctdbase/automated_chem_disease_associations.csv')
+    chem_disease.to_csv('current/data/gene_annotations/ctdbase/automated_chem_disease_associations.csv',index=False)
     print('done')
 
 """ 
