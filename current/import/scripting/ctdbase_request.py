@@ -49,7 +49,7 @@ def get_go_annotations(gene_names):
 
 def get_chem_disease_associations(disease_names, chemical_names):
     df =  request_report_as_csv('chems_curated',disease_names,'disease')
-    df = df[~df['ChemicalID'].isin(chemical_names)]
+    df = df[df['ChemicalID'].isin(chemical_names)]
     return df
 #main
 
