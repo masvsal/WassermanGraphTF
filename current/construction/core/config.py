@@ -39,6 +39,7 @@ JASPAR_PFM = data['data_uri']['jaspar_pfm']
 CTDBASE_GENE_DISEASE = data['data_uri']['ctdbase']['gene_disease']
 CTDBASE_PATHWAY = data['data_uri']['ctdbase']['pathway']
 CTDBASE_GENE_CHEMICAL = data['data_uri']['ctdbase']['gene_chem_association']
+CTDBASE_DISEASE_CHEMICAL = data['data_uri']['ctdbase']['disease_chem_association']
 
 BIOGRID = data['data_uri']['biogrid']
 STRING_ANNOTATION = data['data_uri']['string_annotation']

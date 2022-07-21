@@ -281,6 +281,15 @@ class Annotation_Importer(Data_Importer):
             )
             for record in result:
                 print("({count}) pathway annotations nodes added".format(count=record['count']))
+    
+    def create_disease_chem_annotations(self):
+        with self.driver.session() as session:
+            print("creating pathway associations...")
+            result = session.write_transaction(
+                self._create_disease_chem_annotations
+            )
+            for record in result:
+                print("({count}) disease-chem annotations nodes added".format(count=record['count']))
 
     def create_tfclass_annotations(self):
         with self.driver.session() as session:
@@ -388,6 +397,18 @@ class Annotation_Importer(Data_Importer):
     def _create_pathway_annotations(tx):
         query = open("current/construction/cypher_scripts/toxicogenomics/create_ctdbase_pathways.cypher", "r")
         result = tx.run(query.read().replace("$CDTBASE_PATHWAY_URI",cfg.CTDBASE_PATHWAY))
+        query.close()
+        try:
+            return [{"count":record["count"]} for record in result]
+        except Neo4jError as exception:
+            logging.error("{query} raised an error: \n {exception}".format(
+                query=query, exception=exception))
+            raise
+    
+    @staticmethod
+    def _create_disease_chem_annotations(tx):
+        query = open("current/construction/cypher_scripts/toxicogenomics/create_ctdbase_chemical_disease_associations.cypher", "r")
+        result = tx.run(query.read().replace("$CDTBASE_DISEASE_CHEMICAL_URI",cfg.CTDBASE_DISEASE_CHEMICAL))
         query.close()
         try:
             return [{"count":record["count"]} for record in result]
