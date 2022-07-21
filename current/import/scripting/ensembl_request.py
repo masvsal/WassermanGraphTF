@@ -114,7 +114,7 @@ def lookup_all_protein_xrefs(df:pd.DataFrame, protein_ids):
     return merged
 
 #runs all import functions sequentially
-def import_entities(gene_names):
+def request_ensembl(gene_names):
     print('ENSEMBL: Testing connection...',end="")
     if is_connected():
         print('Connected')

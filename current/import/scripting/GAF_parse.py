@@ -34,7 +34,7 @@ class gaf_parser():
                             protein[row[8]]+=1
 
 #main
-def get_go_annotations(gene_names):
+def parse_go_annotations(gene_names):
     num_annotations = 0
     read_path = 'current/data/gene_annotations/goa_human_full.csv'
     write_path = 'current/data/gene_annotations/namayura_GAF_Pruned.csv'

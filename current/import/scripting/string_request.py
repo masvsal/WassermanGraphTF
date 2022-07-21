@@ -20,7 +20,6 @@ def get_network(gene_names):
     r = r.content
     df = pd.read_csv(io.StringIO(r.decode('utf-8')), delimiter='\t')
     df.drop_duplicates(inplace=True)
-    print(df)
     df = df.rename(columns={'stringId_A':'node1_string_id','stringId_B':'node2_string_id','preferredName_A':'node1','preferredName_B':'node2', 'nscore':'neighborhood_on_chromosome','fscore':'gene_fusion','pscore':'phylogenetic_cooccurrence','ascore':'coexpression','escore':'experimentally_determined_interaction','dscore':'database_annotated','tscore':'automated_textmining','score':'combined_score'},errors='raise')
     return df
 def get_annotations(gene_names):
@@ -36,17 +35,15 @@ def get_annotations(gene_names):
     df = df.rename(columns={'stringId':'identifier','preferredName':'node'},errors='raise')
     return df
 
-gene_names = cfg.GENE_NAMES
+def request_string(gene_names):
+    print('STRING: getting network...', end="")
+    network_df = get_network(gene_names)
+    network_df.to_csv('current/data/protein_interactions/automated_string_interactions.csv',index=False)
+    print("done")
 
-print('STRING: getting network...', end="")
-network_df = get_network(gene_names)
-network_df.to_csv('current/data/protein_interactions/automated_string_interactions.csv',index=False)
-print("done")
-
-
-print('STRING: getting annotations...', end="")
-annotation_df = get_annotations(gene_names)
-annotation_df.to_csv('current/data/protein_interactions/automated_string_annotations.csv',index=False)
-print("done")
+    print('STRING: getting annotations...', end="")
+    annotation_df = get_annotations(gene_names)
+    annotation_df.to_csv('current/data/protein_interactions/automated_string_annotations.csv',index=False)
+    print("done")
 
 

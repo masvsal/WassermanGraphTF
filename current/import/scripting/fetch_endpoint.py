@@ -1,5 +1,4 @@
 import requests, sys
-from pprint import pprint
 
 def fetch_endpoint(server, request, params):
     r = requests.get(server+request, params)
