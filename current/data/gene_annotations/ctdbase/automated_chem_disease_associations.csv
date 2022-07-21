@@ -1,4 +1,4 @@
-,# Input,ChemicalName,ChemicalID,CasRN,DiseaseName,DiseaseID,DiseaseCategories,OmimIDs,PubMedIDs,DirectEvidence
+,Input,ChemicalName,ChemicalID,CasRN,DiseaseName,DiseaseID,DiseaseCategories,OmimIDs,PubMedIDs,DirectEvidence
 0,mesh:d001171,Adrenal Cortex Hormones,D000305,,"Arthritis, Juvenile",MESH:D001171,Connective tissue disease|Immune system disease|Musculoskeletal disease,,12682624|6772782,therapeutic
 3,mesh:d001171,Chloroquine,D002738,54-05-7,"Arthritis, Juvenile",MESH:D001171,Connective tissue disease|Immune system disease|Musculoskeletal disease,,9523387,therapeutic
 4,mesh:d001171,Flurbiprofen,D005480,5104-49-4,"Arthritis, Juvenile",MESH:D001171,Connective tissue disease|Immune system disease|Musculoskeletal disease,,3560095,therapeutic
