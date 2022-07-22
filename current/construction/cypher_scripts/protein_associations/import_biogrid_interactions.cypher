@@ -26,7 +26,7 @@ CREATE (a1:Annot {
 	qualification:coalesce(line.QUALIFICATIONS, ""), 
 	tags:coalesce(line.tags, "")})
 
-MERGE (p:Publication {PMID:line.PUBMED_ID, author:line.PUBMED_AUTHOR})
+MERGE (p:Publication {PMID:line.PUBMED_ID, author:coalesce(line.PUBMED_AUTHOR,'NOT FOUND')})
 
 CREATE (pA)-[:HAS_ANNOTATION]->(a1)
 CREATE (pB)-[:HAS_ANNOTATION]->(a1)

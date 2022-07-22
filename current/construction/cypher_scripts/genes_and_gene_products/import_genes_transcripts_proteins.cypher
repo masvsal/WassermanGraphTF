@@ -15,6 +15,9 @@ MERGE (g)-[:HAS_METADATA]->(m)<-[:HAS_METADATA]-(t)
 SET t.aliases = coalesce(t.aliases,[]) + [line.Transcript_Name]
 SET g.aliases = coalesce(g.aliases,[]) + [line.Gene_Name]
 SET p.ensembl_ids = coalesce(p.ensembl_ids,[]) + [line.Protein_Stable_ID]
+SET p.isoform_id = ['NONE ASSOCIATED']
+SET p.uniprot_swissprot_id = ['NONE ASSOCIATED']
+SET p.uniprot_trembl_id = ['NONE ASSOCIATED']
 
 WITH g, t, p
 CALL {

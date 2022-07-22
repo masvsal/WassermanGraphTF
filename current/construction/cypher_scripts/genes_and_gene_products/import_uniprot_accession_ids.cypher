@@ -3,9 +3,10 @@ LOAD CSV WITH HEADERS
 	FROM '$GENE2UNIPARC' as line
 MATCH (p:Protein)
 WHERE line.Protein_Stable_ID IN p.ensembl_ids
-SET p.isoform_id = coalesce(p.isoform_id,[]) + [coalesce(line.UniProtKB_Isoform_ID,"")] 
-SET p.uniprot_swissprot_id = coalesce(p.uniprot_swissprot_id,[]) + [coalesce(line.UniProtKB_Swiss_Prot_ID,"")] 
-SET p.uniprot_trembl_id = coalesce(p.uniprot_trembl_id,[]) + [coalesce(line.UniProtKB_TrEMBL_ID,"")]
+
+SET p.isoform_id = p.isoform_id + [coalesce(line.UniProtKB_Isoform_ID,'NONE ASSOCIATED') ]
+SET p.uniprot_swissprot_id = p.uniprot_swissprot_id + [coalesce(line.UniProtKB_Swiss_Prot_ID,'NONE ASSOCIATED') ]
+SET p.uniprot_trembl_id = p.uniprot_trembl_id + [coalesce(line.UniProtKB_TrEMBL_ID,'NONE ASSOCIATED')]
 
 WITH p
 CALL {
@@ -20,15 +21,30 @@ SET p.uniprot_swissprot_id = swissprot
 SET p.uniprot_trembl_id = trembl
 
 WITH p
+CALL {
+    WITH p
+    WITH p
+    WHERE (p.isoform_id <> ['NONE ASSOCIATED'])
+    SET p.isoform_id = [x IN p.isoform_id WHERE x <> "NONE ASSOCIATED"]
+    WITH count(p) as count
+    RETURN count as isoforms
+}
+CALL {
+    WITH p
+    WITH p
+    WHERE (p.uniprot_swissprot_id <> ['NONE ASSOCIATED'])
+    SET p.uniprot_swissprot_id = [x IN p.uniprot_swissprot_id WHERE x <> "NONE ASSOCIATED"]
+    WITH count(p) as count
+    RETURN count as manual_entry
+}
+CALL {
+    WITH p
+    WITH p
+    WHERE (p.uniprot_trembl_id <> ['NONE ASSOCIATED'])
+    SET p.uniprot_trembl_id = [x IN p.uniprot_trembl_id WHERE x <> "NONE ASSOCIATED"]
+    WITH count(p) as count
+    RETURN count as automatic_entry
+}
 
-MATCH (isoforms:Protein)
-WHERE (isoforms.isoform_id <> [""])
-
-MATCH (manual_entry:Protein)
-WHERE (manual_entry.uniprot_swissprot_id <> [""])
-
-MATCH (automatic_entry:Protein)
-WHERE (automatic_entry.uniprot_trembl_id <> [""])
-
-RETURN count(DISTINCT isoforms) AS isoforms, count(DISTINCT manual_entry) as manual_entry, count(DISTINCT automatic_entry) as automatic_entry
+RETURN count(isoforms) as isoforms, count(manual_entry) as manual_entry, count(automatic_entry) as automatic_entry
 ;
