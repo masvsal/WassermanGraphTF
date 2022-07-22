@@ -1,5 +1,12 @@
 protein_name,uniprot_ids,jaspar_id,url,collection,family,class,pubmed_ids,medline,tax_group
+ASCL1,P50553,MA1100.2,https://jaspar.genereg.net/api/v1/matrix/MA1100.2/,CORE,MyoD/ASC-related factors,Basic helix-loop-helix factors (bHLH),20382226,20382226,"vertebrates[{'name': 'Homo sapiens', 'tax_id': 9606}]"
+ASCL1,P50553,MA1631.1,https://jaspar.genereg.net/api/v1/matrix/MA1631.1/,CORE,MyoD/ASC-related factors,Basic helix-loop-helix factors (bHLH),31086315,31086315,"vertebrates[{'name': 'Homo sapiens', 'tax_id': 9606}]"
+POU3F2,P20265,MA0787.1,https://jaspar.genereg.net/api/v1/matrix/MA0787.1/,CORE,POU domain factors,Homeo domain factors,9852081,9852081,"vertebrates[{'name': 'Homo sapiens', 'tax_id': 9606}]"
+ETV2,Q3KNT2,MA0762.1,https://jaspar.genereg.net/api/v1/matrix/MA0762.1/,CORE,Ets-related,Tryptophan cluster factors,20517297,20517297,"vertebrates[{'name': 'Homo sapiens', 'tax_id': 9606}]"
+KLF2,Q9Y5W3,MA1515.1,https://jaspar.genereg.net/api/v1/matrix/MA1515.1/,CORE,Three-zinc finger Kruppel-related,C2H2 zinc finger factors,11443140,11443140,"vertebrates[{'name': 'Homo sapiens', 'tax_id': 9606}]"
 KLF4,O43474,MA0039.4,https://jaspar.genereg.net/api/v1/matrix/MA0039.4/,CORE,Three-zinc finger Kruppel-related,C2H2 zinc finger factors,28473536,28473536,"vertebrates[{'name': 'Homo sapiens', 'tax_id': 9606}]"
 MYC,P01106,MA0147.3,https://jaspar.genereg.net/api/v1/matrix/MA0147.3/,CORE,bHLH-ZIP,Basic helix-loop-helix factors (bHLH),18555785,18555785,"vertebrates[{'name': 'Homo sapiens', 'tax_id': 9606}]"
 SOX2,P48431,MA0143.4,https://jaspar.genereg.net/api/v1/matrix/MA0143.4/,CORE,SOX-related factors,High-mobility group (HMG) domain factors,15863505,15863505,"vertebrates[{'name': 'Homo sapiens', 'tax_id': 9606}]"
 POU5F1,Q01860,MA1115.1,https://jaspar.genereg.net/api/v1/matrix/MA1115.1/,CORE,POU domain factors,Homeo domain factors,23747866,23747866,"vertebrates[{'name': 'Homo sapiens', 'tax_id': 9606}]"
+GATA4,P43694,MA0482.2,https://jaspar.genereg.net/api/v1/matrix/MA0482.2/,CORE,C4-GATA-related,Other C4 zinc finger-type factors,7791790,7791790,"vertebrates[{'name': 'Homo sapiens', 'tax_id': 9606}]"
+SOX9,P48436,MA0077.1,https://jaspar.genereg.net/api/v1/matrix/MA0077.1/,CORE,SOX-related factors,High-mobility group (HMG) domain factors,9973626,9973626,"vertebrates[{'name': 'Homo sapiens', 'tax_id': 9606}]"

@@ -284,7 +284,7 @@ class Annotation_Importer(Data_Importer):
     
     def create_disease_chem_annotations(self):
         with self.driver.session() as session:
-            print("creating pathway associations...")
+            print("creating d-c associations...")
             result = session.write_transaction(
                 self._create_disease_chem_annotations
             )

@@ -29,4 +29,11 @@ CTDBASE_BASE_URL = data['ctdbase']['base_url']
 #STRING
 STRING_BASE_URL = data['string']['base_url']
 
+#TF Sets
 GENE_NAMES = data['gene_names']
+FIBROBLAST_TO_ENDOTHELIAL = data['fibroblast_to_endothelium']
+FIBROBLAST_TO_NEURON = data['fibroblast_to_neuron']
+FIBROBLAST_TO_THYMUS = data['fibroblast_to_thymus']
+FIBROBLAST_TO_SERTOLI = data['fibroblast_to_sertoli']
+FIBROBLAST_TO_HSC = data['fibroblast_to_hsc']
+

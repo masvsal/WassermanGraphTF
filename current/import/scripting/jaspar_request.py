@@ -26,6 +26,7 @@ def get_basic_info(gene_names):
 
     for i in range(len(gene_names)):
         params['name'] = gene_names[i]
+        print('getting ', gene_names[i])
         r = requests.get(request_url,params=params)
         response = r.json()
         results = response['results']
@@ -34,8 +35,8 @@ def get_basic_info(gene_names):
                 'search_keyword':gene_names[i],
                 'protein_name':result['name'],
                 'latest_matrix_id':result['matrix_id'],
-                'collection':result['collection'],
-                'url':result['url']
+                'collection':result.get('collection',''),
+                'url':result.get('url','')
                 }]
     return jaspar_annotation
 #multiple small api calls
@@ -44,6 +45,7 @@ def get_further_info(jaspar_annotation):
     request_url = cfg.JASPAR_BASE_URL + "api/v1/matrix"
     for i in range(len(jaspar_annotation)):
         request_url_specific = request_url + "/" + jaspar_annotation[i]['latest_matrix_id']
+        print('getting', jaspar_annotation[i]['search_keyword'])
         r = requests.get(request_url_specific)
         response = r.json()
         jaspar_annotation[i]['pubmed_ids'] = response['pubmed_ids']
@@ -55,8 +57,8 @@ def get_further_info(jaspar_annotation):
         jaspar_annotation[i]['class'] = response['class']
         jaspar_annotation[i]['collection'] = response['collection']
         jaspar_annotation[i]['group'] = response['tax_group'] + '[' + utilfcns.list_to_pipe_del(response['species']) + ']'
-        jaspar_annotation[i]['data type'] = response['type']
-        jaspar_annotation[i]['data_source'] = response['source']
+        jaspar_annotation[i]['data type'] = response.get('type','')
+        jaspar_annotation[i]['data_source'] = response.get('source','')
 
     for i in range(len(jaspar_annotation)):
         jaspar_annotation[i]['uniprot_ids'] = utilfcns.list_to_pipe_del(jaspar_annotation[i]['uniprot_ids'])

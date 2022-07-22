@@ -1,89 +1,142 @@
 ,# Input,DiseaseName,DiseaseID,GeneSymbol,GeneID,DiseaseCategories,DirectEvidence,OmimIDs,PubMedIDs
-0,klf4,"Arthritis, Juvenile",MESH:D001171,KLF4,9314,Connective tissue disease|Immune system disease|Musculoskeletal disease,marker/mechanism,,19565504
-1,klf4,Congenital Abnormalities,MESH:D000013,KLF4,9314,Congenital abnormality,marker/mechanism,,20439457
-2,klf4,"Heart Defects, Congenital",MESH:D006330,KLF4,9314,Cardiovascular disease|Congenital abnormality,marker/mechanism,,20439457
-3,klf4,Myocardial Ischemia,MESH:D017202,KLF4,9314,Cardiovascular disease,marker/mechanism,,16214533
-4,klf4,Thrombosis,MESH:D013927,KLF4,9314,Cardiovascular disease,therapeutic,,25339356
-5,myc,Adenocarcinoma,MESH:D000230,MYC,4609,Cancer,marker/mechanism,,26432044
-6,myc,Adenocarcinoma of Lung,MESH:D000077192,MYC,4609,Cancer,marker/mechanism,,26656844|27602772
-7,myc,Burkitt Lymphoma,MESH:D002051,MYC,4609,Cancer|Immune system disease|Lymphatic disease|Viral disease,marker/mechanism,113970.0,
-8,myc,Carcinoma,MESH:D002277,MYC,4609,Cancer,marker/mechanism,,2228319
-9,myc,"Carcinoma, Ductal",MESH:D044584,MYC,4609,Cancer,marker/mechanism,,29295717
-10,myc,"Carcinoma, Hepatocellular",MESH:D006528,MYC,4609,Cancer|Digestive system disease,marker/mechanism,,12029619|15565109|29698666|9029167
-11,myc,"Carcinoma, Merkel Cell",MESH:D015266,MYC,4609,Cancer|Viral disease,marker/mechanism,,25277525
-12,myc,"Carcinoma, Non-Small-Cell Lung",MESH:D002289,MYC,4609,Cancer|Respiratory tract disease,marker/mechanism,,24688052
-13,myc,"Carcinoma, Squamous Cell",MESH:D002294,MYC,4609,Cancer,marker/mechanism,,26432044
-14,myc,"Cardiomyopathy, Hypertrophic",MESH:D002312,MYC,4609,Cardiovascular disease,marker/mechanism,,22000973
-15,myc,"Cell Transformation, Neoplastic",MESH:D002471,MYC,4609,Cancer|Pathology (process),marker/mechanism,,12115494|2543982|29626521|31504995
-16,myc,Chromosome Breakage,MESH:D019457,MYC,4609,Pathology (process),marker/mechanism,,25933419
-17,myc,Cleft Lip,MESH:D002971,MYC,4609,Congenital abnormality|Mouth disease,marker/mechanism,,24859337
-18,myc,Cleft Palate,MESH:D002972,MYC,4609,Congenital abnormality|Mouth disease|Musculoskeletal disease,marker/mechanism,,24859337
-19,myc,Colonic Neoplasms,MESH:D003110,MYC,4609,Cancer|Digestive system disease,marker/mechanism,,12189186|15059925|18283038|21081470
-20,myc,Colorectal Neoplasms,MESH:D015179,MYC,4609,Cancer|Digestive system disease,marker/mechanism,,30510241
-21,myc,"Disease Models, Animal",MESH:D004195,MYC,4609,Animal disease,marker/mechanism,,27602772
-22,myc,Disease Progression,MESH:D018450,MYC,4609,Pathology (process),marker/mechanism,,22321834|28191284|34510316|34626302
-23,myc,Endometrial Neoplasms,MESH:D016889,MYC,4609,Cancer|Urogenital disease (female),marker/mechanism,,26656844
-24,myc,Fatty Liver,MESH:D005234,MYC,4609,Digestive system disease,therapeutic,,24210820
-25,myc,Glioblastoma,MESH:D005909,MYC,4609,Cancer,marker/mechanism,,21127729
-26,myc,Hemangiosarcoma,MESH:D006394,MYC,4609,Cancer,marker/mechanism,,17569031
-27,myc,"Hypertrophy, Left Ventricular",MESH:D017379,MYC,4609,Cardiovascular disease|Pathology (anatomical condition),marker/mechanism,,21472269
-28,myc,"Leukemia, Myeloid, Acute",MESH:D015470,MYC,4609,Cancer,marker/mechanism,,25956709
-29,myc,"Liver Cirrhosis, Experimental",MESH:D008106,MYC,4609,Digestive system disease|Pathology (process),marker/mechanism,,25380136
-30,myc,Liver Neoplasms,MESH:D008113,MYC,4609,Cancer|Digestive system disease,marker/mechanism,,11532874|8807143
-31,myc,"Liver Neoplasms, Experimental",MESH:D008114,MYC,4609,Cancer|Digestive system disease,marker/mechanism,,11280770|18560566|9079223
-32,myc,Lung Neoplasms,MESH:D008175,MYC,4609,Cancer|Respiratory tract disease,marker/mechanism,,16289808|28191284
-33,myc,"Lymphoma, Large B-Cell, Diffuse",MESH:D016403,MYC,4609,Cancer|Immune system disease|Lymphatic disease,marker/mechanism,,27356265
-34,myc,Medulloblastoma,MESH:D008527,MYC,4609,Cancer,marker/mechanism,,19270706|31694585
-35,myc,Myelodysplastic Syndromes,MESH:D009190,MYC,4609,Blood disease,marker/mechanism,,10914558
-36,myc,Neoplasm Metastasis,MESH:D009362,MYC,4609,Cancer|Pathology (process),marker/mechanism,,22321834
-37,myc,Neoplasms,MESH:D009369,MYC,4609,Cancer,marker/mechanism,,11559025
-38,myc,Neuroblastoma,MESH:D009447,MYC,4609,Cancer,marker/mechanism,,34626302|8761367
-39,myc,Neuroectodermal Tumors,MESH:D017599,MYC,4609,Cancer,marker/mechanism,,8761367
-40,myc,Osteosarcoma,MESH:D012516,MYC,4609,Cancer,marker/mechanism,,24646477|34508303
-41,myc,Ovarian Neoplasms,MESH:D010051,MYC,4609,Cancer|Endocrine system disease|Urogenital disease (female),marker/mechanism,,20852632|34510316
-42,myc,Pancreatic Neoplasms,MESH:D010190,MYC,4609,Cancer|Digestive system disease|Endocrine system disease,marker/mechanism,,25961927
-43,myc,"Polycystic Kidney, Autosomal Dominant",MESH:D016891,MYC,4609,Congenital abnormality|Genetic disease (inborn)|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,,25877301
-44,myc,Prostatic Neoplasms,MESH:D011471,MYC,4609,Cancer|Urogenital disease (male),marker/mechanism,,17173048|23704919|29295717|32512071
-45,myc,Stomach Neoplasms,MESH:D013274,MYC,4609,Cancer|Digestive system disease,marker/mechanism,,17171786|21173787
-46,myc,Urinary Bladder Neoplasms,MESH:D001749,MYC,4609,Cancer|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,,2228319
-47,myc,Uterine Cervical Neoplasms,MESH:D002583,MYC,4609,Cancer|Urogenital disease (female),marker/mechanism,,26432044
-48,sox17,Colorectal Neoplasms,MESH:D015179,SOX17,64321,Cancer|Digestive system disease,marker/mechanism,,18413743
-49,sox17,Teratogenesis,MESH:D064793,SOX17,64321,Pathology (process),marker/mechanism,,24154490
-50,sox17,Vesico-Ureteral Reflux,MESH:D014718,SOX17,64321,Urogenital disease (female)|Urogenital disease (male),marker/mechanism,613674.0,
-51,sox2,Adenocarcinoma of Lung,MESH:D000077192,SOX2,6657,Cancer,marker/mechanism,,25184679
-52,sox2,Anophthalmos,MESH:D000853,SOX2,6657,Congenital abnormality|Eye disease,marker/mechanism,,21532573
-53,sox2,Ataxia,MESH:D001259,SOX2,6657,Nervous system disease|Signs and symptoms,marker/mechanism,,29732603
-54,sox2,Brain Neoplasms,MESH:D001932,SOX2,6657,Cancer|Nervous system disease,marker/mechanism,,27935819
-55,sox2,"Carcinoma, Squamous Cell",MESH:D002294,SOX2,6657,Cancer,marker/mechanism,,19801978
-56,sox2,Esophageal Squamous Cell Carcinoma,MESH:D000077277,SOX2,6657,Cancer|Digestive system disease,marker/mechanism,,19801978
-57,sox2,Lung Neoplasms,MESH:D008175,SOX2,6657,Cancer|Respiratory tract disease,marker/mechanism,,19801978
-58,sox2,"Microphthalmia, Syndromic 3",MESH:C565948,SOX2,6657,Congenital abnormality|Digestive system disease|Eye disease|Nervous system disease,marker/mechanism,206900.0,
-59,sox2,"Neoplasm Recurrence, Local",MESH:D009364,SOX2,6657,Cancer|Pathology (process),marker/mechanism,,27415467
-60,sox2,Osteosarcoma,MESH:D012516,SOX2,6657,Cancer,marker/mechanism,,34508303
-61,sox2,Prostatic Neoplasms,MESH:D011471,SOX2,6657,Cancer|Urogenital disease (male),marker/mechanism,,27415467
-62,sox2,Sarcoma,MESH:D012509,SOX2,6657,Cancer,marker/mechanism,,26343384
-63,sox2,Small Cell Lung Carcinoma,MESH:D055752,SOX2,6657,Cancer|Respiratory tract disease,marker/mechanism,,22941189
-64,sox2,Thoracic Neoplasms,MESH:D013899,SOX2,6657,Cancer,marker/mechanism,,26343384
-65,sox2,Urinary Bladder Neoplasms,MESH:D001749,SOX2,6657,Cancer|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,,29396848
-66,pou5f1,Amphetamine-Related Disorders,MESH:D019969,POU5F1,5460,Mental disorder|Substance-related disorder,marker/mechanism,,18316681
-67,pou5f1,Gestational Trophoblastic Disease,MESH:D031901,POU5F1,5460,Cancer|Pregnancy complication,marker/mechanism,,18440631
-68,pou5f1,"Heart Defects, Congenital",MESH:D006330,POU5F1,5460,Cardiovascular disease|Congenital abnormality,marker/mechanism,,26507003
-69,pou5f1,"Neoplasms, Germ Cell and Embryonal",MESH:D009373,POU5F1,5460,Cancer,marker/mechanism,,16168501
-70,cd44,Acute Kidney Injury,MESH:D058186,CD44,960,Urogenital disease (female)|Urogenital disease (male),marker/mechanism,,23052191
-71,cd44,Adenomatous Polyposis Coli,MESH:D011125,CD44,960,Cancer|Digestive system disease|Genetic disease (inborn),marker/mechanism,,28255344
-72,cd44,Arsenic Poisoning,MESH:D020261,CD44,960,Nervous system disease,marker/mechanism,,16835338
-73,cd44,"Colorectal Neoplasms, Hereditary Nonpolyposis",MESH:D003123,CD44,960,Cancer|Digestive system disease|Genetic disease (inborn)|Metabolic disease,marker/mechanism,,28255344
-74,cd44,"Dermatitis, Contact",MESH:D003877,CD44,960,Skin disease,marker/mechanism,,25724174
-75,cd44,Disease Progression,MESH:D018450,CD44,960,Pathology (process),marker/mechanism,,34626302
-76,cd44,"Glomerulonephritis, IGA",MESH:D005922,CD44,960,Immune system disease|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,,25133636
-77,cd44,"Leukemia, Myeloid, Acute",MESH:D015470,CD44,960,Cancer,marker/mechanism,,23098472
-78,cd44,"Leukemia, Promyelocytic, Acute",MESH:D015473,CD44,960,Cancer,marker/mechanism|therapeutic,,16208414|17349212
-79,cd44,"Mammary Neoplasms, Experimental",MESH:D008325,CD44,960,Cancer,marker/mechanism,,21283680
-80,cd44,Multiple Sclerosis,MESH:D009103,CD44,960,Immune system disease|Nervous system disease,marker/mechanism,,31068361
-81,cd44,Neoplasm Metastasis,MESH:D009362,CD44,960,Cancer|Pathology (process),marker/mechanism,,23098472
-82,cd44,Nerve Degeneration,MESH:D009410,CD44,960,Pathology (process),marker/mechanism,,15191797
-83,cd44,Neuroblastoma,MESH:D009447,CD44,960,Cancer,marker/mechanism,,34626302
-84,cd44,Pancreatic Neoplasms,MESH:D010190,CD44,960,Cancer|Digestive system disease|Endocrine system disease,marker/mechanism,,17446842
-85,cd44,Skin Diseases,MESH:D012871,CD44,960,Skin disease,marker/mechanism,,16835338
-86,cd44,Stomach Neoplasms,MESH:D013274,CD44,960,Cancer|Digestive system disease,marker/mechanism,,21471434
-87,cd44,Vitiligo,MESH:D014820,CD44,960,Skin disease,marker/mechanism,,22561518
+0,ascl1,Acute Lung Injury,MESH:D055371,ASCL1,429.0,Respiratory tract disease,therapeutic,,20554700
+1,ascl1,Intellectual Disability,MESH:D008607,ASCL1,429.0,Mental disorder|Nervous system disease|Signs and symptoms,marker/mechanism,,21937992
+2,ascl1,Nervous System Diseases,MESH:D009422,ASCL1,429.0,Nervous system disease,marker/mechanism,,23203475
+3,ascl1,Small Cell Lung Carcinoma,MESH:D055752,ASCL1,429.0,Cancer|Respiratory tract disease,marker/mechanism,,26253517
+4,pou3f2,Bipolar Disorder,MESH:D001714,POU3F2,5454.0,Mental disorder,marker/mechanism,,31043756
+5,myt1l,"MENTAL RETARDATION, AUTOSOMAL DOMINANT 39",OMIM:616521,MYT1L,23040.0,Mental disorder|Nervous system disease|Signs and symptoms,marker/mechanism,616521.0,
+6,myt1l,Neurodevelopmental Disorders,MESH:D065886,MYT1L,23040.0,Mental disorder,marker/mechanism,,28191889
+7,foxo1,"Hypertension, Pulmonary",MESH:D006976,FOXO1,2308.0,Cardiovascular disease|Respiratory tract disease,marker/mechanism,,27663689
+8,foxo1,Keratoconus,MESH:D007640,FOXO1,2308.0,Eye disease,marker/mechanism,,23291589
+9,foxo1,"Leukemia, Myeloid, Acute",MESH:D015470,FOXO1,2308.0,Cancer,marker/mechanism,,17330099
+10,foxo1,Prostatic Neoplasms,MESH:D011471,FOXO1,2308.0,Cancer|Urogenital disease (male),marker/mechanism,,29662167
+11,foxo1,"Rhabdomyosarcoma, Alveolar",MESH:D018232,FOXO1,2308.0,Cancer,marker/mechanism,268220.0,
+12,etv2 [No associated data found],,,,,,,,
+13,klf2,Colorectal Neoplasms,MESH:D015179,KLF2,10365.0,Cancer|Digestive system disease,marker/mechanism,,30510241
+14,klf2,Lung Diseases,MESH:D008171,KLF2,10365.0,Respiratory tract disease,marker/mechanism,,21053160
+15,tal1,Precursor Cell Lymphoblastic Leukemia-Lymphoma,MESH:D054198,TAL1,6886.0,Cancer|Immune system disease|Lymphatic disease,marker/mechanism,613065.0,
+16,tal1,Precursor T-Cell Lymphoblastic Leukemia-Lymphoma,MESH:D054218,TAL1,6886.0,Cancer|Immune system disease|Lymphatic disease,marker/mechanism,,19246562|24394663
+17,rbtn2 [Object not found],,,,,,,,
+18,foxn1,"T-cell immunodeficiency, congenital alopecia and nail dystrophy",MESH:C536781,FOXN1,8456.0,Genetic disease (inborn)|Immune system disease|Infant-newborn disease|Metabolic disease|Pathology (anatomical condition)|Skin disease,marker/mechanism,601705.0,
+19,klf4,"Arthritis, Juvenile",MESH:D001171,KLF4,9314.0,Connective tissue disease|Immune system disease|Musculoskeletal disease,marker/mechanism,,19565504
+20,klf4,Congenital Abnormalities,MESH:D000013,KLF4,9314.0,Congenital abnormality,marker/mechanism,,20439457
+21,klf4,"Heart Defects, Congenital",MESH:D006330,KLF4,9314.0,Cardiovascular disease|Congenital abnormality,marker/mechanism,,20439457
+22,klf4,Myocardial Ischemia,MESH:D017202,KLF4,9314.0,Cardiovascular disease,marker/mechanism,,16214533
+23,klf4,Thrombosis,MESH:D013927,KLF4,9314.0,Cardiovascular disease,therapeutic,,25339356
+24,myc,Adenocarcinoma,MESH:D000230,MYC,4609.0,Cancer,marker/mechanism,,26432044
+25,myc,Adenocarcinoma of Lung,MESH:D000077192,MYC,4609.0,Cancer,marker/mechanism,,26656844|27602772
+26,myc,Burkitt Lymphoma,MESH:D002051,MYC,4609.0,Cancer|Immune system disease|Lymphatic disease|Viral disease,marker/mechanism,113970.0,
+27,myc,Carcinoma,MESH:D002277,MYC,4609.0,Cancer,marker/mechanism,,2228319
+28,myc,"Carcinoma, Ductal",MESH:D044584,MYC,4609.0,Cancer,marker/mechanism,,29295717
+29,myc,"Carcinoma, Hepatocellular",MESH:D006528,MYC,4609.0,Cancer|Digestive system disease,marker/mechanism,,12029619|15565109|29698666|9029167
+30,myc,"Carcinoma, Merkel Cell",MESH:D015266,MYC,4609.0,Cancer|Viral disease,marker/mechanism,,25277525
+31,myc,"Carcinoma, Non-Small-Cell Lung",MESH:D002289,MYC,4609.0,Cancer|Respiratory tract disease,marker/mechanism,,24688052
+32,myc,"Carcinoma, Squamous Cell",MESH:D002294,MYC,4609.0,Cancer,marker/mechanism,,26432044
+33,myc,"Cardiomyopathy, Hypertrophic",MESH:D002312,MYC,4609.0,Cardiovascular disease,marker/mechanism,,22000973
+34,myc,"Cell Transformation, Neoplastic",MESH:D002471,MYC,4609.0,Cancer|Pathology (process),marker/mechanism,,12115494|2543982|29626521|31504995
+35,myc,Chromosome Breakage,MESH:D019457,MYC,4609.0,Pathology (process),marker/mechanism,,25933419
+36,myc,Cleft Lip,MESH:D002971,MYC,4609.0,Congenital abnormality|Mouth disease,marker/mechanism,,24859337
+37,myc,Cleft Palate,MESH:D002972,MYC,4609.0,Congenital abnormality|Mouth disease|Musculoskeletal disease,marker/mechanism,,24859337
+38,myc,Colonic Neoplasms,MESH:D003110,MYC,4609.0,Cancer|Digestive system disease,marker/mechanism,,12189186|15059925|18283038|21081470
+39,myc,Colorectal Neoplasms,MESH:D015179,MYC,4609.0,Cancer|Digestive system disease,marker/mechanism,,30510241
+40,myc,"Disease Models, Animal",MESH:D004195,MYC,4609.0,Animal disease,marker/mechanism,,27602772
+41,myc,Disease Progression,MESH:D018450,MYC,4609.0,Pathology (process),marker/mechanism,,22321834|28191284|34510316|34626302
+42,myc,Endometrial Neoplasms,MESH:D016889,MYC,4609.0,Cancer|Urogenital disease (female),marker/mechanism,,26656844
+43,myc,Fatty Liver,MESH:D005234,MYC,4609.0,Digestive system disease,therapeutic,,24210820
+44,myc,Glioblastoma,MESH:D005909,MYC,4609.0,Cancer,marker/mechanism,,21127729
+45,myc,Hemangiosarcoma,MESH:D006394,MYC,4609.0,Cancer,marker/mechanism,,17569031
+46,myc,"Hypertrophy, Left Ventricular",MESH:D017379,MYC,4609.0,Cardiovascular disease|Pathology (anatomical condition),marker/mechanism,,21472269
+47,myc,"Leukemia, Myeloid, Acute",MESH:D015470,MYC,4609.0,Cancer,marker/mechanism,,25956709
+48,myc,"Liver Cirrhosis, Experimental",MESH:D008106,MYC,4609.0,Digestive system disease|Pathology (process),marker/mechanism,,25380136
+49,myc,Liver Neoplasms,MESH:D008113,MYC,4609.0,Cancer|Digestive system disease,marker/mechanism,,11532874|8807143
+50,myc,"Liver Neoplasms, Experimental",MESH:D008114,MYC,4609.0,Cancer|Digestive system disease,marker/mechanism,,11280770|18560566|9079223
+51,myc,Lung Neoplasms,MESH:D008175,MYC,4609.0,Cancer|Respiratory tract disease,marker/mechanism,,16289808|28191284
+52,myc,"Lymphoma, Large B-Cell, Diffuse",MESH:D016403,MYC,4609.0,Cancer|Immune system disease|Lymphatic disease,marker/mechanism,,27356265
+53,myc,Medulloblastoma,MESH:D008527,MYC,4609.0,Cancer,marker/mechanism,,19270706|31694585
+54,myc,Myelodysplastic Syndromes,MESH:D009190,MYC,4609.0,Blood disease,marker/mechanism,,10914558
+55,myc,Neoplasm Metastasis,MESH:D009362,MYC,4609.0,Cancer|Pathology (process),marker/mechanism,,22321834
+56,myc,Neoplasms,MESH:D009369,MYC,4609.0,Cancer,marker/mechanism,,11559025
+57,myc,Neuroblastoma,MESH:D009447,MYC,4609.0,Cancer,marker/mechanism,,34626302|8761367
+58,myc,Neuroectodermal Tumors,MESH:D017599,MYC,4609.0,Cancer,marker/mechanism,,8761367
+59,myc,Osteosarcoma,MESH:D012516,MYC,4609.0,Cancer,marker/mechanism,,24646477|34508303
+60,myc,Ovarian Neoplasms,MESH:D010051,MYC,4609.0,Cancer|Endocrine system disease|Urogenital disease (female),marker/mechanism,,20852632|34510316
+61,myc,Pancreatic Neoplasms,MESH:D010190,MYC,4609.0,Cancer|Digestive system disease|Endocrine system disease,marker/mechanism,,25961927
+62,myc,"Polycystic Kidney, Autosomal Dominant",MESH:D016891,MYC,4609.0,Congenital abnormality|Genetic disease (inborn)|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,,25877301
+63,myc,Prostatic Neoplasms,MESH:D011471,MYC,4609.0,Cancer|Urogenital disease (male),marker/mechanism,,17173048|23704919|29295717|32512071
+64,myc,Stomach Neoplasms,MESH:D013274,MYC,4609.0,Cancer|Digestive system disease,marker/mechanism,,17171786|21173787
+65,myc,Urinary Bladder Neoplasms,MESH:D001749,MYC,4609.0,Cancer|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,,2228319
+66,myc,Uterine Cervical Neoplasms,MESH:D002583,MYC,4609.0,Cancer|Urogenital disease (female),marker/mechanism,,26432044
+67,sox2,Adenocarcinoma of Lung,MESH:D000077192,SOX2,6657.0,Cancer,marker/mechanism,,25184679
+68,sox2,Anophthalmos,MESH:D000853,SOX2,6657.0,Congenital abnormality|Eye disease,marker/mechanism,,21532573
+69,sox2,Ataxia,MESH:D001259,SOX2,6657.0,Nervous system disease|Signs and symptoms,marker/mechanism,,29732603
+70,sox2,Brain Neoplasms,MESH:D001932,SOX2,6657.0,Cancer|Nervous system disease,marker/mechanism,,27935819
+71,sox2,"Carcinoma, Squamous Cell",MESH:D002294,SOX2,6657.0,Cancer,marker/mechanism,,19801978
+72,sox2,Esophageal Squamous Cell Carcinoma,MESH:D000077277,SOX2,6657.0,Cancer|Digestive system disease,marker/mechanism,,19801978
+73,sox2,Lung Neoplasms,MESH:D008175,SOX2,6657.0,Cancer|Respiratory tract disease,marker/mechanism,,19801978
+74,sox2,"Microphthalmia, Syndromic 3",MESH:C565948,SOX2,6657.0,Congenital abnormality|Digestive system disease|Eye disease|Nervous system disease,marker/mechanism,206900.0,
+75,sox2,"Neoplasm Recurrence, Local",MESH:D009364,SOX2,6657.0,Cancer|Pathology (process),marker/mechanism,,27415467
+76,sox2,Osteosarcoma,MESH:D012516,SOX2,6657.0,Cancer,marker/mechanism,,34508303
+77,sox2,Prostatic Neoplasms,MESH:D011471,SOX2,6657.0,Cancer|Urogenital disease (male),marker/mechanism,,27415467
+78,sox2,Sarcoma,MESH:D012509,SOX2,6657.0,Cancer,marker/mechanism,,26343384
+79,sox2,Small Cell Lung Carcinoma,MESH:D055752,SOX2,6657.0,Cancer|Respiratory tract disease,marker/mechanism,,22941189
+80,sox2,Thoracic Neoplasms,MESH:D013899,SOX2,6657.0,Cancer,marker/mechanism,,26343384
+81,sox2,Urinary Bladder Neoplasms,MESH:D001749,SOX2,6657.0,Cancer|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,,29396848
+82,pou5f1,Amphetamine-Related Disorders,MESH:D019969,POU5F1,5460.0,Mental disorder|Substance-related disorder,marker/mechanism,,18316681
+83,pou5f1,Gestational Trophoblastic Disease,MESH:D031901,POU5F1,5460.0,Cancer|Pregnancy complication,marker/mechanism,,18440631
+84,pou5f1,"Heart Defects, Congenital",MESH:D006330,POU5F1,5460.0,Cardiovascular disease|Congenital abnormality,marker/mechanism,,26507003
+85,pou5f1,"Neoplasms, Germ Cell and Embryonal",MESH:D009373,POU5F1,5460.0,Cancer,marker/mechanism,,16168501
+86,stf1 [Object not found],,,,,,,,
+87,wt1,Aniridia,MESH:D015783,WT1,7490.0,Congenital abnormality|Eye disease|Genetic disease (inborn),marker/mechanism,106210.0,
+88,wt1,Breast Neoplasms,MESH:D001943,WT1,7490.0,Cancer|Skin disease,marker/mechanism,,14961577
+89,wt1,Colonic Neoplasms,MESH:D003110,WT1,7490.0,Cancer|Digestive system disease,marker/mechanism,,14961577
+90,wt1,Denys-Drash Syndrome,MESH:D030321,WT1,7490.0,Cancer|Congenital abnormality|Endocrine system disease|Genetic disease (inborn)|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,194080.0,
+91,wt1,Frasier Syndrome,MESH:D052159,WT1,7490.0,Congenital abnormality|Endocrine system disease|Genetic disease (inborn)|Pathology (process)|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,136680.0,
+92,wt1,Glioblastoma,MESH:D005909,WT1,7490.0,Cancer,marker/mechanism,,20820871
+93,wt1,Glomerulonephritis,MESH:D005921,WT1,7490.0,Urogenital disease (female)|Urogenital disease (male),marker/mechanism,,20962747
+94,wt1,"Hernia, Diaphragmatic",MESH:D006548,WT1,7490.0,Pathology (anatomical condition),marker/mechanism,,17436238
+95,wt1,"Hernias, Diaphragmatic, Congenital",MESH:D065630,WT1,7490.0,Congenital abnormality|Pathology (anatomical condition),marker/mechanism,,21072664
+96,wt1,Leukemia,MESH:D007938,WT1,7490.0,Cancer,marker/mechanism,,14961577
+97,wt1,"Leukemia, Myelogenous, Chronic, BCR-ABL Positive",MESH:D015464,WT1,7490.0,Blood disease|Cancer|Pathology (process),marker/mechanism,,17157168
+98,wt1,"Leukemia, Myeloid, Acute",MESH:D015470,WT1,7490.0,Cancer,marker/mechanism,,19822134|27992414
+99,wt1,"Leukemia, Promyelocytic, Acute",MESH:D015473,WT1,7490.0,Cancer,marker/mechanism,,26285909
+100,wt1,Lung Neoplasms,MESH:D008175,WT1,7490.0,Cancer|Respiratory tract disease,marker/mechanism,,14961577
+101,wt1,Meacham Winn Culler syndrome,MESH:C538162,WT1,7490.0,Congenital abnormality|Endocrine system disease|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,608978.0,
+102,wt1,"Mesothelioma, Malignant",MESH:D000086002,WT1,7490.0,Cancer|Respiratory tract disease,marker/mechanism,156240.0,22784439
+103,wt1,"NEPHROTIC SYNDROME, TYPE 4",OMIM:256370,WT1,7490.0,Urogenital disease (female)|Urogenital disease (male),marker/mechanism,256370.0,
+104,wt1,Neurilemmoma,MESH:D009442,WT1,7490.0,Cancer,therapeutic,,25474318
+105,wt1,Osteosarcoma,MESH:D012516,WT1,7490.0,Cancer,marker/mechanism,,28107196
+106,wt1,Pancreatic Neoplasms,MESH:D010190,WT1,7490.0,Cancer|Digestive system disease|Endocrine system disease,marker/mechanism,,19196508
+107,wt1,Peritoneal Neoplasms,MESH:D010534,WT1,7490.0,Cancer|Digestive system disease,marker/mechanism,,22784439
+108,wt1,Primary Ovarian Insufficiency,MESH:D016649,WT1,7490.0,Endocrine system disease|Urogenital disease (female),marker/mechanism,,26358501
+109,wt1,WAGR Syndrome,MESH:D017624,WT1,7490.0,Cancer|Congenital abnormality|Endocrine system disease|Eye disease|Genetic disease (inborn)|Nervous system disease|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,194072.0,
+110,wt1,Wilms Tumor,MESH:D009396,WT1,7490.0,Cancer|Genetic disease (inborn)|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,194070.0,15591903|28825729
+111,dmrt1,"Neoplasms, Germ Cell and Embryonal",MESH:D009373,DMRT1,1761.0,Cancer,marker/mechanism,,20543847
+112,dmrt1,Testicular Neoplasms,MESH:D013736,DMRT1,1761.0,Cancer|Endocrine system disease|Urogenital disease (male),marker/mechanism,,20543847
+113,gata4,Alcoholism,MESH:D000437,GATA4,2626.0,Mental disorder|Substance-related disorder,marker/mechanism,,20585342
+114,gata4,Atrial Fibrillation,MESH:D001281,GATA4,2626.0,Cardiovascular disease|Pathology (process),marker/mechanism,,30061737
+115,gata4,Atrial septal defect 2,MESH:C538263,GATA4,2626.0,Cardiovascular disease|Congenital abnormality,marker/mechanism,607941.0,
+116,gata4,Atrioventricular Septal Defect,MESH:C562831,GATA4,2626.0,Cardiovascular disease|Congenital abnormality,marker/mechanism,614430.0,
+117,gata4,Cardiomegaly,MESH:D006332,GATA4,2626.0,Cardiovascular disease|Pathology (anatomical condition),marker/mechanism,,16259952|18252717
+118,gata4,Colorectal Neoplasms,MESH:D015179,GATA4,2626.0,Cancer|Digestive system disease,marker/mechanism,,19509152
+119,gata4,"Disease Models, Animal",MESH:D004195,GATA4,2626.0,Animal disease,marker/mechanism,,29394407
+120,gata4,Drug-Related Side Effects and Adverse Reactions,MESH:D064420,GATA4,2626.0,,marker/mechanism,,31190750
+121,gata4,"Heart Septal Defects, Ventricular",MESH:D006345,GATA4,2626.0,Cardiovascular disease|Congenital abnormality,marker/mechanism,614429.0,
+122,gata4,Hemorrhage,MESH:D006470,GATA4,2626.0,Pathology (process),marker/mechanism,,31190750
+123,gata4,"Hernia, Diaphragmatic",MESH:D006548,GATA4,2626.0,Pathology (anatomical condition),marker/mechanism,,18280291
+124,gata4,"Hernias, Diaphragmatic, Congenital",MESH:D065630,GATA4,2626.0,Congenital abnormality|Pathology (anatomical condition),marker/mechanism,,23426975
+125,gata4,Myocardial Infarction,MESH:D009203,GATA4,2626.0,Cardiovascular disease|Pathology (process),therapeutic,,20200331
+126,gata4,TESTICULAR ANOMALIES WITH OR WITHOUT CONGENITAL HEART DISEASE,OMIM:615542,GATA4,2626.0,Cardiovascular disease|Congenital abnormality|Endocrine system disease|Urogenital disease (female)|Urogenital disease (male),marker/mechanism,615542.0,
+127,gata4,Tetralogy of Fallot,MESH:D013771,GATA4,2626.0,Cardiovascular disease|Congenital abnormality,marker/mechanism,187500.0,
+128,gata4,Ventricular Remodeling,MESH:D020257,GATA4,2626.0,Pathology (anatomical condition),marker/mechanism,,29394407
+129,sox9,Anonychia congenita,MESH:C536377,SOX9,6662.0,Pathology (anatomical condition),marker/mechanism,,19639023
+130,sox9,Autism Spectrum Disorder,MESH:D000067877,SOX9,6662.0,Mental disorder,marker/mechanism,,20868653
+131,sox9,Campomelic Dysplasia,MESH:D055036,SOX9,6662.0,Congenital abnormality|Musculoskeletal disease,marker/mechanism,114290.0,
+132,sox9,Carcinoma,MESH:D002277,SOX9,6662.0,Cancer,marker/mechanism,,16316942
+133,sox9,Craniofacial Abnormalities,MESH:D019465,SOX9,6662.0,Congenital abnormality|Musculoskeletal disease,marker/mechanism,,11807034
+134,sox9,"Hand Deformities, Congenital",MESH:D006228,SOX9,6662.0,Congenital abnormality|Musculoskeletal disease,marker/mechanism,,19639023
+135,sox9,Lung Neoplasms,MESH:D008175,SOX9,6662.0,Cancer|Respiratory tract disease,marker/mechanism,,27935865
+136,sox9,"Mammary Neoplasms, Animal",MESH:D015674,SOX9,6662.0,Animal disease|Cancer,marker/mechanism,,16316942
+137,sox9,"Mammary Neoplasms, Experimental",MESH:D008325,SOX9,6662.0,Cancer,marker/mechanism,,16316942
+138,sox9,Neoplasm Invasiveness,MESH:D009361,SOX9,6662.0,Cancer|Pathology (process),marker/mechanism,,32682831
+139,sox9,Neoplasm Metastasis,MESH:D009362,SOX9,6662.0,Cancer|Pathology (process),marker/mechanism,,32682831
+140,sox9,Pierre Robin Syndrome,MESH:D010855,SOX9,6662.0,Congenital abnormality|Mouth disease|Musculoskeletal disease,marker/mechanism,,19234473
