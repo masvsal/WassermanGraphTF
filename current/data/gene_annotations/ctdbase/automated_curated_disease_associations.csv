@@ -11,12 +11,10 @@
 9,foxo1,"Leukemia, Myeloid, Acute",MESH:D015470,FOXO1,2308.0,Cancer,marker/mechanism,,17330099
 10,foxo1,Prostatic Neoplasms,MESH:D011471,FOXO1,2308.0,Cancer|Urogenital disease (male),marker/mechanism,,29662167
 11,foxo1,"Rhabdomyosarcoma, Alveolar",MESH:D018232,FOXO1,2308.0,Cancer,marker/mechanism,268220.0,
-12,etv2 [No associated data found],,,,,,,,
 13,klf2,Colorectal Neoplasms,MESH:D015179,KLF2,10365.0,Cancer|Digestive system disease,marker/mechanism,,30510241
 14,klf2,Lung Diseases,MESH:D008171,KLF2,10365.0,Respiratory tract disease,marker/mechanism,,21053160
 15,tal1,Precursor Cell Lymphoblastic Leukemia-Lymphoma,MESH:D054198,TAL1,6886.0,Cancer|Immune system disease|Lymphatic disease,marker/mechanism,613065.0,
 16,tal1,Precursor T-Cell Lymphoblastic Leukemia-Lymphoma,MESH:D054218,TAL1,6886.0,Cancer|Immune system disease|Lymphatic disease,marker/mechanism,,19246562|24394663
-17,rbtn2 [Object not found],,,,,,,,
 18,foxn1,"T-cell immunodeficiency, congenital alopecia and nail dystrophy",MESH:C536781,FOXN1,8456.0,Genetic disease (inborn)|Immune system disease|Infant-newborn disease|Metabolic disease|Pathology (anatomical condition)|Skin disease,marker/mechanism,601705.0,
 19,klf4,"Arthritis, Juvenile",MESH:D001171,KLF4,9314.0,Connective tissue disease|Immune system disease|Musculoskeletal disease,marker/mechanism,,19565504
 20,klf4,Congenital Abnormalities,MESH:D000013,KLF4,9314.0,Congenital abnormality,marker/mechanism,,20439457
@@ -85,7 +83,6 @@
 83,pou5f1,Gestational Trophoblastic Disease,MESH:D031901,POU5F1,5460.0,Cancer|Pregnancy complication,marker/mechanism,,18440631
 84,pou5f1,"Heart Defects, Congenital",MESH:D006330,POU5F1,5460.0,Cardiovascular disease|Congenital abnormality,marker/mechanism,,26507003
 85,pou5f1,"Neoplasms, Germ Cell and Embryonal",MESH:D009373,POU5F1,5460.0,Cancer,marker/mechanism,,16168501
-86,stf1 [Object not found],,,,,,,,
 87,wt1,Aniridia,MESH:D015783,WT1,7490.0,Congenital abnormality|Eye disease|Genetic disease (inborn),marker/mechanism,106210.0,
 88,wt1,Breast Neoplasms,MESH:D001943,WT1,7490.0,Cancer|Skin disease,marker/mechanism,,14961577
 89,wt1,Colonic Neoplasms,MESH:D003110,WT1,7490.0,Cancer|Digestive system disease,marker/mechanism,,14961577

@@ -1,7 +1,4 @@
 ,# Input,GeneSymbol,GeneID,PathwayName,PathwayID
-0,ascl1 [No associated data found],,,,
-1,pou3f2 [No associated data found],,,,
-2,myt1l [No associated data found],,,,
 3,foxo1,FOXO1,2308.0,Adaptive Immune System,REACT:R-HSA-1280218
 4,foxo1,FOXO1,2308.0,AGE-RAGE signaling pathway in diabetic complications,KEGG:hsa04933
 5,foxo1,FOXO1,2308.0,AKT-mediated inactivation of FOXO1A,REACT:R-HSA-211163
@@ -48,13 +45,9 @@
 46,foxo1,FOXO1,2308.0,Signal Transduction,REACT:R-HSA-162582
 47,foxo1,FOXO1,2308.0,Thyroid hormone signaling pathway,KEGG:hsa04919
 48,foxo1,FOXO1,2308.0,Transcriptional misregulation in cancer,KEGG:hsa05202
-49,etv2 [No associated data found],,,,
 50,klf2,KLF2,10365.0,Apelin signaling pathway,KEGG:hsa04371
 51,klf2,KLF2,10365.0,Fluid shear stress and atherosclerosis,KEGG:hsa05418
 52,klf2,KLF2,10365.0,FoxO signaling pathway,KEGG:hsa04068
-53,tal1 [No associated data found],,,,
-54,rbtn2 [Object not found],,,,
-55,foxn1 [No associated data found],,,,
 56,klf4,KLF4,9314.0,Developmental Biology,REACT:R-HSA-1266738
 57,klf4,KLF4,9314.0,Metabolism of proteins,REACT:R-HSA-392499
 58,klf4,KLF4,9314.0,Peptide hormone metabolism,REACT:R-HSA-2980736
@@ -146,9 +139,7 @@
 144,pou5f1,POU5F1,5460.0,"POU5F1 (OCT4), SOX2, NANOG repress genes related to differentiation",REACT:R-HSA-2892245
 145,pou5f1,POU5F1,5460.0,Signaling pathways regulating pluripotency of stem cells,KEGG:hsa04550
 146,pou5f1,POU5F1,5460.0,Transcriptional regulation of pluripotent stem cells,REACT:R-HSA-452723
-147,stf1 [Object not found],,,,
 148,wt1,WT1,7490.0,Transcriptional misregulation in cancer,KEGG:hsa05202
-149,dmrt1 [No associated data found],,,,
 150,gata4,GATA4,2626.0,Cardiac conduction,REACT:R-HSA-5576891
 151,gata4,GATA4,2626.0,cGMP-PKG signaling pathway,KEGG:hsa04022
 152,gata4,GATA4,2626.0,Factors involved in megakaryocyte development and platelet production,REACT:R-HSA-983231

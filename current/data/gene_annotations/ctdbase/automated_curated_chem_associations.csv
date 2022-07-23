@@ -1,4 +1,4 @@
-# Input,ChemicalName,ChemicalId,CasRN,GeneSymbol,GeneId,Organism,OrganismId,PubMedIds
+Input,ChemicalName,ChemicalId,CasRN,GeneSymbol,GeneId,Organism,OrganismId,PubMedIds
 ascl1,"1,1-bis(4-hydroxyphenyl)cyclohexane",C517113,,ASCL1,429.0,Homo sapiens,9606.0,28591870
 ascl1,3-(4-pyridyl)-1H-indole,C569798,,ASCL1,429.0,Homo sapiens,9606.0,34480604
 ascl1,3-hydroxy-4-prenyl-5-methoxystilbene-2-carboxylic acid,C549543,,ASCL1,429.0,Homo sapiens,9606.0,25716159
