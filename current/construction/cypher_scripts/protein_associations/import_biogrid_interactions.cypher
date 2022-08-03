@@ -26,10 +26,20 @@ CREATE (a1:Annot {
 	qualification:coalesce(line.QUALIFICATIONS, ""), 
 	tags:coalesce(line.tags, "")})
 
+CREATE (a1:Annot {
+	bait:pA.uniprot_swissprot_id,
+	target:pB.uniprot_swissprot_id,
+	experimental_system:line.EXPERIMENTAL_SYSTEM + ":" + line.EXPERIMENTAL_SYSTEM_TYPE,
+	throughput:line.THROUGHPUT, 
+	quantitation:coalesce(line.QUANTITATION, ""), 
+	modification:coalesce(line.MODIFICATION, ""),
+	qualification:coalesce(line.QUALIFICATIONS, ""), 
+	tags:coalesce(line.tags, "")})
+
 MERGE (p:Publication {PMID:line.PUBMED_ID, author:coalesce(line.PUBMED_AUTHOR,'NOT FOUND')})
 
-CREATE (pA)-[:HAS_ANNOTATION]->(a1)
-CREATE (pB)-[:HAS_ANNOTATION]->(a1)
+CREATE (gA)-[:HAS_ANNOTATION]->(a1)
+CREATE (gB)-[:HAS_ANNOTATION]->(a1)
 MERGE (a1)-[:ANNOTATED_TO]->(assoc)
 MERGE (a1)-[:BECAUSE]->(p)
 

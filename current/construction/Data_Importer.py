@@ -307,7 +307,7 @@ class Annotation_Importer(Data_Importer):
                 self._create_cis_bp_annotations
             )
             for record in result:
-                print("({dbds}) dna binding domain nodes added".format(dbds=record['dbds']))
+                print("({dbds}) dna binding domain annotations added".format(dbds=record['dbds']))
     
     def create_jaspar_pfm_annotations(self):
         with self.driver.session() as session:
@@ -360,7 +360,7 @@ class Annotation_Importer(Data_Importer):
     @staticmethod
     def _create_go_annotations(tx):
         query = open("current/construction/cypher_scripts/GO/yamanaka_import_GO.cypher", "r")
-        result = tx.run(query.read().replace("$GAF_PRUNED_URI",cfg.GOA_PRUNED))
+        result = tx.run(query.read().replace("$GAF_PRUNED_URI",cfg.PIR_SLIM_PRUNED))
         query.close()
         try:
             return "done" #[{"component":record["component"], "process":record["process"], "function":record['function']} for record in result]

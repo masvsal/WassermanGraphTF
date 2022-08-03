@@ -1,6 +1,6 @@
 //load CSV
 //------------------
-LOAD CSV WITH HEADERS FROM '$GAF_PRUNED_URI' AS line
+LOAD CSV WITH HEADERS FROM '$GAF_PRUNED_URI' AS line FIELDTERMINATOR '\t'
 //find protein
 match (prot:Protein)<-[:ENCODES]-(t:Transcript)<-[:ENCODES]-(g:Gene)
 where t.ensembl_canonical_flag = TRUE AND g.primary_seq_flag = TRUE AND line.DB_Object_ID IN prot.uniprot_swissprot_id

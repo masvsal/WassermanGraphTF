@@ -31,8 +31,8 @@ CREATE (assoc:Association {
 
 CREATE (a1:Annot)
 
-CREATE (p1)-[:HAS_ANNOTATION]->(a1)
-CREATE (p2)-[:HAS_ANNOTATION]->(a1)
+CREATE (g1)-[:HAS_ANNOTATION]->(a1)
+CREATE (g2)-[:HAS_ANNOTATION]->(a1)
 MERGE (a1)-[:ANNOTATED_TO]->(assoc)
 
 //WITH "done" as done

@@ -23,10 +23,10 @@ class Graph_Loader:
         self.annotation_loader.create_jaspar_pfm_annotations() #works! :)
         self.annotation_loader.create_biogrid_interaction_annotations()
         self.annotation_loader.create_string_interaction_annotations()
-        self.annotation_loader.create_gene_disease_associations()
-        self.annotation_loader.create_gene_chemical_annotations()
-        self.annotation_loader.create_gene_pathway_annotations()
-        self.annotation_loader.create_disease_chem_annotations() #must occur after diseases and chemicals are loade
+        #self.annotation_loader.create_gene_disease_associations()
+        #self.annotation_loader.create_gene_chemical_annotations()
+        #self.annotation_loader.create_gene_pathway_annotations()
+        #self.annotation_loader.create_disease_chem_annotations() #must occur after diseases and chemicals are loade
     
     def test_connection(self):
         self.entity_loader.testing()
